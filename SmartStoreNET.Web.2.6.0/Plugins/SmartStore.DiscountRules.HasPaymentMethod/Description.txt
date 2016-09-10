@@ -1,9 +1,0 @@
-﻿FriendlyName: "Customer has selected payment method" discount requirement rule
-SystemName: SmartStore.DiscountRules.HasPaymentMethod
-Group: Marketing
-Version: 2.6.0
-MinAppVersion: 2.5.0
-DisplayOrder: 1
-FileName: SmartStore.DiscountRules.HasPaymentMethod.dll
-ResourceRootKey: Plugins.SmartStore.DiscountRules.HasPaymentMethod
-Url: http://community.smartstore.com/marketplace/file/36-customer-has-selected-payment-method-discount-rule/

@@ -1,9 +1,0 @@
-﻿@using SmartStore.OpenTrans;
-@{
-    Layout = "";
-}
-<a href="javascript:void(0)" class="btn opentrans-export-button" 
-   data-url="@Url.Action("Export", "OpenTrans", new { exportAll = false, method = "Edit", selectedIds = ViewData["SelectedIds"], area = Plugin.SystemName })">
-	<i class="fa fa-upload"></i>&nbsp;@T("Plugins.Exports.OpenTrans.OpenTransExport")
-</a>
-@Html.Partial("ExportButtonsGeneral")

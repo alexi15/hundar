@@ -1,9 +1,0 @@
-﻿FriendlyName: UPS (United Parcel Service)
-SystemName: SmartStore.UPS
-Group: Shipping
-Version: 2.6.0
-MinAppVersion: 2.5.0
-DisplayOrder: 1
-FileName: SmartStore.UPS.dll
-ResourceRootKey: Plugins.Shipping.UPS
-Url: http://community.smartstore.com/marketplace/file/39-united-parcel-service-shipping/

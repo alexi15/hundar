@@ -1,3 +1,0 @@
-AppVersion: 2.6.0.0
-DataProvider: sqlce
-DataConnectionString: Data Source=|DataDirectory|\SmartStore.Db.sdf;Persist Security Info=False

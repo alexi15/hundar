@@ -1,0 +1,285 @@
+﻿@using SmartStore.NewsImporter;
+@using SmartStore.NewsImporter.Core;
+@using SmartStore.NewsImporter.Models;
+@using SmartStore.Web.Framework;
+@using Telerik.Web.Mvc.UI
+@model FeedImportModel
+@{
+	Layout = "~/Administration/Views/Shared/_AdminLayout.cshtml";
+	ViewBag.Title = T("Plugins.SmartStore.NewsImporter.EditFeed").Text;
+	
+	Html.AddCssFileParts(true, Url.Content("~/Plugins/SmartStore.NewsImporter/Content/smartStore.newsimporter.css"));
+}
+
+@Html.ValidationSummary(false)
+
+<div class="section-header">
+	<div class="title">
+		<i class="fa fa-sign-in"></i>
+		@T("Plugins.SmartStore.NewsImporter.EditFeed") - @Model.UrlDisplay
+		<a href="@Url.Action("ConfigurePlugin", "Plugin", new { area = "admin", systemName = NewsImporterCore.SystemName })">(@T("Admin.Common.BackToConfiguration"))</a>
+	</div>
+</div>
+
+<div>
+	<form id="FeedEditForm" method="POST" action="@Url.Action("FeedEdit", "NewsImporter", new { area = NewsImporterCore.SystemName })">
+		<input type="hidden" id="Id" name="Id" value="@Model.Id" />
+
+		<table id="FeedEditContainer" class="adminContent">
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.Url)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.Url)
+					@Html.ValidationMessageFor(model => model.Url)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.IsActive)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.IsActive)
+					@Html.ValidationMessageFor(model => model.IsActive)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.Publish)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.Publish)
+					@Html.ValidationMessageFor(model => model.Publish)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.AllowComments)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.AllowComments)
+					@Html.ValidationMessageFor(model => model.AllowComments)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.ImageEmbedding)
+				</td>
+				<td class="adminData">
+					@Html.DropDownListFor(model => model.ImageEmbedding, Model.ImageEmbeddingValues)
+					@Html.ValidationMessageFor(model => model.ImageEmbedding)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.AppendLink)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.AppendLink)
+					@Html.ValidationMessageFor(model => model.AppendLink)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.LanguageId)
+				</td>
+				<td class="adminData">
+					@Html.DropDownListFor(model => model.LanguageId, Model.AvailableLanguages)
+					@Html.ValidationMessageFor(model => model.LanguageId)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.TagNameShortDescription)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.TagNameShortDescription)
+					@Html.ValidationMessageFor(model => model.TagNameShortDescription)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.TagNameLongDescription)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.TagNameLongDescription)
+					@Html.ValidationMessageFor(model => model.TagNameLongDescription)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.TagNameMetaKeywords)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.TagNameMetaKeywords)
+					@Html.ValidationMessageFor(model => model.TagNameMetaKeywords)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.TitleToPlainText)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.TitleToPlainText)
+					@Html.ValidationMessageFor(model => model.TitleToPlainText)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.ShortDescriptionToPlainText)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.ShortDescriptionToPlainText)
+					@Html.ValidationMessageFor(model => model.ShortDescriptionToPlainText)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.LongDescriptionToPlainText)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.LongDescriptionToPlainText)
+					@Html.ValidationMessageFor(model => model.LongDescriptionToPlainText)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.Filter)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.Filter)
+					@Html.ValidationMessageFor(model => model.Filter)
+				</td>
+			</tr>
+			<tr class="news-filtering">
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.FilterValues)
+				</td>
+				<td class="adminData">
+					@Html.HiddenFor(model => model.FilterValues)
+					@Html.ValidationMessageFor(model => model.FilterValues)
+				</td>
+			</tr>
+			<tr class="news-filtering">
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.TagNameFilter)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.TagNameFilter)
+					@Html.ValidationMessageFor(model => model.TagNameFilter)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.LimitedToStores)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.LimitedToStores)
+					@Html.ValidationMessageFor(model => model.LimitedToStores)
+				</td>
+			</tr>
+			<tr id="pnl-available-stores">
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.AvailableStores)
+				</td>
+				<td class="adminData">
+					@if (Model.AvailableStores != null && Model.AvailableStores.Count > 0)
+					{
+						foreach (var store in Model.AvailableStores)
+						{
+							<label class="checkbox">
+								<input type="checkbox" name="SelectedStoreIds" value="@store.Value" checked="@(Model.SelectedStoreIds != null && Model.SelectedStoreIds.Contains(store.Value.ToInt()))" />
+								<span>@store.Text</span>
+							</label>
+						}
+					}
+					else
+					{
+						<div>@T("Admin.Configuration.Stores.NoStoresDefined")</div>
+					}
+				</td>
+			</tr>
+			@if (Model.LastImport.HasValue)
+			{
+				<tr>
+					<td class="adminTitle">
+						@Html.SmartLabelFor(model => model.LastImport)
+					</td>
+					<td class="adminData">
+						@Html.DisplayFor(model => model.LastImport)
+					</td>
+				</tr>
+			}
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.NumberOfImports)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.NumberOfImports)
+					@Html.ValidationMessageFor(model => model.NumberOfImports)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.NumberOfImportedNews)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.NumberOfImportedNews)
+					@Html.ValidationMessageFor(model => model.NumberOfImportedNews)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.NumberOfFailures)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.NumberOfFailures)
+					@Html.ValidationMessageFor(model => model.NumberOfFailures)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.CreatedOn)
+				</td>
+				<td class="adminData">
+					@Html.DisplayFor(model => model.CreatedOn)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.UpdatedOn)
+				</td>
+				<td class="adminData">
+					@Html.DisplayFor(model => model.UpdatedOn)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">&nbsp;</td>
+				<td class="adminData">
+					<button type="submit" name="save" value="save" class="btn btn-primary">
+						<i class="fa fa-check"></i>&nbsp;@T("Admin.Common.Save")
+					</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function () {
+
+		$('#FilterValues').select2({ tags: [@(Html.Raw(Model.SerializedFilterValues))] });
+
+		// toggle available stores
+		$('#LimitedToStores').change(function () {
+			$('#pnl-available-stores').toggle($(this).is(':checked'));
+		}).trigger('change');
+
+		// toggle filtering
+		$('#Filter').change(function () {
+			$('#FeedEditContainer').find('.news-filtering').toggle($(this).is(':checked'));
+		}).trigger('change');
+
+	});
+</script>

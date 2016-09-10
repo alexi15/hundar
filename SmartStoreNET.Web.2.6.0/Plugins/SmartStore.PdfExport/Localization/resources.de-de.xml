@@ -1,0 +1,43 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.PdfExport" AppendRootKey="false">
+    <Value>PDF Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.PdfExport" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im PDF Format.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreProductPdf" AppendRootKey="false">
+    <Value>Produkt PDF Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreProductPdf" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im PDF Format.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="DemoModeHint">
+    <Value>
+      <![CDATA[Bitte beachten Sie, dass sich dieses Plugin im Demo-Modus befindet und nur 20 Datensätze exportiert werden. 
+        Um das Plugin zu lizensieren besuchen Sie bitte den <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="ConvertPdf">
+    <Value>Konvertiere in PDF</Value>
+  </LocaleResource>
+  <LocaleResource Name="TocTitle">
+    <Value>Inhaltsverzeichnis</Value>
+  </LocaleResource>
+  <LocaleResource Name="SpecificationAttributes">
+    <Value>Spezifikation</Value>
+  </LocaleResource>
+  <LocaleResource Name="AssociatedProducts">
+    <Value>Gruppierte Produkte</Value>
+  </LocaleResource>
+  <LocaleResource Name="PdfExport">
+    <Value>PDF Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExportToPdfSelected">
+    <Value>Ausgewählte nach PDF exportieren</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExportToPdfAll">
+    <Value>Alles nach PDF exportieren</Value>
+  </LocaleResource>
+</Language>

@@ -1,0 +1,97 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.CommonExportProviders" AppendRootKey="false">
+    <Value>Data Exports</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.CommonExportProviders" AppendRootKey="false">
+    <Value>Allows to export product, category, manufacturer and other data.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreCategoryCsv" AppendRootKey="false">
+    <Value>Category CSV Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreCategoryCsv" AppendRootKey="false">
+    <Value>Allows to export category data in CSV format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreCategoryXml" AppendRootKey="false">
+    <Value>Category XML Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreCategoryXml" AppendRootKey="false">
+    <Value>Allows to export category data in XML format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreCustomerCsv" AppendRootKey="false">
+    <Value>Customer CSV Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreCustomerCsv" AppendRootKey="false">
+    <Value>Allows to export customer data in CSV format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreCustomerXml" AppendRootKey="false">
+    <Value>Customer XML Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreCustomerXml" AppendRootKey="false">
+    <Value>Allows to export customer data in XML format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreManufacturerCsv" AppendRootKey="false">
+    <Value>Manufacturer CSV Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreManufacturerCsv" AppendRootKey="false">
+    <Value>Allows to export manufacturer data in CSV format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreManufacturerXml" AppendRootKey="false">
+    <Value>Manufacturer XML Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreManufacturerXml" AppendRootKey="false">
+    <Value>Allows to export manufacturer data in XML format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreOrderCsv" AppendRootKey="false">
+    <Value>Order CSV Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreOrderCsv" AppendRootKey="false">
+    <Value>Allows to export order data in CSV format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreOrderXml" AppendRootKey="false">
+    <Value>Order XML Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreOrderXml" AppendRootKey="false">
+    <Value>Allows to export order data in XML format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreProductCsv" AppendRootKey="false">
+    <Value>Product CSV Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreProductCsv" AppendRootKey="false">
+    <Value>Allows to export product data in CSV format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreProductXml" AppendRootKey="false">
+    <Value>Product XML Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreProductXml" AppendRootKey="false">
+    <Value>Allows to export product data in XML format.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.SmartStoreNewsSubscriptionCsv" AppendRootKey="false">
+    <Value>Newsletter Subscribers CSV Export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.SmartStoreNewsSubscriptionCsv" AppendRootKey="false">
+    <Value>Allows to export newsletter subscriber data in CSV format.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="DemoModeHint">
+    <Value>
+      <![CDATA[Please take to account this plugin runs in demo mode and only 20 records will be exported.
+        To buy a license for this plugin please visit the <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="ExportToXmlAll">
+    <Value>Export all to XML</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExportToXmlSelected">
+    <Value>Export selected to XML</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExportToCsv">
+    <Value>Export to CSV</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExportToCsvAll">
+    <Value>Export all to CSV</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExportToCsvSelected">
+    <Value>Export selected to CSV</Value>
+  </LocaleResource>
+</Language>

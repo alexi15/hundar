@@ -1,0 +1,41 @@
+﻿@using SmartStore.Web.Framework;
+@{
+    Layout = "";
+}
+@model SmartStore.IPayment.Models.DDPaymentInfoModel
+
+@Html.SmartLabelFor(model => model.EnterIBAN, false)
+<div data-role="fieldcontain">
+	<input type="radio" id="EnterIBAN_1" name="EnterIBAN" value="no-iban" @(Model.EnterIBAN == "no-iban" ? "checked=\"checked\"" : "")  />
+	<label for="EnterIBAN_1">@T("Plugins.Payments.IPaymentDirectDebit.NoEnterIBAN")</label>
+	<input type="radio" id="EnterIBAN_2" name="EnterIBAN" value="iban" @(Model.EnterIBAN == "iban" ? "checked=\"checked\"" : "")  />
+	<label for="EnterIBAN_2">@T("Plugins.Payments.IPaymentDirectDebit.YesEnterIBAN")</label>
+</div>
+@Html.SmartLabelFor(model => model.ElvAccountHolder, false)
+@Html.TextBoxFor(model => model.ElvAccountHolder, new { autocomplete = "off" })
+<div class="ipayment-no-iban">
+	@Html.SmartLabelFor(model => model.ElvAccountNumber, false)
+	@Html.TextBoxFor(model => model.ElvAccountNumber, new { autocomplete = "off" })
+	@Html.SmartLabelFor(model => model.ElvBankCode, false)
+	@Html.TextBoxFor(model => model.ElvBankCode, new { autocomplete = "off" })
+	@Html.SmartLabelFor(model => model.ElvCountry, false)
+	@Html.DropDownListFor(model => model.ElvCountry, Model.Countries, new { data_native_menu = "false" })
+</div>
+<div class="ipayment-iban">
+	@Html.SmartLabelFor(model => model.ElvIBAN, false)
+	@Html.TextBoxFor(model => model.ElvIBAN, new { autocomplete = "off" })
+	@Html.SmartLabelFor(model => model.ElvBIC, false)
+	@Html.TextBoxFor(model => model.ElvBIC, new { autocomplete = "off" })
+</div>
+@Html.SmartLabelFor(model => model.ElvBankName, false)
+@Html.TextBoxFor(model => model.ElvBankName, new { autocomplete = "off" })
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('input[name=EnterIBAN]').change(function () {
+			var value = $(this).filter(':checked').val();
+			$('.ipayment-' + value).slideDown('fast');
+			$('.ipayment-' + (value === 'iban' ? 'no-iban' : 'iban')).slideUp('fast');
+		}).trigger('change');
+	});
+</script>

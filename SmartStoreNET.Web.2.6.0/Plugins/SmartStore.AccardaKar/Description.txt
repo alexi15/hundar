@@ -1,0 +1,10 @@
+﻿FriendlyName: Accarda-KaR
+SystemName: SmartStore.AccardaKar
+Group: Payment
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.AccardaKar.dll
+ResourceRootKey: Plugins.SmartStore.AccardaKar
+Url: http://community.smartstore.com/marketplace/file/26-accarda-kauf-auf-rechnung-ratenzahlung/

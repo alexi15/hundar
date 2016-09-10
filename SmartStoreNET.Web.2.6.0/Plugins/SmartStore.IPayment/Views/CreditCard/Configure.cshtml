@@ -1,0 +1,163 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Web.Framework.UI;
+@using SmartStore.IPayment.Models;
+@model CCConfigurationModel
+@{
+    Layout = "";
+	Html.AddCssFileParts(true, "~/Plugins/SmartStore.IPayment/Content/smartstore.ipaymentcc.css");
+}
+
+<div class="plugin-configuration">
+	<div>
+		<div class="alert alert-info">
+			<button class="close" data-dismiss="alert">×</button>
+			@Html.Raw(@T("Plugins.Payments.IPaymentCreditCard.AdminInstruction"))
+		</div>
+	</div>
+	<div>
+		<a href="http://hosting.1und1.de/ipayment" target="_blank">
+			<img src="@Url.Content("~/Plugins/SmartStore.IPayment/Content/images/logo245x87.png")" alt="ipayment" />
+		</a>
+	</div>
+</div>
+
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+
+@using (Html.BeginForm())
+{
+	<table class="adminContent">
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AccountID)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AccountID)
+            @Html.ValidationMessageFor(model => model.AccountID)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AppID)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AppID)
+            @Html.ValidationMessageFor(model => model.AppID)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AppPassword)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AppPassword)
+            @Html.ValidationMessageFor(model => model.AppPassword)
+        </td>
+    </tr>
+    <tr id="IpaymentAdminActionPassword">
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AdminActionPassword)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AdminActionPassword)
+            @Html.ValidationMessageFor(model => model.AdminActionPassword)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.SecurityKey)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.SecurityKey)
+            @Html.ValidationMessageFor(model => model.SecurityKey)
+        </td>
+    </tr>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.TransactionType)
+        </td>
+        <td class="adminData">
+			@Html.SettingOverrideCheckbox(model => model.TransactionType)
+			@Html.DropDownList("TransactionType", new List<SelectListItem> {
+				new SelectListItem { Selected = (Model.TransactionType == "auth"), Text = @T("Plugins.Payments.IPaymentCreditCard.ModeAuthAndCapture"), Value = "auth" },
+				new SelectListItem { Selected = (Model.TransactionType == "preauth"), Text = @T("Plugins.Payments.IPaymentCreditCard.ModeAuth"), Value = "preauth" }
+			})
+            @Html.ValidationMessageFor(model => model.TransactionType)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.ExcludedCreditCards)
+        </td>
+        <td class="adminData">
+            <input type="hidden" name="newExcludedCreditCards" />
+
+			@Html.SettingOverrideCheckbox(model => model.ExcludedCreditCards)
+            @(Html.DropDownListFor(model => model.ExcludedCreditCards, Model.AvailableCreditCards, null, new { multiple = "multiple" }))
+            @Html.ValidationMessageFor(model => model.ExcludedCreditCards)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AdditionalFee)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AdditionalFee)
+            @Html.ValidationMessageFor(model => model.AdditionalFee)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AdditionalFeePercentage)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AdditionalFeePercentage)
+            @Html.ValidationMessageFor(model => model.AdditionalFeePercentage)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.CheckCcMismatch)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.CheckCcMismatch)
+            @Html.ValidationMessageFor(model => model.CheckCcMismatch)
+        </td>
+    </tr>
+	<tr>
+		<td class="adminTitle">
+			@Html.SmartLabelFor(model => model.CheckIP)
+		</td>
+		<td class="adminData">
+			@Html.EditorFor(model => model.CheckIP)
+			@Html.ValidationMessageFor(model => model.CheckIP)
+		</td>
+	</tr>
+    <tr>
+        <td class="adminTitle">&nbsp;</td>
+        <td class="adminData">
+            <button id="IpaymentSaveConfiguration" type="submit" name="save" class="btn btn-primary" value="save">
+                <i class="fa fa-check"></i>&nbsp;@T("Admin.Common.Save")
+            </button>
+        </td>
+    </tr>
+	</table>
+}
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#TransactionType').change(function () {
+			$('#IpaymentAdminActionPassword').toggle($(this).val() !== 'auth');
+		}).trigger('change');
+
+		$('#IpaymentSaveConfiguration').click(function () {
+		    var newExcludedCreditCards = $("#@Html.FieldIdFor(model => model.ExcludedCreditCards)").val();
+		    $("input[name=newExcludedCreditCards]").val(newExcludedCreditCards ? newExcludedCreditCards.join() : '');
+		});
+
+		var excludedCreditCards = '@Model.ExcludedCreditCards.EmptyNull()'.split(',');
+		$("#@Html.FieldIdFor(model => model.ExcludedCreditCards)").select2().select2('val', excludedCreditCards);
+	});
+</script>

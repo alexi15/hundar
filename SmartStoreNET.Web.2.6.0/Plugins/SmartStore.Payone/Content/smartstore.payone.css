@@ -1,0 +1,34 @@
+﻿
+.config-logo {
+	width: 336px;
+	height: 39px;
+}
+
+.payone-complete-box {
+	margin: 32px 0 10px 0;
+	text-align: left;
+}
+.payone-complete-box .redirect-button {
+	margin-top: 16px;
+}
+.payone-complete-box .intended-purpose {
+	font-weight: bold;
+}
+.payone-complete-box table {
+	margin: 10px 0 10px 0;
+}
+.payone-complete-box table td {
+	padding-right: 12px;
+}
+
+.payone-mandate-description {
+	margin-bottom: 10px;
+}
+.payone-mandate {
+	overflow: auto;
+	height: 100px;
+	padding: 1px 0 1px 0;
+}
+.payone-mandate-confirm {
+	margin-top: 10px;
+}

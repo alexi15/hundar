@@ -1,0 +1,45 @@
+﻿@using SmartStore.CommonExportProviders;
+@using SmartStore.CommonExportProviders.Providers;
+@{
+    Layout = "";
+}
+<div class="btn-group">
+	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+		@T("Common.Export")
+		<span class="fa fa-caret-down"></span>
+	</a>
+	<ul class="dropdown-menu pull-right">
+		<li>
+			<a href="javascript:void(0)" class="export-data-button"
+			   data-url="@Url.Action("Export", "CommonExportProviders", new { systemName = CustomerXmlExportProvider.SystemName, exportAll = false, area = CommonExportProvidersPlugin.SystemName })">
+				<i class="fa fa-fw fa-code"></i>
+				@T("Plugins.Data.CommonExportProviders.ExportToXmlSelected")
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0)" class="export-data-button"
+			   data-url="@Url.Action("Export", "CommonExportProviders", new { systemName = CustomerCsvExportProvider.SystemName, exportAll = false, area = CommonExportProvidersPlugin.SystemName })">
+				<i class="fa fa-fw fa-file-text-o"></i>
+				@T("Plugins.Data.CommonExportProviders.ExportToCsvSelected")
+			</a>
+		</li>
+
+		<li class="divider"></li>
+
+		<li>
+			<a href="javascript:void(0)" class="export-data-button"
+			   data-url="@Url.Action("Export", "CommonExportProviders", new { systemName = CustomerXmlExportProvider.SystemName, exportAll = true, area = CommonExportProvidersPlugin.SystemName })">
+				<i class="fa fa-fw fa-code"></i>
+				@T("Plugins.Data.CommonExportProviders.ExportToXmlAll")
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0)" class="export-data-button"
+			   data-url="@Url.Action("Export", "CommonExportProviders", new { systemName = CustomerCsvExportProvider.SystemName, exportAll = true, area = CommonExportProvidersPlugin.SystemName })">
+				<i class="fa fa-fw fa-file-text-o"></i>
+				@T("Plugins.Data.CommonExportProviders.ExportToCsvAll")
+			</a>
+		</li>
+	</ul>
+	@Html.Partial("ExportButtonsGeneral")
+</div>

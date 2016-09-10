@@ -1,0 +1,10 @@
+﻿@using SmartStore.Viveum.Models;
+@model PaymentInfoModel
+@{
+	Layout = "";
+}
+<div class="media">
+	<div class="media-body">
+		@T("Plugins.SmartStore.Viveum.PaymentMethodInfo") @Model.AvailablePaymentBrands
+	</div>
+</div>

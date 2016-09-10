@@ -1,0 +1,19 @@
+﻿@model PdfProductModel
+@using SmartStore.PdfExport.Models;
+@{
+	Layout = null;
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/print.css" />
+
+<hr />
+
+<div class="clearfix">
+	<div class="pull-right">
+		<span class="page"></span> @T("Admin.Common.Of") <span class="topage"></span>
+	</div>
+	<div class="title" style="text-align: center;">
+        @((string)Model.Store.Name)
+    </div>
+</div>
+

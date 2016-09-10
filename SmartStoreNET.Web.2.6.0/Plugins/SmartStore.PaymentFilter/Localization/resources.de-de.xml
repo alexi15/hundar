@@ -1,0 +1,85 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+	<LocaleResource Name="Plugins.FriendlyName.SmartStore.PaymentFilter" AppendRootKey="false">
+		<Value>Filter für Zahlungsarten</Value>
+	</LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.PaymentFilter" AppendRootKey="false">
+    <Value>Ermöglicht das Filtern von Zahlungsarten im Kassenbereich. Bietet das Filtern nach Kundengruppen, Ländern, Bestellwert und Versandsarten, so wie diverse Regeln wie "Kunde hat weniger als n Aufträge erteilt" und "Kunde hat weniger als x Betrag ausgegeben".</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterCountryContext.BillingAddress" AppendRootKey="false">
+    <Value>Rechnungsadresse</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterCountryContext.ShippingAddress" AppendRootKey="false">
+    <Value>Versandadresse</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterAmountContext.SubtotalAmount" AppendRootKey="false">
+    <Value>Zwischensumme</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterAmountContext.TotalAmount" AppendRootKey="false">
+    <Value>Gesamtsumme</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="ExcludedCustomerRoles">
+    <Value>Kundengruppen</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCustomerRoles.Hint">
+    <Value>Legt Kundengruppen fest, für die die Zahlungsart nicht angeboten werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCountries">
+    <Value>Länder</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCountries.Hint">
+    <Value>Legt Länder fest, für die die Zahlungsart nicht angeboten werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CountryContext">
+    <Value>Länder beziehen sich auf</Value>
+  </LocaleResource>
+  <LocaleResource Name="CountryContext.Hint">
+    <Value>Legt die Adresse fest, auf den sich die gewählten Länder beziehen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedShippingMethods">
+    <Value>Versandarten</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedShippingMethods.Hint">
+    <Value>Legt Versandarten fest, für die die Zahlungsart nicht angeboten werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="MinimumOrderAmount">
+    <Value>Mindestbestellwert</Value>
+  </LocaleResource>
+  <LocaleResource Name="MinimumOrderAmount.Hint">
+    <Value>Legt den Mindestbestellwert fest, ab dem die Zahlungsart angeboten werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="MaximumOrderAmount">
+    <Value>Maximalbestellwert</Value>
+  </LocaleResource>
+  <LocaleResource Name="MaximumOrderAmount.Hint">
+    <Value>Legt den maximalen Bestellwert fest, bis zu dem die Zahlungsart angeboten werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AmountContext">
+    <Value>Betrag bezieht sich auf</Value>
+  </LocaleResource>
+  <LocaleResource Name="AmountContext.Hint">
+    <Value>Legt den Betrag fest, auf den sich die Mindest- und Maximalbestellwerte beziehen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanOrders">
+    <Value>Kunde hat weniger als n Aufträge erteilt</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanOrders.Hint">
+    <Value>Diese Zahlungsart nicht anbieten, wenn der Kunde weniger als n Aufträge erteilt hat.</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanTotalAmount">
+    <Value>Kunde hat weniger als x Betrag ausgegeben</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanTotalAmount.Hint">
+    <Value>Diese Zahlungsart nicht anbieten, wenn der Kunde insgesamt weniger als x Betrag ausgegeben hat.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Selection">
+    <Value>Auswahl</Value>
+  </LocaleResource>
+  <LocaleResource Name="Reverse">
+    <Value>Umkehren</Value>
+  </LocaleResource>
+  <LocaleResource Name="Eu">
+    <Value>Europäische Union</Value>
+  </LocaleResource>
+</Language>

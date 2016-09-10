@@ -1,0 +1,203 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.NewsImporter" AppendRootKey="false">
+    <Value>News-Importer</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.NewsImporter" AppendRootKey="false">
+    <Value>Ermöglich es News automatisch aus RSS-Feeds zu importieren.</Value>
+  </LocaleResource>
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<p>xyz.</p>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="LicensingHint">
+    <Value>
+      <![CDATA[Bitte beachten Sie, dass dieses Plugin unlizenziert ist und daher keine News importiert werden können. 
+        Um das Plugin zu lizensieren besuchen Sie bitte den <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="ConfigSaveNote">
+    <Value>Einstellungen wurden erfolgreich gespeichert. Starten Sie die Anwendung bitte neu, falls "News automatisch importieren" geändert wurde.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AddFeed">
+    <Value>Feed hinzufügen</Value>
+  </LocaleResource>
+  <LocaleResource Name="EditFeed">
+    <Value>Feed bearbeiten</Value>
+  </LocaleResource>
+  <LocaleResource Name="ImageEmbeddingTopLeftFloated">
+    <Value><![CDATA[<img src="{0}" style="float: left; max-width: 320px; margin: 3px 20px 10px 0;" alt="" />]]></Value>
+  </LocaleResource>
+  <LocaleResource Name="ImageEmbeddingAppend">
+    <Value><![CDATA[<img src="{0}" style="clear:both; display: block; max-width: 320px; margin: 10px 0 10px 0;" alt="" />]]></Value>
+  </LocaleResource>
+  <LocaleResource Name="HyperlinkAppend">
+    <Value><![CDATA[&nbsp;<a href="{0}" target="_blank" rel="nofollow">Mehr...</a>]]></Value>
+  </LocaleResource>
+  <LocaleResource Name="ImportNow">
+    <Value>Jetzt importieren!</Value>
+  </LocaleResource>
+  <LocaleResource Name="ImportAll">
+    <Value>Jetzt alle Feeds importieren!</Value>
+  </LocaleResource>
+ 
+  <LocaleResource Name="UpdateNews">
+    <Value>News aktualisieren</Value>
+  </LocaleResource>
+  <LocaleResource Name="UpdateNews.Hint">
+    <Value>Legt fest, ab bereits importierte News nachträglich aktualisiert werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TaskEnabled">
+    <Value>News automatisch importieren</Value>
+  </LocaleResource>
+  <LocaleResource Name="TaskEnabled.Hint">
+    <Value>Aktivieren Sie diese Option, falls die News automatisch importiert werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TaskExecuteEachMinutes">
+    <Value>Zeitspanne (in Minuten)</Value>
+  </LocaleResource>
+  <LocaleResource Name="TaskExecuteEachMinutes.Hint">
+    <Value>Die Zeitspanne nach der die News automatisch importiert werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="OldestNewsDays">
+    <Value>Maximales Alter (in Tagen)</Value>
+  </LocaleResource>
+  <LocaleResource Name="OldestNewsDays.Hint">
+    <Value>Legt das maximale Alter von News in Tagen fest. News, die älter sind werden nicht importiert.</Value>
+  </LocaleResource>
+  <LocaleResource Name="DeleteOldNews">
+    <Value>Alte News löschen</Value>
+  </LocaleResource>
+  <LocaleResource Name="DeleteOldNews.Hint">
+    <Value>Legt fest, ob alte News automatisch gelöscht werden sollen.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Url">
+    <Value>RSS Feed URL</Value>
+  </LocaleResource>
+  <LocaleResource Name="Url.Hint">
+    <Value>Legt die URL des RSS Feeds fest, aus dem Daten importiert werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Url.Validate">
+    <Value>Bitte eine gültige URL zu einem RSS Feed angeben. Diese muss mit "http(s)" und darf nicht mit "feed" beginnen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Publish">
+    <Value>News veröffentlichen</Value>
+  </LocaleResource>
+  <LocaleResource Name="Publish.Hint">
+    <Value>Legt fest, ob importierte News automatisch veröffentlicht werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AllowComments">
+    <Value>Kommentare erlauben</Value>
+  </LocaleResource>
+  <LocaleResource Name="AllowComments.Hint">
+    <Value>Legt fest, ob importierte News kommentiert werden können.</Value>
+  </LocaleResource>
+  <LocaleResource Name="LanguageId">
+    <Value>Sprache</Value>
+  </LocaleResource>
+  <LocaleResource Name="LanguageId.Hint">
+    <Value>Legt die Sprache der importierten News fest (optional). Ohne diese Angabe wird die Sprache anhand des Feeds ermittelt oder auf die Standardsprache des Shops zurückgefallen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ImageEmbeddingType">
+    <Value>Bild einbetten</Value>
+  </LocaleResource>
+  <LocaleResource Name="ImageEmbeddingType.Hint">
+    <Value>Legt fest, ob und wie Bilder in die Langbeschreibung der News eingebettet werden sollen. Der Feed muss dazu ein Bild als sogenanntes Enclosure exportieren.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AppendLink">
+    <Value>Nachricht verlinken</Value>
+  </LocaleResource>
+  <LocaleResource Name="AppendLink.Hint">
+    <Value>Legt fest, ob ein Hyperlink an die Langbeschreibung der News angehängt werden soll. Über ihn gelangt man zur ursprünglichen Nachricht.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filter">
+    <Value>Einträge filtern</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filter.Hint">
+    <Value>Legt fest, ob und wie die Feed-Einträge gefiltert werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="FilterValues">
+    <Value>Zu filternde Werte</Value>
+  </LocaleResource>
+  <LocaleResource Name="FilterValues.Hint">
+    <Value>Legt Werte fest, nach denen die Feed-Einträge gefiltert werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameFilter">
+    <Value>Tag-Name der Filterwerte</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameFilter.Hint">
+    <Value>Legt den XML Tag-Namen für die zu filternden Werte fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameShortDescription">
+    <Value>Tag-Name der Kurzbeschreibung</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameShortDescription.Hint">
+    <Value>Legt den XML Tag-Namen für die News-Kurzbeschreibung fest. Ohne diese Angabe wird die RSS-Description des Feeds importiert.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameLongDescription">
+    <Value>Tag-Name der Langbeschreibung</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameLongDescription.Hint">
+    <Value>Legt den XML Tag-Namen für die News-Langbeschreibung fest. Ohne diese Angabe wird die RSS-Description des Feeds als Langbeschreibung importiert.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameMetaKeywords">
+    <Value>Tag-Name der Keywords</Value>
+  </LocaleResource>
+  <LocaleResource Name="TagNameMetaKeywords.Hint">
+    <Value>Legt den XML Tag-Namen für die Meta-Keywords fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TitleToPlainText">
+    <Value>HTML im Titel entfernen</Value>
+  </LocaleResource>
+  <LocaleResource Name="TitleToPlainText.Hint">
+    <Value>Legt fest, ob der Titel in unformatierten Text umgewandelt werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ShortDescriptionToPlainText">
+    <Value>HTML in Kurzbeschreibung entfernen</Value>
+  </LocaleResource>
+  <LocaleResource Name="ShortDescriptionToPlainText.Hint">
+    <Value>Legt fest, ob die Kurzbeschreibung in unformatierten Text umgewandelt werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="LongDescriptionToPlainText">
+    <Value>HTML in Langbeschreibung entfernen</Value>
+  </LocaleResource>
+  <LocaleResource Name="LongDescriptionToPlainText.Hint">
+    <Value>Legt fest, ob die Langbeschreibung in unformatierten Text umgewandelt werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="NumberOfFailures">
+    <Value>Fehlschläge</Value>
+  </LocaleResource>
+  <LocaleResource Name="NumberOfFailures.Hint">
+    <Value>Anzahl der fehlgeschlagenen Importe.</Value>
+  </LocaleResource>
+  <LocaleResource Name="NumberOfImports">
+    <Value>Importe</Value>
+  </LocaleResource>
+  <LocaleResource Name="NumberOfImports.Hint">
+    <Value>Anzahl der durchgeführten Importe.</Value>
+  </LocaleResource>
+  <LocaleResource Name="NumberOfImportedNews">
+    <Value>Importierte News</Value>
+  </LocaleResource>
+  <LocaleResource Name="NumberOfImportedNews.Hint">
+    <Value>Anzahl der insgesamt importierten News.</Value>
+  </LocaleResource>
+  <LocaleResource Name="LastImport">
+    <Value>Letzter Import</Value>
+  </LocaleResource>
+  <LocaleResource Name="LastImport.Hint">
+    <Value>Datum des letzten Imports.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Enums.SmartStore.NewsImporter.Core.ImageEmbeddingType.None" AppendRootKey="false">
+    <Value>Nicht einbetten</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.NewsImporter.Core.ImageEmbeddingType.TopLeftFloated" AppendRootKey="false">
+    <Value>Oben links fließend</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.NewsImporter.Core.ImageEmbeddingType.Append" AppendRootKey="false">
+    <Value>Anhängen</Value>
+  </LocaleResource>
+ 
+</Language>

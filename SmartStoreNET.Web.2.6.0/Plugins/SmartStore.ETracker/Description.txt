@@ -1,0 +1,10 @@
+﻿FriendlyName: etracker
+SystemName: SmartStore.ETracker
+Group: Analytics
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.ETracker.dll
+ResourceRootKey: Plugins.Widgets.ETracker
+Url: http://community.smartstore.com/marketplace/file/14-etracker-web-analyzer/

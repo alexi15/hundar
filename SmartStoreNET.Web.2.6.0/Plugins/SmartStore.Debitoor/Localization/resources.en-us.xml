@@ -1,0 +1,282 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+	<LocaleResource Name="Plugins.FriendlyName.SmartStore.Debitoor" AppendRootKey="false">
+		<Value>Debitoor</Value>
+	</LocaleResource>
+	<LocaleResource Name="Plugins.Description.SmartStore.Debitoor" AppendRootKey="false">
+		<Value>Automatic data exchange with the popular online invoicing and accounting software.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdminInformationInvoice">
+		<Value>
+			<![CDATA[
+			<p>Debitoor - the free Invoicing & Accounting Software. Create invoices online in less than a minute, customize and send to customers.</p>
+			<a href="https://debitoor.com/" class="btn btn-info" target="debitoor">Inform and sign-up!</a>
+			]]>
+		</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdminInformationAccounting">
+		<Value>
+			<![CDATA[
+			<p>Online Accounting simple and clearly. Keep track of expenses, get on top of your accounts.... all this and much more offers Debitoor.</p>
+			]]>
+		</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[
+      <p>Step by step set up guide to connect your store with Debitoor:</p>
+      <ul>
+				<li>Sign-up at <a href="https://debitoor.com/" target="debitoor">Debitoor</a> for free and register an app under <b>Settings > Account > Developer > Register</b>.</li>
+				<li>Enter an app name (e.g. the name of your store) and the callback URL (s. below on this page).</li>
+				<li>After clicking <b>Register</b> the Client-ID and Client Secret are shown in the right panel. Enter them below on this page and save them.</li>
+				<li>Now click <b>Create Debitoor Token</b>. After a short time the token should be displayed in its field.</li>
+        <li>Execute <b>Refresh and save data</b> to load production data at Debitoor.</li>
+				<li>Check the option <b>Is active</b> and save your configuration. Your store is now able to exchange data with Debitoor.</li>
+			</ul>
+			<p>If you should later delete your Debitoor account (and thus all your Debitoor data), then please run <b>Delete</b> further below. This will ensure that no unnecessary data will remain in the database.
+      <br />Make sure that the configuration does not mismatch your Debitoor settings (e.g. the price type), otherwise you will get error messages of type "malformed".</p>
+			]]>
+		</Value>
+	</LocaleResource>
+	<LocaleResource Name="LongRunning">
+		<Value>This process can take up to several minutes depending on the amount of data.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ButtonCreateToken">
+		<Value>Create Debitoor token</Value>
+	</LocaleResource>
+	<LocaleResource Name="DebitoorReports">
+		<Value>Debitoor reports</Value>
+	</LocaleResource>
+	<LocaleResource Name="ButtonRefreshDebitoorConfigData">
+		<Value>Refresh and save data</Value>
+	</LocaleResource>
+	<LocaleResource Name="ButtonRefreshDebitoorConfigData.Hint">
+		<Value>Loads the current production data from Debitoor and saves it.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ConfigGroupAccessData">
+		<Value>Access data</Value>
+	</LocaleResource>
+	<LocaleResource Name="ConfigGroupProductionData">
+		<Value>Production data from Debitoor</Value>
+	</LocaleResource>
+  <LocaleResource Name="ConfigGroupDataExchange">
+    <Value>Data exchange</Value>
+  </LocaleResource>
+	<LocaleResource Name="ConfigGroupOtherOptions">
+		<Value>More options</Value>
+	</LocaleResource>
+	<LocaleResource Name="RequestStatus">
+		<Value>n/a;failed;inserted;updated;deleted;archived;is up-to-date;not found;ignored;booked;partially updated;marked as paid;sent as email</Value>
+	</LocaleResource>
+	<LocaleResource Name="OrderNoteStrings">
+		<Value>Data for Debitoor checked and sent;Invoice draft;Customer;Product;Invoice</Value>
+	</LocaleResource>
+	<LocaleResource Name="DeleteAll.Confirm">
+		<Value>Do you want to delete all data? That should be done if you have deleted your Debitoor account (and thus all your Debitoor data).</Value>
+	</LocaleResource>
+  <LocaleResource Name="PriceTypes">
+    <Value>-;Gross;Net</Value>
+  </LocaleResource>
+	<LocaleResource Name="OrderManuallyUpdate.Link">
+		<Value>
+			<![CDATA[<a href="{0}" title="Send now current order data to Debitoor!">Update now!</a>]]>
+		</Value>
+	</LocaleResource>
+	<LocaleResource Name="OrderManuallyUpdate.Note">
+		<Value>The data has been transmitted to Debitoor. For more details, see the added order note.</Value>
+	</LocaleResource>
+  <LocaleResource Name="OtherAmount">
+    <Value>Miscellaneous</Value>
+  </LocaleResource>
+	<LocaleResource Name="ReversePaid">
+		<Value>Unpaid oders with Debitoor invoice</Value>
+	</LocaleResource>
+	<LocaleResource Name="ReversePaid.Hint">
+		<Value>You can retrieve invoices marked as paid at Debitoor and then mark the corresponding shop order as paid, unless the invoice has been booked and created by the plugin.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ReversePaid.Process">
+		<Value>Apply paid status</Value>
+	</LocaleResource>
+	<LocaleResource Name="ReversePaid.Note">
+		<Value>Number of orders marked as paid: {0}.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ClientId">
+		<Value>Client ID</Value>
+	</LocaleResource>
+	<LocaleResource Name="ClientId.Hint">
+		<Value>The Debitoor Client ID. Can be created in your application settings at Debitoor.</Value>
+	</LocaleResource>
+  <LocaleResource Name="ClientId.Validate">
+    <Value>Please enter the Debitoor Client ID in the corresponding field.</Value>
+  </LocaleResource>
+	<LocaleResource Name="ClientSecret">
+		<Value>Client Secret</Value>
+	</LocaleResource>
+	<LocaleResource Name="ClientSecret.Hint">
+		<Value>The Debitoor Client Secret. Can be created in your application settings at Debitoor.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Token">
+		<Value>Token</Value>
+	</LocaleResource>
+	<LocaleResource Name="Token.Hint">
+		<Value>The Debitoor token grants SmartStore.NET access to your Debitoor account.</Value>
+	</LocaleResource>
+	<LocaleResource Name="TokenCreation">
+		<Value>Token created on</Value>
+	</LocaleResource>
+	<LocaleResource Name="TokenCreation.Hint">
+		<Value>The date the token has been created.</Value>
+	</LocaleResource>
+	<LocaleResource Name="IsActive">
+		<Value>Is active</Value>
+	</LocaleResource>
+	<LocaleResource Name="IsActive.Hint">
+		<Value>Determines if SmartStore.NET should exchange data with your Debitoor account.</Value>
+	</LocaleResource>
+	<LocaleResource Name="CallbackUrl">
+		<Value>Callback URL</Value>
+	</LocaleResource>
+	<LocaleResource Name="CallbackUrl.Hint">
+		<Value>Debitoor redirects to this URL. Must be saved in the account settings at Debitoor.</Value>
+	</LocaleResource>
+	<LocaleResource Name="PaymentTermsId">
+		<Value>Payment term</Value>
+	</LocaleResource>
+	<LocaleResource Name="PaymentTermsId.Hint">
+		<Value>Debitoor payment term to be used when creating or updating customer data.</Value>
+	</LocaleResource>
+	<LocaleResource Name="CustomPaymentTermsDays">
+		<Value>Days</Value>
+	</LocaleResource>
+	<LocaleResource Name="CustomPaymentTermsDays.Hint">
+		<Value>Number of days.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddressFormat">
+		<Value>Address format</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddressFormat.Hint">
+		<Value>Determines the format of how the "city row" of addresses should be transmitted to Debitoor.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddressFormat.Type">
+		<Value>n/a;Postcode City;Postcode City, State/Province;City, Postcode;City, State/Province Postcode</Value>
+	</LocaleResource>
+	<LocaleResource Name="DefaultCountryCode">
+		<Value>Country</Value>
+	</LocaleResource>
+	<LocaleResource Name="DefaultCountryCode.Hint">
+		<Value>Determines what country to fallback if there is no country indication available for the customer.</Value>
+	</LocaleResource>
+	<LocaleResource Name="UnitIdProduct">
+		<Value>Product measure unit</Value>
+	</LocaleResource>
+	<LocaleResource Name="UnitIdProduct.Hint">
+		<Value>Debitoor product measure unit to be used when creating or updating product data.</Value>
+	</LocaleResource>
+	<LocaleResource Name="MappingRecords">
+		<Value>Stored mappings</Value>
+	</LocaleResource>
+	<LocaleResource Name="MappingRecords.Hint">
+		<Value>The number of mapping records stored in the database. These records are required to identify and subsequently update records at Debitoor.</Value>
+	</LocaleResource>
+	<LocaleResource Name="InvoiceNotes">
+		<Value>Invoice note</Value>
+	</LocaleResource>
+	<LocaleResource Name="InvoiceNotes.Hint">
+		<Value>Optional note that appear at the top of the invoice.</Value>
+	</LocaleResource>
+	<LocaleResource Name="InvoiceNotes.Type">
+		<Value>None;Order Number {0}</Value>
+	</LocaleResource>
+	<LocaleResource Name="InvoiceAdditionalNotes">
+		<Value>Additional invoice notes</Value>
+	</LocaleResource>
+	<LocaleResource Name="InvoiceAdditionalNotes.Hint">
+		<Value>Optional notes that appear at the bottom of the invoice.</Value>
+	</LocaleResource>
+	<LocaleResource Name="PriceDisplayType">
+		<Value>Price type for invoices</Value>
+	</LocaleResource>
+	<LocaleResource Name="PriceDisplayType.Hint">
+		<Value>If set to gross, the price on lines will be displayed as the gross price on the debitoor website. Optional.</Value>
+	</LocaleResource>
+  <LocaleResource Name="ProductPriceType">
+    <Value>Price type for products</Value>
+  </LocaleResource>
+  <LocaleResource Name="ProductPriceType.Hint">
+    <Value>Determines the price type used to create products at Debitoor. Optional.</Value>
+  </LocaleResource>
+	<LocaleResource Name="NetProductCostPrices">
+		<Value>Net product cost prices</Value>
+	</LocaleResource>
+	<LocaleResource Name="NetProductCostPrices.Hint">
+		<Value>Determines that product costs are net rather than gross price values.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddOrderNotes">
+		<Value>Create order notes</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddOrderNotes.Hint">
+		<Value>Determines that order notes should be created in context of the Debitoor data exchange.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddCustomers">
+		<Value>Create customers</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddCustomers.Hint">
+		<Value>Determines that customers should be created at Debitoor.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddProducts">
+		<Value>Create products</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddProducts.Hint">
+		<Value>Determines that products should be created at Debitoor.</Value>
+	</LocaleResource>
+	<LocaleResource Name="BookPaidInvoices">
+		<Value>Book invoice if paid</Value>
+	</LocaleResource>
+	<LocaleResource Name="BookPaidInvoices.Hint">
+		<Value>Determines whether to automatically book invoices and mark them as paid, if the related order has been paid.</Value>
+	</LocaleResource>
+  <LocaleResource Name="BookPaidInvoicesAndEmail">
+    <Value>Email invoice</Value>
+  </LocaleResource>
+  <LocaleResource Name="BookPaidInvoicesAndEmail.Hint">
+    <Value>Determines whether invoices should be emailed automatically.</Value>
+  </LocaleResource>
+	<LocaleResource Name="ReflectOrderUpdate">
+		<Value>Reflect order updates</Value>
+	</LocaleResource>
+	<LocaleResource Name="ReflectOrderUpdate.Hint">
+		<Value>Determines that updates on an order that are relevant for Debitoor should be automatically transmitted to Debitoor.</Value>
+	</LocaleResource>
+  <LocaleResource Name="VerifyInvoiceTotal">
+    <Value>Check invoice total</Value>
+  </LocaleResource>
+  <LocaleResource Name="VerifyInvoiceTotal.Hint">
+    <Value>Determines whether to check the invoice total calculated by Debitoor and corrected if necessary by adjusting the invoice details.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AttachPdf">
+    <Value>Attach PDF</Value>
+  </LocaleResource>
+  <LocaleResource Name="AttachPdf.Hint">
+    <Value>Determines whether to attach the invoice as a PDF.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CopyMail">
+    <Value>Copy to me</Value>
+  </LocaleResource>
+  <LocaleResource Name="CopyMail.Hint">
+    <Value>Determines whether to send a copy of the email to myself.</Value>
+  </LocaleResource>
+  <LocaleResource Name="EmailSubject">
+    <Value>Subject</Value>
+  </LocaleResource>
+  <LocaleResource Name="EmailSubject.Hint">
+    <Value>Determines the subject of the email.</Value>
+  </LocaleResource>
+  <LocaleResource Name="EmailSubject.Validate">
+    <Value>An email subject is required.</Value>
+  </LocaleResource>
+  <LocaleResource Name="EmailMessage">
+    <Value>Message (optional)</Value>
+  </LocaleResource>
+  <LocaleResource Name="EmailMessage.Hint">
+    <Value>Determines an optional message to the customer.</Value>
+  </LocaleResource>
+</Language>

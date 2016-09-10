@@ -1,0 +1,52 @@
+﻿@using SmartStore.OpenTrans.Providers;
+@{
+	Layout = "";
+}
+
+<div class="plugin-configuration">
+	<div>
+		@if (ViewData["DemoModeHint"] != null)
+		{
+			<div class="alert alert-warning">
+				<button class="close" data-dismiss="alert">×</button>
+				<div>@Html.Raw((string)ViewData["DemoModeHint"])</div>
+			</div>
+		}
+		<div class="alert alert-info">
+			<button class="close" data-dismiss="alert">×</button>
+			@Html.Raw(@T("Plugins.Exports.OpenTrans.AdminInstruction"))
+		</div>
+		<div>
+			@Html.Action("InfoProfile", "Export", new { systemName = OpenTrans10ExportProvider.SystemName, returnUrl = Request.RawUrl, area = "admin" })
+		</div>
+	</div>
+	<div>
+		<a href="http://www.opentrans.de/" target="_blank">
+			<img src="@Url.Content("~/Plugins/SmartStore.OpenTrans/Content/branding.png")" alt="OpenTrans" />
+		</a>
+	</div>
+</div>
+
+<script>
+    $(function () {
+        $(".lexware-factura").click(function () {
+            $(".usage-desc").hide();
+            $("#lexware-factura").show();
+        });
+
+        $(".profitex-business").click(function () {
+            $(".usage-desc").hide();
+            $("#profitex-business").show();
+        });
+
+        $(".sage-new-classic").click(function () {
+            $(".usage-desc").hide();
+            $("#sage-new-classic").show();
+        });
+
+        $(".lexware-wawi").click(function () {
+            $(".usage-desc").hide();
+            $("#lexware-wawi").show();
+        });
+    });
+</script>

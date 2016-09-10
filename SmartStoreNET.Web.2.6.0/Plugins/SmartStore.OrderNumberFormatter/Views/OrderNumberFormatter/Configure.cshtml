@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "";
+}
+@model SmartStore.OrderNumberFormatter.Models.ConfigurationModel
+@using SmartStore.Web.Framework;
+
+<div class="alert alert-info">
+    <button class="close" data-dismiss="alert">x</button>
+    @Html.Raw(@T("Plugins.Admin.OrderNumberFormatter.AdminInstruction"))
+</div>
+
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+	
+@using (Html.BeginForm())
+{    
+if (!ViewData.ModelState.IsValid) 
+{
+    @Html.ValidationSummary(false)
+}
+<table class="adminContent">
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.NumberFormatOrder)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.NumberFormatOrder)
+            @Html.ValidationMessageFor(model => model.NumberFormatOrder)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.DateFormatOrder)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.DateFormatOrder)
+            @Html.ValidationMessageFor(model => model.DateFormatOrder)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.NumberMinLengthOrder)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.NumberMinLengthOrder)
+            @Html.ValidationMessageFor(model => model.NumberMinLengthOrder)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.LeadingCharOrder)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.LeadingCharOrder)
+            @Html.ValidationMessageFor(model => model.LeadingCharOrder)
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="adminSeparator"><hr /></td>
+    </tr>
+
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.NumberFormatCustomer)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.NumberFormatCustomer)
+            @Html.ValidationMessageFor(model => model.NumberFormatCustomer)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.DateFormatCustomer)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.DateFormatCustomer)
+            @Html.ValidationMessageFor(model => model.DateFormatCustomer)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.NumberMinLengthCustomer)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.NumberMinLengthCustomer)
+            @Html.ValidationMessageFor(model => model.NumberMinLengthCustomer)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.LeadingCharCustomer)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.LeadingCharCustomer)
+            @Html.ValidationMessageFor(model => model.LeadingCharCustomer)
+        </td>
+    </tr>
+
+    <tr>
+        <td class="adminTitle">
+            &nbsp;
+        </td>
+        <td class="adminData">
+            <button type="submit" name="save" value="save" class="btn btn-primary">
+				<i class="fa fa-check"></i>
+                @T("Admin.Common.Save")
+            </button>
+        </td>
+    </tr>
+</table>
+}

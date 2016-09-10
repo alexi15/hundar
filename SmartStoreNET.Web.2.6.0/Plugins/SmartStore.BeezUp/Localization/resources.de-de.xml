@@ -1,0 +1,98 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.BeezUp" AppendRootKey="false">
+    <Value>BeezUP Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.BeezUp" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im Feed-Format von BeezUP.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Feeds.BeezUpProductCsv" AppendRootKey="false">
+    <Value>BeezUP CSV Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Feeds.BeezUpProductCsv" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im CSV Feed-Format von BeezUP.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Feeds.BeezUpProductXml" AppendRootKey="false">
+    <Value>BeezUP XML Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Feeds.BeezUpProductXml" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im XML Feed-Format von BeezUP.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="DemoModeHint">
+    <Value>
+      <![CDATA[Bitte beachten Sie, dass sich dieses Plugin im Demo-Modus befindet und nur 20 Datensätze exportiert werden. 
+        Um das Plugin zu lizensieren besuchen Sie bitte den <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="States">
+    <Value>Neu;Gebraucht;Instandgehalten</Value>
+  </LocaleResource>
+  <LocaleResource Name="Stocks">
+    <Value>Auf Lager;Nicht vorrätig</Value>
+  </LocaleResource>
+  <LocaleResource Name="Genders">
+    <Value>Herren;Damen;Mädchen;Jungen;Unisex</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="State">
+    <Value>Zustand</Value>
+  </LocaleResource>
+  <LocaleResource Name="State.Hint">
+    <Value>Legt den Zustand des Produktes fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Guarantee">
+    <Value>Garantie (in Jahren)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Guarantee.Hint">
+    <Value>Legt die Garantiezeit in Jahren fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="GuaranteeDetails">
+    <Value>Garantiedetails</Value>
+  </LocaleResource>
+  <LocaleResource Name="GuaranteeDetails.Hint">
+    <Value>Legt Details zur Garantie fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Stock">
+    <Value>Verfügbarkeit</Value>
+  </LocaleResource>
+  <LocaleResource Name="Stock.Hint">
+    <Value>Legt die Verfügbarkeit des Produktes fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="DeliveryTime">
+    <Value>Lieferzeit (in Tagen)</Value>
+  </LocaleResource>
+  <LocaleResource Name="DeliveryTime.Hint">
+    <Value>Legt die Lieferzeit in Tagen fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Gender">
+    <Value>Geschlecht</Value>
+  </LocaleResource>
+  <LocaleResource Name="Gender.Hint">
+    <Value>Legt fest, für welches Geschlecht das Produkt bestimmt ist.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Color">
+    <Value>Farbe</Value>
+  </LocaleResource>
+  <LocaleResource Name="Color.Hint">
+    <Value>Legt die Produktfarbe fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Size">
+    <Value>Größe</Value>
+  </LocaleResource>
+  <LocaleResource Name="Size.Hint">
+    <Value>Legt die Produktgröße fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Material">
+    <Value>Material</Value>
+  </LocaleResource>
+  <LocaleResource Name="Material.Hint">
+    <Value>Legt das Material des Produktes fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AgeRange">
+    <Value>Altersgruppe</Value>
+  </LocaleResource>
+  <LocaleResource Name="AgeRange.Hint">
+    <Value>Legt eine Altersgruppe zum Produkt fest.</Value>
+  </LocaleResource>
+</Language>

@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "";
+}
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		// pdf export button clicked
+		$('a.export-pdf-button').click(function (e) {
+			e.preventDefault();
+
+			if (confirm('@T("Admin.Common.AskToProceed")')) {
+				var form = '<form id="StartPdfExportForm" action="' + $(this).data('url') + '" method="post">';
+
+				if (typeof selectedIds !== 'undefined') {
+					form += '<input type="hidden" name="selectedIds" value="' + selectedIds.join(',') + '" />';
+				}
+				form += '</form>';
+
+				$('body').append(form);
+				$('#StartPdfExportForm').submit();
+			}
+
+			return false;
+		});
+
+	});
+</script>

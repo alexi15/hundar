@@ -1,0 +1,181 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Web.Framework.UI;
+@using SmartStore.Skrill;
+@using SmartStore.Skrill.Models;
+@using SmartStore.Skrill.Services;
+@model ConfigurationModel
+@{
+    Layout = "";
+	Html.AddCssFileParts(true, Url.Content("~/Plugins/SmartStore.Skrill/Content/smartstore.skrill.css"));
+	Html.AddScriptParts(true, Url.Content("~/Plugins/SmartStore.Skrill/Scripts/smartstore.skrill.js"));
+}
+
+<div class="plugin-configuration">
+	<div>
+		<div class="alert alert-info">
+			<button class="close" data-dismiss="alert">×</button>
+			@Html.Raw(@T("Plugins.SmartStore.Skrill.AdminInstruction"))
+		</div>
+	</div>
+	<div>
+		<a href="https://www.skrill.com/" target="_blank">
+			<img src="@Url.Content("~/Plugins/SmartStore.Skrill/Content/branding.png")" alt="Skrill" class="config-logo" />
+		</a>
+	</div>
+</div>
+
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm())
+{
+	<input type="hidden" name="systemName" id="systemName" value="@Model.SystemName" />
+
+	<table id="SkrillConfigTable" class="adminContent">
+		<tr>
+			<td colspan="2">
+				<div class="admin-config-group">
+					<div class="title">
+						@Model.ConfigGroups.SafeGet(0)
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="adminTitle">
+				@Html.SmartLabelFor(model => model.ApiEmail)
+			</td>
+			<td class="adminData">
+				@Html.SettingEditorFor(model => model.ApiEmail)
+				@Html.ValidationMessageFor(model => model.ApiEmail)
+			</td>
+		</tr>
+		<tr>
+			<td class="adminTitle">
+				@Html.SmartLabelFor(model => model.ApiPassword)
+			</td>
+			<td class="adminData">
+				@Html.SettingEditorFor(model => model.ApiPassword)
+				@Html.ValidationMessageFor(model => model.ApiPassword)
+			</td>
+		</tr>
+		<tr>
+			<td class="adminTitle">
+				@Html.SmartLabelFor(model => model.ApiSecretWord)
+			</td>
+			<td class="adminData">
+				@Html.SettingEditorFor(model => model.ApiSecretWord)
+				@Html.ValidationMessageFor(model => model.ApiSecretWord)
+			</td>
+		</tr>
+		<tr class="adminSeparator">
+			<td colspan="2">
+				<div class="admin-config-group">
+					<div class="title">
+						@Model.ConfigGroups.SafeGet(1)
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="adminTitle">
+				@Html.SmartLabelFor(model => model.AddOrderNotes)
+			</td>
+			<td class="adminData">
+				@Html.SettingEditorFor(model => model.AddOrderNotes)
+				@Html.ValidationMessageFor(model => model.AddOrderNotes)
+			</td>
+		</tr>
+		@if (Model.SkrillPaymentMethods != null && Model.SkrillPaymentMethods.Count > 0)
+		{
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.RestrictPaymentMethods)
+				</td>
+				<td class="adminData">
+					@Html.SettingEditorFor(model => model.RestrictPaymentMethods)
+					@Html.ValidationMessageFor(model => model.RestrictPaymentMethods)
+				</td>
+			</tr>
+			<tr class="payment-methods">
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.ShowPaymentMethodLogos)
+				</td>
+				<td class="adminData">
+					@Html.SettingEditorFor(model => model.ShowPaymentMethodLogos)
+					@Html.ValidationMessageFor(model => model.ShowPaymentMethodLogos)
+				</td>
+			</tr>
+			<tr class="payment-methods">
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.RestrictedPaymentMethods)
+				</td>
+				<td class="adminData">
+					@Html.SettingOverrideCheckbox(model => model.RestrictedPaymentMethods)
+					<select id="RestrictedPaymentMethods" name="RestrictedPaymentMethods" multiple="multiple" class="input-xxlarge">
+						@foreach (var grp in Model.SkrillPaymentMethods.GroupBy(x => x.Group))
+						{
+							<optgroup label="@grp.Key">
+								@foreach (var item in grp)
+								{
+									<option value="@item.Code" @(item.Selected ? "selected='selected'" : "")>@item.Text</option>
+								}
+							</optgroup>
+						}
+					</select>
+				</td>
+			</tr>
+			<tr class="payment-methods">
+				<td colspan="2">
+					<div class="alert alert-info">
+						<button class="close" data-dismiss="alert">×</button>
+						@Html.Raw(T("Plugins.SmartStore.Skrill.QuickCheckout.SkrillPaymentMethodsInfos", Html.GetPaymentMethodsInfoTable()))
+					</div>
+				</td>
+			</tr>
+		}
+		<tr class="adminSeparator">
+			<td colspan="2">
+				<div class="admin-config-group">
+					<div class="title">
+						@Model.ConfigGroups.SafeGet(2)
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="adminTitle">
+				@Html.SmartLabelFor(model => model.AdditionalFee)
+			</td>
+			<td class="adminData">
+				@Html.SettingEditorFor(model => model.AdditionalFee)
+				@Html.ValidationMessageFor(model => model.AdditionalFee)
+			</td>
+		</tr>
+		<tr>
+			<td class="adminTitle">
+				@Html.SmartLabelFor(model => model.AdditionalFeePercentage)
+			</td>
+			<td class="adminData">
+				@Html.SettingEditorFor(model => model.AdditionalFeePercentage)
+				@Html.ValidationMessageFor(model => model.AdditionalFeePercentage)
+			</td>
+		</tr>
+
+		<tr>
+			<td class="adminTitle">&nbsp;</td>
+			<td class="adminData">
+				<button id="SaveConfigButton" type="submit" name="save" class="btn btn-primary" value="save">
+					<i class="fa fa-check"></i>&nbsp;@T("Admin.Common.Save")
+				</button>
+			</td>
+		</tr>
+	</table>
+}
+
+<script type="text/javascript">
+	jQuery(document).ready(function () {
+		skrill.init();
+	});
+</script>

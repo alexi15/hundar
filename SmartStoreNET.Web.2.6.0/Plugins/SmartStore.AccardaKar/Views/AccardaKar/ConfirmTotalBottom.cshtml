@@ -1,0 +1,71 @@
+﻿@using SmartStore.Web.Framework;
+
+@model SmartStore.AccardaKar.Models.SummaryTotalModel
+
+@{
+	Html.AddCssFileParts(true, Url.Content("~/Plugins/SmartStore.AccardaKar/Content/smartstore.accardakar.css"));
+}
+
+@if (Model.TotalAmount.HasValue())
+{
+	<div class="accarda-summary-bottom total-info">
+		@if (!string.IsNullOrWhiteSpace(Model.OrderTotalNoteTop))
+		{
+			<div class="accarda-total-note-top">@Model.OrderTotalNoteTop</div>
+		}
+
+		<table class="cart-total table">
+			<tbody>
+				@if (Model.TotalInterest.HasValue())
+				{
+					<tr>
+						<td class="cart-total-left">
+							<span class="nobr">@T("Plugins.SmartStore.AccardaKar.Interest"):</span>
+						</td>
+						<td class="cart-total-right">
+							<span><span class="product-price">@Model.TotalInterest</span></span>
+						</td>
+					</tr>
+				}
+				@if (Model.InvoiceFee.HasValue())
+				{
+					<tr>
+						<td class="cart-total-left">
+							<span class="nobr">@T("Plugins.SmartStore.AccardaKar.InvoiceFee"):</span>
+						</td>
+						<td class="cart-total-right">
+							<span><span class="product-price">@Model.InvoiceFee</span></span>
+						</td>
+					</tr>
+				}
+				<tr class="omega lined">
+					<td class="cart-total-left">
+						<span class="nobr"><strong>@T("ShoppingCart.Totals.OrderTotal"):</strong></span>
+					</td>
+					<td class="cart-total-right">
+						<span><span class="product-price order-total">@Model.TotalAmount</span></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		@if (!string.IsNullOrWhiteSpace(Model.OrderTotalNoteBottom))
+		{
+			<div class="accarda-total-note-bottom">@Model.OrderTotalNoteBottom</div>
+		}
+	</div>
+
+	<script type="text/javascript">
+		$(function () {
+			try {
+				var lastRow = $('table').addBack().find('.cart-total').first().find('tr:last-child');
+				lastRow.css('backgroundColor', 'transparent');
+
+				var lastStrong = lastRow.find('.cart-total-left span');
+				if (lastStrong)
+					lastStrong.text('@T("ShoppingCart.Totals.SubTotal"):');
+			}
+			catch (e) { }
+		});
+	</script>
+}

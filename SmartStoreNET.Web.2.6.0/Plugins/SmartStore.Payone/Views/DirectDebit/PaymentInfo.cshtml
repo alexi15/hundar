@@ -1,0 +1,10 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Payone.Models;
+@model DirectDebitPaymentInfoModel
+@{
+    Layout = "";
+}
+
+<div class="form-horizontal payone-directdebit">
+	@Html.Partial("BankingPaymentInfo", Model as PaymentInfoBankingBaseModel)
+</div>

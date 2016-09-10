@@ -1,0 +1,11 @@
+﻿FriendlyName: PayDirekt
+Description: Provides the PayDirekt payment methods.
+SystemName: SmartStore.PayDirekt
+Group: Payment
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.PayDirekt.dll
+ResourceRootKey: Plugins.SmartStore.PayDirekt
+Url: 

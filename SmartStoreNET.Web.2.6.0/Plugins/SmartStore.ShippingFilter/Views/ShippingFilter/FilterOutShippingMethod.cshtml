@@ -1,0 +1,102 @@
+﻿@using SmartStore.ShippingFilter;
+@using SmartStore.ShippingFilter.Models;
+@model FilterOutShippingMethodModel
+@{
+	Layout = null;
+}
+
+@Html.Hidden("__Type__", Model.GetType().AssemblyQualifiedName)
+
+<table id="ShippingMethodFilterControls" class="adminContent">
+	<tr>
+		<td class="adminTitle">
+			@Html.SmartLabelFor(model => model.ExcludedCustomerRoles)
+		</td>
+		<td class="adminData">
+			@Html.ListBoxFor(model => model.ExcludedCustomerRoles,
+				new MultiSelectList(Model.AvailableCustomerRoles, "Value", "Text"),
+				new { multiple = "multiple", @class = "control-xlarge" })
+			@Html.ValidationMessageFor(model => model.ExcludedCustomerRoles)
+		</td>
+	</tr>
+	<tr>
+		<td class="adminTitle">
+			@Html.SmartLabelFor(model => model.ExcludedCountries)
+		</td>
+		<td class="adminData">
+			@Html.ListBoxFor(model => model.ExcludedCountries,
+				new MultiSelectList(Model.AvailableCountries, "Value", "Text"),
+				new { multiple = "multiple", @class = "control-xlarge" })
+
+			<div class="btn-group">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					@T("Plugins.Shipping.ShippingFilter.Selection")
+					<span class="fa fa-caret-down"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="javascript:void(0)" class="selection-button" data-type="All">
+							@*<i class="fa fa-fw fa-th"></i>*@
+							@T("Common.All")
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="selection-button" data-type="Remove">
+							@*<i class="fa fa-fw fa-remove"></i>*@
+							@T("Common.Remove")
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="selection-button" data-type="Reverse">
+							@*<i class="fa fa-fw fa-exchange"></i>*@
+							@T("Plugins.Shipping.ShippingFilter.Reverse")
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="selection-button" data-type="Eu">
+							@*<i class="fa fa-fw fa-euro"></i>*@
+							@T("Plugins.Shipping.ShippingFilter.Eu")
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+
+			@Html.ValidationMessageFor(model => model.ExcludedCountries)
+		</td>
+	</tr>
+	<tr>
+		<td class="adminTitle">
+			@Html.SmartLabelFor(model => model.CountryContext)
+		</td>
+		<td class="adminData">
+			@Html.DropDownListFor(model => model.CountryContext, Model.AvailableCountryContextTypes)
+			@Html.ValidationMessageFor(model => model.CountryContext)
+		</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#ShippingMethodFilterControls').find('select').selectWrapper();
+
+		$('#ShippingMethodFilterControls .selection-button').click(function () {
+			var select = $(this).closest('.adminData').find('select:first'),
+				type = $(this).attr('data-type'),
+				val = select.val(),
+				data = '';
+
+			if (val) {
+				data = val.join();
+			}
+
+			$({}).doAjax({
+				url: '@Url.Action("CountrySelection", "ShippingFilter", new { area = ShippingFilterPlugin.SystemName })',
+				data: 'type=' + type + '&existingCountries=' + data,
+				callbackSuccess: function (response) {
+					select.select2('data', response);
+				}
+			});
+		});
+    });
+</script>

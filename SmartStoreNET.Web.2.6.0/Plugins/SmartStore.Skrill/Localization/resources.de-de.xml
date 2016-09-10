@@ -1,0 +1,179 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+	<LocaleResource Name="Plugins.FriendlyName.SmartStore.Skrill" AppendRootKey="false">
+		<Value>Skrill</Value>
+	</LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.Skrill" AppendRootKey="false">
+    <Value>Stellt die Skrill Zahlungsarten zur Verfügung.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Payments.SkrillQuickCheckout" AppendRootKey="false">
+    <Value>Bezahlen mit Skrill</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.SkrillQuickCheckout" AppendRootKey="false">
+    <Value>Bezahlen mit Skrill</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<p>Anleitung zum Einrichten von Skrill:</p><ol>
+<li>Registrieren Sie sich kostenlos bei <a href="https://account.skrill.com/signup">Skrill</a>.</li>
+<li>Gehen Sie im Kontobereich von Skrill auf <b>Einstellungen > Entwickler</b>.</li>
+<li>Aktivieren Sie den Service <b>Bedienoberfläche für automatsierte Zahlungen (API)</b>.</li>
+<li>Legen Sie ein Passwort für MQI/API fest.</li>
+<li>Erstellen Sie ein Geheimwort.</li>
+<li>Tragen Sie das MQI/API-Passwort und das Geheimwort zusammen mit der E-Mail-Adresse Ihres Skrill-Kontos in das Formular unten auf dieser Seite ein. Speichern nicht vergessen.</li>
+</ol>]]></Value>
+	</LocaleResource>
+  <LocaleResource Name="ConfigGroups">
+    <Value>Zugangsdaten;Datenaustausch;Sonstiges</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderNoteStrings">
+		<Value><![CDATA[Statusmeldung von Skrill:<br />{0}]]></Value>
+	</LocaleResource>
+  <LocaleResource Name="MessageStrings">
+    <Value>Status;Fehlergrund;Zahlungsart;Zahlungsempfänger;Zahler;Kundenkonto;Händlerkonto;Transaktions-ID;Bestellreferenz-Nr.;Zahlungsbetrag;Signatur;Erstattungsbetrag</Value>
+  </LocaleResource>
+  <LocaleResource Name="SkrillStatus">
+    <Value>Ausgeführt;Ausstehend;Abgebrochen;Fehlgeschlagen;Zurückgebucht</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidCredentials">
+    <Value>Die Zugangsdaten zum Zahlungsanbieter sind unvollständig. Bitte geben Sie die erforderlichen Zugangsdaten im Konfigurationsbereich der Zahlungsart ein.</Value>
+  </LocaleResource>
+  <LocaleResource Name="PaymentMethodNotActive">
+    <Value>Die gewählte Zahlungsart ist nicht verfügbar.</Value>
+  </LocaleResource>
+  <LocaleResource Name="PrepareFailed">
+    <Value>Wir haben Ihre Daten geprüft, können Ihnen aber auf Basis dieser Prüfung leider die gewünschte Zahlungsart nicht anbieten. Bitte korrigieren Sie Ihre Daten oder wählen Sie eine andere Zahlungsart.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SkrillReportsError">
+    <Value>Der Vorgang "{0}" ist fehlgeschlagen. Die Skrill-API liefert folgenden Fehler: {1}.</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderReferenceNumber">
+    <Value>Bestellreferenznummer</Value>
+  </LocaleResource>
+  <LocaleResource Name="NoSessionId">
+    <Value>Die Sitzungs-ID des Zahlungsanbieters wurde nicht geliefert oder nicht gefunden. Daher kann nicht zum Zahlungsanbieter weitergeleitet werden.</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderNotFound">
+    <Value>Ein Auftrag mit der Zahlungsart "Skrill" und der Bestellreferenznummer {0} wurde nicht gefunden.</Value>
+  </LocaleResource>
+  <LocaleResource Name="StatusHashNotMatching">
+    <Value>Der Inhalts-Hash einer Statusmeldung stimmt nicht überein.</Value>
+  </LocaleResource>
+  <LocaleResource Name="StatusHashNotMatchingDetails">
+    <Value><![CDATA[Auftragsnummer: {0}<br />Skrill-Hash: {1}<br />Shop-Hash: {2}<br />Inhalt: {3}]]></Value>
+  </LocaleResource>
+  <LocaleResource Name="PayToEmailNotMatching">
+    <Value>Statusmeldung mit einer anderen E-Mail Adresse ({0}) für den Geldempfang als jene, die in den Konfigurationseinstellungen festgelegt wurde.</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="ApiEmail">
+		<Value>E-Mail Skrill-Konto</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiEmail.Hint">
+		<Value>Die E-Mail Adresse zu Ihrem Skrill-Konto.</Value>
+	</LocaleResource>
+  <LocaleResource Name="ApiPassword">
+    <Value>MQI/API Passwort</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiPassword.Hint">
+    <Value>Das MQI/API Passwort für den Zugang zur Skrill-API.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiSecretWord">
+    <Value>Geheimwort</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiSecretWord.Hint">
+    <Value>Das Geheimwort zur Verifizierung von Skrill-Statusmeldungen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ValidateAccessData">
+    <Value>Die Zugangsdaten sind unvollständig. Bitte geben Sie sämtliche Skrill Zugangsdaten ein.</Value>
+  </LocaleResource>
+	<LocaleResource Name="AdditionalFee">
+		<Value>Zusätzliche Gebühren</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFee.Hint">
+		<Value>Zusätzliche Gebühren, die dem Kunden für die Inanspruchnahme des Dienstes berechnet werden sollen.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage">
+		<Value>Zusätzliche Gebühren (prozentual)</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage.Hint">
+		<Value>Zusätzliche prozentuale Gebühr zum Gesamtbetrag. Es wird ein fester Wert verwendet, falls diese Option nicht aktiviert ist.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddOrderNotes">
+		<Value>Auftragsnotizen anlegen</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddOrderNotes.Hint">
+		<Value>Legt fest, dass Auftragsnotizen hinsichtlich des Datenaustausches mit dem Zahlungsanbieter angelegt werden sollen.</Value>
+	</LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Skrill.QuickCheckout" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>Nach Bestätigung der Bestellung werden Sie direkt zu Skrill weitergeleitet. Halten Sie bitte Ihre Daten für das Online-Banking bereit.</Value>
+      </LocaleResource>
+      <LocaleResource Name="RestrictPaymentMethods">
+        <Value>Zahlungsarten eingrenzen</Value>
+      </LocaleResource>
+      <LocaleResource Name="RestrictPaymentMethods.Hint">
+        <Value>Legt fest, ob die dem Käufer bei Skrill angebotenen Zahlungsarten eingegrenzt werden sollen.</Value>
+      </LocaleResource>
+      <LocaleResource Name="RestrictedPaymentMethods">
+        <Value>Anzubietende Zahlungsarten</Value>
+      </LocaleResource>
+      <LocaleResource Name="RestrictedPaymentMethods.Hint">
+        <Value>Legt die dem Käufer bei Skrill anzubietenden Zahlungsarten fest.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShowPaymentMethodLogos">
+        <Value>Logos der Zahlarten anzeigen</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShowPaymentMethodLogos.Hint">
+        <Value>Legt fest, ob die Logos der Zahlarten im Kassenbereich angezeigt werden sollen.</Value>
+      </LocaleResource>
+      <LocaleResource Name="SkrillPaymentMethods">
+        <Value>
+          <![CDATA[
+WLT;Skrill Digitale Geldbörse;Verschiedene;Alle Länder
+PSC;Paysafecard;Verschiedene;Amerik. Samoa, Österreich, Belgien, Kanada, Kroatien, Zypern, Tschechien, Dänemark, Finnland, Frankreich, Deutschland, Griechenland, Guam, Ungarn, Irland, Italien, Letland, Luxemburg, Malta, Mexico, Niederlande, Marianen, Norwegen, Polen, Portugal, Puerto Rico, Rumänien, Slowakei, Slowenien, Spanien, Schweden, Schweiz, Türkei, Großbritannien, USA und amer. Jungferninseln
+ACC;Alle Arten von Kreditkarten;Kredit- und Debitkarten;Alle Länder
+VSA;Visa;Kredit- und Debitkarten;Alle Länder
+MSC;MasterCard;Kredit- und Debitkarten;Alle Länder
+VSD;Visa Delta/Debit;Kredit- und Debitkarten;Großbritannien
+VSE;Visa Electron;Kredit- und Debitkarten;Alle Länder (außer USA)
+MAE;Maestro;Kredit- und Debitkarten;Großbritannien, Spanien, Irland und Österreich
+AMX;American Express;Kredit- und Debitkarten;Alle Länder (außer USA). Es gelten zusätzliche Einschränkungen.
+DIN;Diners;Kredit- und Debitkarten;Alle Länder (außer USA)
+JCB;JCB;Kredit- und Debitkarten;Alle Länder (außer USA)
+GCB;Carte Bleue;Kredit- und Debitkarten;Frankreich
+DNK;Dankort;Kredit- und Debitkarten;Dänemark
+PSP;PostePay;Kredit- und Debitkarten;Italien
+CSI;CartaSi;Kredit- und Debitkarten;Italien
+OBT;Skrill Direct (Online-Überweisung);Sofortige Zahlungsoptionen;Deutschland, Großbritannien, Frankreich, Italien, Spanien, Ungarn und Österreich
+GIR;Giropay;Sofortige Zahlungsoptionen;Deutschland
+DID;Elektronisches Lastschriftverfahren;Sofortige Zahlungsoptionen;Deutschland
+SFT;Sofortüberweisung;Sofortige Zahlungsoptionen;Deutschland, Österreich, Belgien, Niederlande, Italien, Frankreich, Polen und Großbritannien
+ENT;eNETS;Sofortige Zahlungsoptionen;Singapur
+EBT;Nordea Solo;Sofortige Zahlungsoptionen;Schweden
+IDL;iDEAL;Sofortige Zahlungsoptionen;Niederlande
+NPY;EPS (Netpay);Sofortige Zahlungsoptionen;Österreich
+PLI;POLi;Sofortige Zahlungsoptionen;Australien
+PWY;Alle Polnischen Banken;Sofortige Zahlungsoptionen;Polen
+EPY;ePay.bg;Sofortige Zahlungsoptionen;Bulgarien
+GLU;Trustly;Sofortige Zahlungsoptionen;Schweden, Finnland, Estland, Dänemark, Spanien und Polen
+MNO;Einfaches Bezahlen per Mobile;Mobiles Bezahlen;Elfenbeinküste, Ruanda, Benin und Togo
+MTN;MTN;Mobiles Bezahlen;Elfenbeinküste und Ruanda
+ETISALAT;Etisalat Flous/Flooz;Mobiles Bezahlen;Elfenbeinküste, Benin und Togo
+]]></Value>
+      </LocaleResource>
+      <LocaleResource Name="SkrillPaymentMethodsInfos">
+        <Value>
+          <![CDATA[<div>Hinweise zu den von Skrill angebotenen Zahlungsarten: <a id="PaymentMethodsInfoLink" href="javascript:void(0)" data-in="Einblenden" data-out="Ausblenden">Einblenden</a></div>
+<div id="PaymentMethodsInfoContainer" class="hide">
+<table class="payment-methods-info-table table table-hover"><thead><tr><th>Zahlungsart</th><th>Code</th><th>Logo</th><th>Unterstützte Länder</th></tr></thead><tbody>{0}</tbody></table>
+</div>]]>
+        </Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+</Language>

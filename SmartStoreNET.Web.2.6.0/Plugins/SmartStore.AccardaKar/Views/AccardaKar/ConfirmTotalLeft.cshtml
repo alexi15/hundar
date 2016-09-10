@@ -1,0 +1,45 @@
+﻿@using SmartStore.Web.Framework;
+
+@model SmartStore.AccardaKar.Models.SummaryTotalModel
+
+@{
+	Html.AddCssFileParts(true, Url.Content("~/Plugins/SmartStore.AccardaKar/Content/smartstore.accardakar.css"));
+}
+
+@if(Model.Rates.Count > 0)
+{
+	<div class="accarda-summary-left cart-box well well-small">
+		<div class="title">
+			@T("Plugins.SmartStore.AccardaKar.YourInstallmentPlan")
+		</div>
+		<div class="body">
+
+			<table class="accarda-rate-table">
+				<thead>
+					<tr>
+						<th>@T("Plugins.SmartStore.AccardaKar.DueDate")</th>
+						<th>@T("Plugins.SmartStore.AccardaKar.Amount")</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var rate in Model.Rates)
+					{
+						<tr>
+							<td>@rate.Date.ToShortDateString()</td>
+							<td>@rate.Amount</td>
+						</tr>
+					}
+					<tr>
+						<td>@T("Plugins.SmartStore.AccardaKar.Total")</td>
+						<td>@Model.TotalAmount</td>
+					</tr>
+				</tbody>
+			</table>
+
+			@if (!string.IsNullOrWhiteSpace(Model.RatePlanNoteBottom))
+			{
+				<div class="accarda-rate-plan-note-bottom">@Model.RatePlanNoteBottom</div>
+			}
+		</div>
+	</div>
+}

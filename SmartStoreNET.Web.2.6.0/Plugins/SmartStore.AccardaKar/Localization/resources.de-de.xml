@@ -1,0 +1,275 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+	<LocaleResource Name="Plugins.FriendlyName.SmartStore.AccardaKar" AppendRootKey="false">
+		<Value>Accarda-KaR</Value>
+	</LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.AccardaPurchaseOnAccount" AppendRootKey="false">
+    <Value>Kauf auf Rechnung</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.AccardaPurchaseOnAccount" AppendRootKey="false">
+    <Value>Accarda-KaR Kauf auf Rechnung</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.AccardaPaymentByInstalments" AppendRootKey="false">
+    <Value>Kauf auf Raten</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.AccardaPaymentByInstalments" AppendRootKey="false">
+    <Value>Accarda-KaR Kauf auf Raten</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Widgets.AccardaPurchaseOnAccount" AppendRootKey="false">
+    <Value>Kauf auf Rechnung</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Widgets.AccardaPurchaseOnAccount" AppendRootKey="false">
+    <Value>Accarda-KaR Kauf auf Rechnung</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Widgets.AccardaPaymentByInstalments" AppendRootKey="false">
+    <Value>Kauf auf Raten</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Widgets.AccardaPaymentByInstalments" AppendRootKey="false">
+    <Value>Accarda-KaR Kauf auf Raten</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<p>Accarda-KaR wird derzeit nur für die Schweiz und Liechtenstein angeboten. Die Shop-Währung muss auf Schweizer Franken lauten.</p>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="ConfigGroups">
+    <Value>Zugangsdaten;Datenaustausch;Gestaltung;Sonstiges;Gebühren</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderNoteStrings">
+		<Value><![CDATA[Aufruf der Accarda-KaR-API. Antwort:<br />{0}]]></Value>
+	</LocaleResource>
+  <LocaleResource Name="MessageStrings">
+    <Value>Funktion;Autorisierungs ID;Guardean Auftragsnummer;Personen ID;Gutschrift ID;Ist Kauf auf Rechnung ok;Ist Kauf auf Raten ok;Entscheidung;Gesamtbetrag;Jahreszins;Rechnungsdatum;Details zu den Raten;Zinsen;Fehler</Value>
+  </LocaleResource>
+	<LocaleResource Name="PaymentMethodNotActive">
+		<Value>Die gewählte Zahlungsart ist nicht verfügbar.</Value>
+	</LocaleResource>
+	<LocaleResource Name="MissingPaymentInfo">
+		<Value>Es wurden keine Zahlungsdaten gefunden. Bitte durchlaufen Sie das Kassensystem erneut.</Value>
+	</LocaleResource>
+	<LocaleResource Name="PreauthorizationFailed">
+		<Value>Wir haben Ihre Daten geprüft, können Ihnen aber auf Basis dieser Prüfung leider die gewünschte Zahlungsart nicht anbieten. Bitte korrigieren Sie Ihre Daten oder wählen Sie eine andere Zahlungsart.</Value>
+	</LocaleResource>
+  <LocaleResource Name="PreauthorizationError">
+    <Value>Wir können Ihnen leider die gewünschte Zahlungsart nicht anbieten. Bitte versuchen Sie es später noch einmal oder wählen Sie eine andere Zahlungsart.</Value>
+  </LocaleResource>
+	<LocaleResource Name="NoOrderTotal">
+		<Value>Der Gesamtbetrag der Bestellung kann nicht berechnet werden.</Value>
+	</LocaleResource>
+	<LocaleResource Name="HoldOnCheckingData">
+		<Value>Wir prüfen Ihre Daten. Einen Augenblick bitte...</Value>
+	</LocaleResource>
+	<LocaleResource Name="Other">
+		<Value>Andere</Value>
+	</LocaleResource>
+	<LocaleResource Name="ShippingFee">
+		<Value>Versandgebühren</Value>
+	</LocaleResource>
+	<LocaleResource Name="PaymentMethodFee">
+		<Value>Zahlungsgebühren</Value>
+	</LocaleResource>
+	<LocaleResource Name="UseSandbox">
+		<Value>Testsystem benutzen</Value>
+	</LocaleResource>
+	<LocaleResource Name="UseSandbox.Hint">
+		<Value>Legt fest, ob das Testsystem genutzt werden soll.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiUrlTest">
+		<Value>API URL Testsystem</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiUrlTest.Hint">
+		<Value>Legt die API URL zum Testsystem fest.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiUrlProduction">
+		<Value>API URL Produktionssystem</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiUrlProduction.Hint">
+		<Value>Legt die API URL zum Produktionssystem fest.</Value>
+	</LocaleResource>
+	<LocaleResource Name="WebshopId">
+		<Value>Webshop-ID</Value>
+	</LocaleResource>
+	<LocaleResource Name="WebshopId.Hint">
+		<Value>Ihre Webshop-ID. Erhalten Sie von Accarda.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiUsername">
+		<Value>API Benutzername</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiUsername.Hint">
+		<Value>Ihr API Benutzername. Erhalten Sie von Accarda.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiPassword">
+		<Value>API Passwort</Value>
+	</LocaleResource>
+	<LocaleResource Name="ApiPassword.Hint">
+		<Value>Ihr API Passwort. Erhalten Sie von Accarda.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFee">
+		<Value>Zusätzliche Gebühren</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFee.Hint">
+		<Value>Zusätzliche Gebühren, die dem Kunden für die Inanspruchnahme des Dienstes berechnet werden sollen.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage">
+		<Value>Zusätzliche Gebühren (prozentual)</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage.Hint">
+		<Value>Zusätzliche prozentuale Gebühr zum Gesamtbetrag. Es wird ein fester Wert verwendet, falls diese Option nicht aktiviert ist.</Value>
+	</LocaleResource>
+  <LocaleResource Name="TransactionType">
+    <Value>Zahlungsaktion</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Hint">
+    <Value>Legt fest, wann die Auszahlung stattfinden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.AuthAndSubmission">
+    <Value>Sofort abbuchen</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Auth">
+    <Value>Autorisierung sofort, Abbuchung später</Value>
+  </LocaleResource>
+	<LocaleResource Name="AddOrderNotes">
+		<Value>Auftragsnotizen anlegen</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddOrderNotes.Hint">
+		<Value>Legt fest, dass Auftragsnotizen hinsichtlich des Datenaustausches mit dem Zahlungsanbieter angelegt werden sollen.</Value>
+	</LocaleResource>
+  <LocaleResource Name="DefaultQuantityUnit">
+    <Value>Mengeneinheit</Value>
+  </LocaleResource>
+  <LocaleResource Name="DefaultQuantityUnit.Hint">
+    <Value>Legt die zu verwendende Mengeneinheit (z.B. Stück) der Produkte fest.</Value>
+  </LocaleResource>
+	<LocaleResource Name="TransmitItemDetails">
+		<Value>Produktdetails übermitteln</Value>
+	</LocaleResource>
+	<LocaleResource Name="TransmitItemDetails.Hint">
+		<Value>Legt fest, ob Details zu den gekauften Produkten (wie Produktname und Preis) übermittelt werden sollen.</Value>
+	</LocaleResource>
+	<LocaleResource Name="TransmitItemDetailsDiscount">
+		<Value>Rabatt als Produktdetail übermitteln</Value>
+	</LocaleResource>
+	<LocaleResource Name="TransmitItemDetailsDiscount.Hint">
+		<Value>Legt fest, dass der Rabatt auf den Bestellwert als Produktdetail übermittelt werden soll. Diese Option sollte laut Accarda aktiviert sein.</Value>
+	</LocaleResource>
+	<LocaleResource Name="EnablePhysicalInvoice">
+		<Value>Gedruckte Rechnung anbieten</Value>
+	</LocaleResource>
+	<LocaleResource Name="EnablePhysicalInvoice.Hint">
+		<Value>Legt fest, ob im Checkout die Option zum Erhalt einer gedruckten Rechnung angezeigt werden soll.</Value>
+	</LocaleResource>
+	<LocaleResource Name="PhysicalInvoiceFee">
+		<Value>Gebühr für eine gedruckte Rechnung</Value>
+	</LocaleResource>
+	<LocaleResource Name="PhysicalInvoiceFee.Hint">
+		<Value>Legt die Gebühr für eine gedruckte Rechnung fest.</Value>
+	</LocaleResource>
+	<LocaleResource Name="PhysicalInvoiceFeePercentage">
+		<Value>Gebühr für gedruckte Rechnung ist prozentual</Value>
+	</LocaleResource>
+	<LocaleResource Name="PhysicalInvoiceFeePercentage.Hint">
+		<Value>Legt fest, dass die Gebühr für eine gedruckte Rechnung prozentual zum Bestellwert berechnet werden soll. Es wird ein fester Wert verwendet, falls diese Option nicht aktiviert ist.</Value>
+	</LocaleResource>
+	<LocaleResource Name="EnableBusinessCustomer">
+		<Value>Prüfung von Geschäftskunden (B2B) anbieten</Value>
+	</LocaleResource>
+	<LocaleResource Name="EnableBusinessCustomer.Hint">
+		<Value>Legt fest, ob im Checkout die Eingabe der für eine Bonitätsprüfung von Geschäftskunden benötigten Daten ermöglicht werden soll.</Value>
+	</LocaleResource>
+	<LocaleResource Name="CreditForKarFees">
+		<Value>Gebühren gutschreiben</Value>
+	</LocaleResource>
+	<LocaleResource Name="CreditForKarFees.Hint">
+		<Value>Legt fest, ob bei Rückerstattungen die Accarda Gebühren gutgeschrieben werden sollen.</Value>
+	</LocaleResource>
+  <LocaleResource Name="InvoiceAddDays">
+    <Value>Rechnungsdatum Tage</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvoiceAddDays.Hint">
+    <Value>Legt das Rechnungsdatum fest, indem zum Bestelldatum die Anzahl der hier festgelegten Tage hinzuaddiert wird.</Value>
+  </LocaleResource>
+
+
+  <LocaleResource Name="CustomerType">
+    <Value>Ich bestelle als</Value>
+  </LocaleResource>
+  <LocaleResource Name="CustomerType.Private">
+    <Value>Privatkunde</Value>
+  </LocaleResource>
+  <LocaleResource Name="CustomerType.Business">
+    <Value>Geschäftskunde</Value>
+  </LocaleResource>
+  <LocaleResource Name="Salutation">
+		<Value>Anrede</Value>
+	</LocaleResource>
+  <LocaleResource Name="DateOfBirth">
+		<Value>Geburtsdatum</Value>
+	</LocaleResource>
+	<LocaleResource Name="DateOfBirth.Validate">
+		<Value>Bitte geben Sie Ihr vollständiges Geburtsdatum an.</Value>
+	</LocaleResource>
+  <LocaleResource Name="Street">
+    <Value>Strasse der Rechnungsanschrift</Value>
+  </LocaleResource>
+  <LocaleResource Name="Street.Validate">
+    <Value>Bitte geben Sie Ihre Strasse an.</Value>
+  </LocaleResource>
+  <LocaleResource Name="HouseNumber">
+    <Value>Hausnummer der Rechnungsanschrift</Value>
+  </LocaleResource>
+  <LocaleResource Name="StreetShippingAddress">
+    <Value>Strasse der Versandanschrift</Value>
+  </LocaleResource>
+  <LocaleResource Name="HouseNumberShippingAddress">
+    <Value>Hausnummer der Versandanschrift</Value>
+  </LocaleResource>
+  <LocaleResource Name="HouseNumber.Validate">
+    <Value>Bitte geben Sie Ihre Hausnummer an.</Value>
+  </LocaleResource>
+	<LocaleResource Name="PhysicalInvoice">
+		<Value>Ich wünsche eine gedruckte Rechnung</Value>
+	</LocaleResource>
+	<LocaleResource Name="PhysicalInvoice.Info">
+		<Value>Für das Erstellen einer gedruckten Rechnung wird Ihnen eine Gebühr in Höhe von {0} berechnet.</Value>
+	</LocaleResource>
+  <LocaleResource Name="CompanyName">
+    <Value>Firmenname</Value>
+  </LocaleResource>
+  <LocaleResource Name="CompanyName.Validate">
+    <Value>Bitte geben Sie den Firmennamen an.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CompanyNumber">
+    <Value>Handelsregisternummer</Value>
+  </LocaleResource>
+  <LocaleResource Name="CompanyUid">
+    <Value>UID-Nummer</Value>
+  </LocaleResource>
+  <LocaleResource Name="CompanyLegalForm">
+    <Value>Rechtsform</Value>
+  </LocaleResource>
+  <LocaleResource Name="CompanyLegalFormOther">
+    <Value>Andere Rechtsform</Value>
+  </LocaleResource>
+  <LocaleResource Name="CompanyFoundationDate">
+    <Value>Gründungsdatum</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="YourInstallmentPlan">
+    <Value>Ihr Ratenzahlungsplan</Value>
+  </LocaleResource>
+  <LocaleResource Name="DueDate">
+    <Value>Fällig am</Value>
+  </LocaleResource>
+  <LocaleResource Name="Amount">
+    <Value>Betrag</Value>
+  </LocaleResource>
+  <LocaleResource Name="Interest">
+    <Value>Zinsen</Value>
+  </LocaleResource>
+  <LocaleResource Name="Total">
+    <Value>Gesamt</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvoiceFee">
+    <Value>Gedruckte Rechnung</Value>
+  </LocaleResource>
+</Language>

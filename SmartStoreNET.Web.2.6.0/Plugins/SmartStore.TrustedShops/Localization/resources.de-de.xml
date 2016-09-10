@@ -1,0 +1,417 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.TrustedShops" AppendRootKey="false">
+    <Value>Trusted Shops Widgets</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.TrustedShops" AppendRootKey="false">
+    <Value>Stellt die Trusted Shops Widgets Siegel, Käuferschutz und Kundenbewertungen zur Verfügung.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.TrustedShops" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="TrustedShopsId">
+        <Value>Trusted Shops Id</Value>
+      </LocaleResource>
+      <LocaleResource Name="TrustedShopsId.Hint">
+        <Value>Geben Sie hier Ihre Trusted Shops Id an.</Value>
+      </LocaleResource>
+      <LocaleResource Name="IsTestMode">
+        <Value>Testmodus aktivieren</Value>
+      </LocaleResource>
+      <LocaleResource Name="IsTestMode.Hint">
+        <Value>Testmodus aktivieren</Value>
+      </LocaleResource>
+      <LocaleResource Name="Introduction.Headline">
+        <Value>
+          <![CDATA[
+            Trusted Shops ist das bekannte Internet-Gütesiegel für Online-Shops mit Käuferschutz für Ihre Kunden. Bei einer Zertifizierung wird Ihr Shop 
+            umfassenden Tests unterzogen. Diese Prüfung mit mehr als 70 Einzelkriterien orientiert sich an den Forderungen von Verbraucherschützern sowie 
+            dem nationalen und europäischen Recht.
+          ]]>
+        </Value>
+      </LocaleResource>
+      <LocaleResource Name="Introduction.Body">
+        <Value>
+          <![CDATA[
+          <div style="margin-left:250px; width:600px">
+            <h4>Mehr Umsatz durch mehr Vertrauen!</h4>
+            <p>
+              Das Trusted Shops Gütesiegel ist optimal, um das Vertrauen Ihrer Online-Kunden zu steigern.
+              Vertrauen erhöht die Bereitschaft Ihrer Kunden, bei Ihnen einzukaufen.
+            </p>
+            <h4>Weniger Kaufabbrüche</h4>
+            <p>
+              Sie bieten Ihren Online-Kunden ein starkes Argument: den Trusted Shops Käuferschutz. Durch diese
+              zusätzliche Sicherheit werden weniger Einkäufe abgebrochen.
+            </p>
+
+            <h4>Ihre Kunden werden zu Verkäufern</h4>
+            <p>
+              Nutzen Sie unsere Kundenbewertungen als wichtiges Marketing-Tool, um das Vertrauen Ihrer Kunden
+              zu steigern. Lassen Sie Ihre gute Bewertung bei Google Shopping anzeigen und erhöhen Sie Ihren Traffic.
+            </p>
+            
+            <a href="http://www.trustedshops.de/" class="btn btn-info">Informieren und anmelden!</a>
+          </div>
+          ]]>
+        </Value>
+      </LocaleResource>
+      <LocaleResource Name="Prepared">
+        <Value>SmartStore.NET ist bereits optimal für die Zertifizierung vorbereitet!</Value>
+      </LocaleResource>
+      <LocaleResource Name="MandatoryTrustedShopsId">
+        <Value>Bitte geben Sie Ihre Trusted Shops ID an.</Value>
+      </LocaleResource>
+      <LocaleResource Name="Image.Logo">
+        <Value>~/Plugins/SmartStore.TrustedShops/Content/images/logo_de.jpg</Value>
+      </LocaleResource>
+      <LocaleResource Name="Image.Seal">
+        <Value>~/Plugins/SmartStore.TrustedShops/Content/images/seal_rating_de.jpg</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.FriendlyName.Widgets.TrustedShopsSeal" AppendRootKey="false">
+    <Value>Trusted Shops Siegel</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Widgets.TrustedShopsSeal" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="AdminInstruction">
+        <Value>
+          <![CDATA[
+            <p>Um das Trusted Shops Siegel oder die Trustbadge auf Ihrer Seite einzubinden, finden Sie nachfolgend eine Schritt-für-Schritt Anleitung:</p>
+            <ul>
+                <li>Registrieren Sie sich bei <a href="http://www.trustedshops.de/shopbetreiber/mitgliedschaft_partner.html?smartstore">Trusted Shops</a></li>
+                <li>Geben Sie Ihre Trusted Shops ID in dem vorgesehenen Feld an.</li>
+                <li>Wählen Sie eine Darstellungsform des Trusted Shops Zertifikats (Siegel oder TrustBadge)</li>
+                <li><b>Siegel</b>: Geben Sie optional den Namen Ihres Shops und einen beschreibenden Text an, die im Widget angezeigt werden sollen und wählen Sie die Widget-Zone in der das Siegel dargestellt werden soll.</li>
+                <li><b>Trustbadge (empfohlen)</b>: Wählen Sie den Trustbadge-Varianten und bestimmen Sie den Abstand zum unteren Browserrand.</li>
+            </ul>
+          ]]>
+        </Value>
+      </LocaleResource>
+      <LocaleResource Name="Title">
+        <Value>Trusted Shops</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShopName">
+        <Value>Name des Shops</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShopName.Hint">
+        <Value>Geben Sie hier den Namen des Shops an, wie er im Widget angezeigt werden soll.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShopText">
+        <Value>Beschreibender Text</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShopText.Hint">
+        <Value>Geben Sie hier einen beschreibenden Text an, wie er im Widget angezeigt werden soll.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckIdSuccess">
+        <Value>Die Validierung Ihrer Trusted Shops ID war erfolgreich.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckIdError">
+        <Value>Die Validierung Ihrer Trusted Shops ID war nicht erfolgreich.</Value>
+      </LocaleResource>
+      <LocaleResource Name="AltContentSealGraphic">
+        <Value>Klicken Sie auf das Gütesiegel, um die Gültigkeit zu prüfen!</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayTrustBadge">
+        <Value>Trustbadge darstellen</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayTrustBadge.Hint">
+        <Value>Das Trustbadge ist immer rechts unten in der Ecke des Browsers platziert. Dadurch vermitteln Sie die Sicherheit Ihres Online-Shops jedem Besucher schon auf den ersten Blick.</Value>
+      </LocaleResource>
+      <LocaleResource Name="Offset">
+        <Value>Abstand nach unten</Value>
+      </LocaleResource>
+      <LocaleResource Name="Offset.Hint">
+        <Value>Bestimmt den Abstand den die Trustbage zum unteren Rand des Browsers hat.</Value>
+      </LocaleResource>
+      <LocaleResource Name="Variant">
+        <Value>Trustbadge-Variant</Value>
+      </LocaleResource>
+      <LocaleResource Name="Variant.Hint">
+        <Value>Bestimmt die Darstellung der Trustbadge</Value>
+      </LocaleResource>
+      <LocaleResource Name="Variant.Text">
+        <Value>Mit Text</Value>
+      </LocaleResource>
+      <LocaleResource Name="Variant.Default">
+        <Value>Standard</Value>
+      </LocaleResource>
+      <LocaleResource Name="Variant.Small">
+        <Value>Klein</Value>
+      </LocaleResource>
+      <LocaleResource Name="Variant.Reviews">
+        <Value>Mit Bewertungen</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Widgets.TrustedShopsCustomerProtection" AppendRootKey="false">
+    <Value>Trusted Shops Käuferschutz</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Widgets.TrustedShopsCustomerProtection" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="AdminInstruction">
+        <Value>
+          <![CDATA[
+            <p>Um den Trusted Shops Käuferschutz auf Ihrer Seite einzubinden, finden Sie nachfolgend eine Schritt-für-Schritt Anleitung:</p>
+            <ul>
+                <li>Registrieren Sie sich bei <a href="http://www.trustedshops.de/shopbetreiber/mitgliedschaft_partner.html?smartstore">Trusted Shops</a></li>
+                <li>Richten Sie das TrustedShops-Siegel-Widget ein.</li>
+                <li>Wählen Sie ob der Kundenschutz über die Trustbadge (empfohlen) oder in einem separaten Bereich angeboten werden soll. Bitte beachten Sie, dass die Darstellungsform via Trustbadge nur funktioniert wenn das Trusted Shops-Siegel-Widget so konfiguriert ist, dass die Trustbadge zur Anzeige des Zertifikats genutzt wird.</li>
+            </ul>
+          ]]>
+        </Value>
+      </LocaleResource>
+      <LocaleResource Name="Title">
+        <Value>Trusted Shops</Value>
+      </LocaleResource>
+      <LocaleResource Name="UserName">
+        <Value>Trusted Shops Benutzername</Value>
+      </LocaleResource>
+      <LocaleResource Name="UserName.Hint">
+        <Value>Geben Sie hier den Benutzernamen an, der Ihnen von Trusted Shops mitgeteilt wurde.</Value>
+      </LocaleResource>
+      <LocaleResource Name="Password">
+        <Value>Trusted Shops Passwort</Value>
+      </LocaleResource>
+      <LocaleResource Name="Password.Hint">
+        <Value>Geben Sie hier das Passwort an, das Ihnen von Trusted Shops mitgeteilt wurde.</Value>
+      </LocaleResource>
+
+      <LocaleResource Name="RenderHidden">
+        <Value>Kundenschutz über Trustbadge anbieten</Value>
+      </LocaleResource>
+      <LocaleResource Name="RenderHidden.Hint">
+        <Value>Geben Sie hier an, ob der Kundenschutz über die Trustbadge (empfohlen) oder in einem separaten Bereich angeboten werden soll.</Value>
+      </LocaleResource>
+
+      <LocaleResource Name="CheckIdSuccess">
+        <Value>Die Validierung Ihrer Trusted Shops ID war erfolgreich.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckIdError">
+        <Value>Die Validierung Ihrer Trusted Shops ID war nicht erfolgreich.</Value>
+      </LocaleResource>
+      <LocaleResource Name="AltContentSealGraphic">
+        <Value>Trusted Shops Siegel - Klicken Sie hier für eine Bestätigung.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ProtectionMode">
+        <Value>Art des Käuferschutzes</Value>
+      </LocaleResource>
+      <LocaleResource Name="ProtectionMode.Classic">
+        <Value>Classic</Value>
+      </LocaleResource>
+      <LocaleResource Name="ProtectionMode.Excellence">
+        <Value>Excellence</Value>
+      </LocaleResource>
+      <LocaleResource Name="SealTitle">
+        <Value>Trusted Shops Gütesiegel - Bitte hier Gültigkeit prüfen!</Value>
+      </LocaleResource>
+      <LocaleResource Name="RegistrationText">
+        <Value>Als zusätzlichen Service bieten wir Ihnen den Trusted Shops Käuferschutz an. Wir übernehmen alle Kosten dieser Garantie, Sie müssen sich lediglich anmelden.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ButtonText">
+        <Value>Anmeldung zum Trusted Shops Käuferschutz</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckLogin">
+        <Value>Login prüfen</Value>
+      </LocaleResource>
+      <LocaleResource Name="GetProtectionItems">
+        <Value>Trusted Shops Produkte zufügen</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckLoginSuccess">
+        <Value>Die Validierung Ihrer Login-Daten war erfolgreich.</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10001">
+        <Value>Web service login or TS-ID invalid</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10002">
+        <Value>The shop's credit limit has been suspended by Trusted Shops</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10003">
+        <Value>Order number already used</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10004">
+        <Value>Unsupported Buyer Protection product</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10005">
+        <Value>Inactive payment method</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10006">
+        <Value>Unsupported payment method</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10007">
+        <Value>The currency of the Buyer Protection product does not match with the currency of the shopping basket</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10008">
+        <Value>This currency is not supported in this shop</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10009">
+        <Value>This exchange rate is not supported</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10010">
+        <Value>This payment method is not supported</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10011">
+        <Value>No credit limit available for this certificate</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10012">
+        <Value>The delivery date is in the past</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10013">
+        <Value>The guarantee is for a purchase that was made over 3 days ago</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10014">
+        <Value>The email address contains an error</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10015">
+        <Value>No order number was assigned</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10016">
+        <Value>No customer number was assigned</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10017">
+        <Value>The credit limit for this certificate has been exceeded</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10018">
+        <Value>No email address was assigned</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10019">
+        <Value>Non-applicable Buyer Protection product</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-10010L">
+        <Value>The order date is in the future</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-11001">
+        <Value>Invalid security token</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.-11111">
+        <Value>General system error, please contact Trusted Shops</Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.Heading">
+        <Value>Leider ist folgender Fehler aufgetreten: </Value>
+      </LocaleResource>
+      <LocaleResource Name="Error.MissingParams">
+        <Value>Bitte füllen Sie alle Felder aus.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ProtectionMode.Excellence.Public.Title">
+        <Value>Trusted Shops Käuferschutz (empfohlen)</Value>
+      </LocaleResource>
+      <LocaleResource Name="ProtectionMode.Excellence.Public.Name">
+        <Value>Käuferschutz bis {0}</Value>
+      </LocaleResource>
+      <LocaleResource Name="ProtectionMode.Excellence.Public.Description">
+        <Value>
+          <![CDATA[
+            Die im Käuferschutz enthaltene <a href="http://www.trustedshops.com/shop/protection_conditions.php?shop_id={0}" target="_blank">Trusted Shops Garantie</a>
+            sichert Ihren Online-Kauf ab. Mit der Übermittlung und <a href="http://www.trustedshops.com/shop/data_privacy.php?shop_id={0}" target="_blank">Speicherung</a>
+            meiner E-Mail-Adresse zur Abwicklung des Käuferschutzes durch Trusted Shops bin ich einverstanden. 
+            <a href="http://www.trustedshops.com/shop/protection_conditions.php?shop_id={0}" target="_blank">Garantiebedingungen</a> für den Käuferschutz.
+          ]]>
+        </Value>
+      </LocaleResource>
+      <LocaleResource Name="ProtectionMode.Excellence.Public.ButtonText">
+        <Value>Käuferschutz zum Warenkorb zufügen</Value>
+      </LocaleResource>
+      <LocaleResource Name="TrustedShopsProduct.Description">
+        <Value>Dauer der Garantie {0} Tage. Höhe der der Garantiesumme {1}</Value>
+      </LocaleResource>
+      <LocaleResource Name="Prepared">
+        <Value>SmartStore.NET ist bereits optimal für die Zertifizierung vorbereitet!</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Widgets.TrustedShopsCustomerReviews" AppendRootKey="false">
+    <Value>Trusted Shops Kundenbewertungen</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Widgets.TrustedShopsCustomerReviews" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="AdminInstruction">
+        <Value>
+          <![CDATA[
+            <p>
+              Das TrustedShops Plugin stellt zwei verschiedene Methoden bereit über die Kunden Bewertungen abgeben können. 
+              <br><br>
+              <b>Methode 1:</b> 
+              Das Trusted Shops-Widget Kundenbewertungen ist aktiviert. In diesem Fall werden Kunden nach der Bestellung direkt aufgefordert 
+              eine Bewertung Ihres Shopping-Erlebnisses abzugeben.
+              <br><br>
+              <b>Methode 2 (empfohlen):</b> Das Widget Kundenbewertungen ist deaktiviert. In diesem Fall können sich Kunden für die Bewertung eines Shop registrieren und per Email benachrichtigen lassen.
+              Wenn Sie diese Möglichkeit nutzen, wird ihnen nach einiger Zeit eine Email von Trusted Shops geschickt in der sie dazu aufgefordert werden den Shop und die gekauften Produkte zu bewerten.
+              Diese Methode ist empfohlen, da der Kunde die Produkte erst noch erhalten muss, bevor er sie bewerten kann. Somit kann er bei der Bewertung auch den Versand berücksichtigen.
+            </p>
+            <p>Um die Trusted Shops Käuferbewertungen auf Ihrer Seite einzubinden, finden Sie nachfolgend eine Schritt-für-Schritt Anleitung:</p>
+            <ul>
+                <li>Registrieren Sie sich bei <a href="http://www.trustedshops.de/shopbetreiber/mitgliedschaft_partner.html?smartstore">Trusted Shops</a></li>
+                <li>Geben Sie Ihre Trusted Shops ID, Ihren Benutzernamen und Ihr Passwort in den vorgesehenen Feldern an.</li>
+                <li>Geben Sie optional den Namen Ihres Shops an, der im Widget angezeigt werden soll.</li>
+                <li>Geben Sie optional den Namen Ihres Shops an, der im Widget angezeigt werden soll.</li>
+                <li>Die Käuferbewertungen werden nun in der angegebenen Widget-Zone in Ihrem Shop dargestellt.</li>
+                <li>Bestimmen Sie, ob Ihren Kunden nach Abschluss der Bestellung die Möglichkeit hat, eine Bewertung für Ihren Shop zu schreiben.</li>
+            </ul>
+          ]]>
+        </Value>
+      </LocaleResource>
+      <LocaleResource Name="Title">
+        <Value>Trusted Shops</Value>
+      </LocaleResource>
+      <LocaleResource Name="TrustedShopsActivation">
+        <Value>Trusted Shops ID aktivieren</Value>
+      </LocaleResource>
+      <LocaleResource Name="TrustedShopsActivation.Hint">
+        <Value>Deaktivieren Sie diese Option nur, wenn Sie von Trusted Shops dazu aufgefordert wurden.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShopName">
+        <Value>Name des Shops</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShopName.Hint">
+        <Value>Geben Sie hier den Namen Ihres Shops an, wie er im Widget angezeigt werden soll.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckIdSuccess">
+        <Value>Das Widget wurde erfolgreich aktualisiert.</Value>
+      </LocaleResource>
+      <LocaleResource Name="InvalidId">
+        <Value>Ihre Trusted Shops ID ist nicht bei Trusted Shops hinterlegt.</Value>
+      </LocaleResource>
+      <LocaleResource Name="NotRegistered">
+        <Value>Ihre Trusted Shops ID wurde nicht für Kundenbewertungen aktiviert.</Value>
+      </LocaleResource>
+      <LocaleResource Name="WrongCredentials">
+        <Value>Der Benutzername oder Ihr Passwort war nicht korrekt.</Value>
+      </LocaleResource>
+      <LocaleResource Name="OtherError">
+        <Value>Es ist ein unbekannter Fehler aufgetreten.</Value>
+      </LocaleResource>
+      <LocaleResource Name="LinkTitle">
+        <Value>Betrachte alle Kundenbewertungen von {0}</Value>
+      </LocaleResource>
+      <LocaleResource Name="ImageAltText">
+        <Value>Kundenbewertungen von {0}</Value>
+      </LocaleResource>
+      <LocaleResource Name="WriteReview">
+        <Value>Bewerten Sie unseren Shop!</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayWidget">
+        <Value>Widget darstellen</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayWidget.Hint">
+        <Value>Bestimmen Sie ob das Widget auf Ihrer Webseite angezeigt werden soll.</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayReviewLinkOnOrderCompleted">
+        <Value>Bewertungsmöglichkeit nach Bestellabschluss aktivieren</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayReviewLinkOnOrderCompleted.Hint">
+        <Value>Bestimmen Sie ob ein Kunde nach Bestellabschluss Ihren Shop bewerten kann.</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayReviewLinkInEmail">
+        <Value>Bewertungsmöglichkeit in Bestellbestätigungsemail aktivieren</Value>
+      </LocaleResource>
+      <LocaleResource Name="DisplayReviewLinkInEmail.Hint">
+        <Value>Bestimmen Sie ob ein Kunde Ihren Shop aus der Bestellbestätigungsemail bewerten kann. Um die automatische Platzierung des Bewertungslinks selbst zu bestimmen fügen Sie das Token %TrustedShops.CustomerReviews% zu der Nachrichtenvorlage OrderPlaced.CustomerNotification zu.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

@@ -1,0 +1,81 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.OrderNumberFormatter" AppendRootKey="false">
+    <Value>Nummernkreis-Formatierer</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdminInstruction">
+    <Value>
+      <![CDATA[
+        <p>
+        Standardmäßig ist die fortlaufende, nummerische Auftrags-ID und die Kunden-ID gleichzeitig die Auftragsnummer bzw. die Kundennummer.
+        Mit Hilfe dieses Plugins aber können Sie ein benutzerdefiniertes Muster erstellen, das Ihren
+        Bedürfnissen entspricht. Beachten Sie bitte dabei, dass sich das Muster nur auf neue Bestellungen bzw. neu registrierte Kunden
+        auswirkt und einmal erzeugte - formatierte - Auftragsnummern nicht mehr verändert werden können. 
+        </p>
+      ]]>
+    </Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Setting.NumberFormatOrder">
+    <Value>Format für Auftragsnummer</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberFormatOrder.Hint">
+    <Value>Ein beliebiges Zeichenfolgenmuster, das die Platzhalter %id (nummerische Auftragsnr.), %d (Datum) und %c (Kundennr.) enthalten kann ('OR-%d-%id' ergibt bspw. 'OR-20131022-1248')</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatOrder">
+    <Value>Datumsformat</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatOrder.Hint">
+    <Value>Muster für Datumsangaben (Platzhalter %d) (z.B.: yyyyMMdd, ddMMyyyy, dd, MM etc.)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthOrder">
+    <Value>ID Mindestlänge</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthOrder.Hint">
+    <Value>Mindestlänge für Auftragsnr. (Platzhalter %id). Der Nummer werden Führungszeichen vorangestellt, sollte sie kürzer als diese Angabe sein (Bsp: 248 ergibt 000248 bei Einstellung 6)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharOrder">
+    <Value>Führungszeichen</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharOrder.Hint">
+    <Value>Das Führungszeichen, das zum 'Auffüllen' der Auftragsnr. verwendet werden soll.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Setting.NumberFormatCustomer">
+    <Value>Format für Kundennummer</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberFormatCustomer.Hint">
+    <Value>Ein beliebiges Zeichenfolgenmuster, das die Platzhalter %id (nummerische Kundennr.), %d (Datum) und %l (Seo-Code der gewählten Sprache des Kunden) enthalten kann ('CN-%d-%id' ergibt bspw. 'CN-20131022-1248')</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatCustomer">
+    <Value>Datumsformat</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatCustomer.Hint">
+    <Value>Muster für Datumsangaben (Platzhalter %d) (z.B.: yyyyMMdd, ddMMyyyy, dd, MM etc.)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthCustomer">
+    <Value>ID Mindestlänge</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthCustomer.Hint">
+    <Value>Mindestlänge für Kundennr. (Platzhalter %id). Der Nummer werden Führungszeichen vorangestellt, sollte sie kürzer als diese Angabe sein (Bsp: 248 ergibt 000248 bei Einstellung 6)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharCustomer">
+    <Value>Führungszeichen</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharCustomer.Hint">
+    <Value>Das Führungszeichen, das zum 'Auffüllen' der Kundennr. verwendet werden soll.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Validate.NumberFormat.NotEmpty">
+    <Value>Das Format für die Nummer darf nicht leer sein.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Validate.LeadingChar">
+    <Value>Das Führungszeichen muss mindestens aus einem Zeichen bestehen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Validate.DateFormat">
+    <Value>Das Datumsformat ist ungültig.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Validate.NumberMinLength">
+    <Value>Die ID Mindestlänge muss zwischen 1 und 20 liegen.</Value>
+  </LocaleResource>
+
+</Language>

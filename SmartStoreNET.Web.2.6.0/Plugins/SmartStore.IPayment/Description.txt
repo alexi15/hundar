@@ -1,0 +1,10 @@
+﻿FriendlyName: 1 & 1 ipayment
+SystemName: SmartStore.IPayment
+Group: Payment
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.IPayment.dll
+ResourceRootKey: Plugins.SmartStore.IPayment
+Url: http://community.smartstore.com/marketplace/file/16-11-ipayment-zahlart-plugin/

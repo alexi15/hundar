@@ -1,0 +1,8 @@
+﻿
+.t-grid tbody .t-last {
+	overflow: visible !important;
+}
+
+.t-grid *:not(.btn-group) > .btn {
+	margin: 0 1px 0 1px !important;
+}

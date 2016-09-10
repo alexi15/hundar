@@ -1,0 +1,53 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.Shopwahl" AppendRootKey="false">
+    <Value>LeGuide Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.Shopwahl" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im Feed-Format von LeGuide.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Feeds.ShopwahlProductXml" AppendRootKey="false">
+    <Value>LeGuide XML Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Feeds.ShopwahlProductXml" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im XML Feed-Format von LeGuide.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Feeds.ShopwahlProductCsv" AppendRootKey="false">
+    <Value>LeGuide CSV Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Feeds.ShopwahlProductCsv" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im CSV Feed-Format von LeGuide.</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<ul>
+<li>Die URL zu Ihrer Feed-Datei können Sie im Händler-Bereich von <a href="https://haendler.shopwahl.com" target="_blank">LeGuide</a> im Register <b>Produktdatei</b> hinterlegen.</li>
+<li>Mehr technische Informationen finden Sie unter <a href="https://haendler.shopwahl.com/faq/index?menu=498" target="_blank">FAQ</a>.</li>
+</ul>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="DemoModeHint">
+    <Value>
+      <![CDATA[Bitte beachten Sie, dass sich dieses Plugin im Demo-Modus befindet und nur 20 Produkte exportiert werden. 
+        Um das Plugin zu lizensieren besuchen Sie bitte den <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+	<LocaleResource Name="Warranty">
+		<Value>Garantie</Value>
+	</LocaleResource>
+	<LocaleResource Name="Warranty.Hint">
+		<Value>Garantie bzw. Gewährleistung die exportiert werden soll.</Value>
+	</LocaleResource>
+  <LocaleResource Name="Availability">
+    <Value>Verfügbarkeit</Value>
+  </LocaleResource>
+  <LocaleResource Name="Availability.Hint">
+    <Value>Verfügbarkeit des Artikels.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Condition">
+    <Value>Zustand</Value>
+  </LocaleResource>
+  <LocaleResource Name="Condition.Hint">
+    <Value>Angabe zum Zustand der Ware (neu, gebraucht...).</Value>
+  </LocaleResource>
+</Language>

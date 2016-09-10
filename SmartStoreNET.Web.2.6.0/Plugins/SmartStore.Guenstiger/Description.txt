@@ -1,0 +1,10 @@
+﻿FriendlyName: Guenstiger.de feed
+SystemName: SmartStore.Guenstiger
+Group: Marketing
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.Guenstiger.dll
+ResourceRootKey: Plugins.Feed.Guenstiger
+Url: http://community.smartstore.com/marketplace/file/15-guenstigerde-feed/

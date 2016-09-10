@@ -1,0 +1,148 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.Payments.PostFinanceECommerce.PostFinanceECommerce" AppendRootKey="false">
+    <Value>PostFinance</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Payments.PostFinanceECommerce.PostFinanceECommerce" AppendRootKey="false">
+    <Value>Enables payment with the swiss PostFinance.</Value>
+  </LocaleResource>
+  
+	<LocaleResource Name="Plugins.FriendlyName.Payments.PostFinanceECommerce" AppendRootKey="false">
+		<Value>PostFinance</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<p>Steps to configure PostFinance eCommerce:</p>
+      <ol>
+      <li>Click <b>Technical information</b> in your PostFinance account administration.</li>
+
+      <li>Settings under <b>Global security parameters</b>
+      <ul>
+      <li><span class="instruct-label">Compose the string to be hashed...:</span> <b>Each parameter followed by the passphrase</b></li>
+      <li><span class="instruct-label">Hash algorithm:</span> <b>SHA-1</b></li>
+      <li><span class="instruct-label">Character encoding:</span> <b>Use the character encoding expected with the initial transaction request (depending on the URL called)</b></li>
+      </ul>
+
+      <li>Settings under <b>Data and origin verification</b>
+      <ul>
+      <li><span class="instruct-label">URL of the merchant page...:</span> <b>http://www.yourStore.com</b> (Your store URL) </li>
+      <li><span class="instruct-label">SHA-IN pass phrase:</span> <b>ABCDEF0987654321</b> (freely definable password, containing at least 16 characters)</li>
+      </ul>
+
+      <li>Settings under <b>Transaction feedback</b>
+      <ul>
+      <li><span class="instruct-label">Direct HTTP server-to-server request:</span> <b>	Online but switch to a deferred request when the online requests fail</b></li>
+      <li><span class="instruct-label">URL of the merchant's post-payment page:</span> <b>http://www.yourStore.com/Plugins/PaymentPostFinanceECommerce/PostSaleNotification</b> for both input fields</li>
+      <li><span class="instruct-label">Request method:</span> <b>POST</b></li>
+      <li><span class="instruct-label">SHA-OUT pass phrase:</span> <b>ABCDEF0987654321</b> (freely definable password, containing at least 16 characters)</li>
+      <li><span class="instruct-label">HTTP request for status changes:</span> <b>For each offline status change...</b> and as URL enter <b>http://www.yourStore.com/Plugins/PaymentPostFinanceECommerce/PostSaleNotification</b> again</li>
+      </ul>
+      </ol>]]>
+		</Value>
+	</LocaleResource>
+	<LocaleResource Name="PaymentNote">
+		<Value>
+			<![CDATA[PostFinance eCommerce:
+      Status: {0} ({1})
+      Order ID: {2}
+      Amount: {3} {4}
+      Payment method: {5}
+      Acceptance value: {6}
+      Payment ID: {7}
+      Transaction method: {8}
+      Transaction date: {9}
+      Customer name: {10}
+      Credit card: {11} {12}
+      Error message: {13}]]>
+		</Value>
+	</LocaleResource>
+	<LocaleResource Name="RedirectionTip">
+		<Value>After confirmation of the order, you will be redirected straight to PostFinance. Please provide your online banking data.</Value>
+	</LocaleResource>
+	<LocaleResource Name="InvalidCredentials">
+		<Value>Incomplete credentials for the PostFinance ePayment API. Please enter the required data in the configuration area.</Value>
+	</LocaleResource>
+	<LocaleResource Name="InitiateFailed">
+		<Value>Payment through PostFinance eCommerce cannot be initiated.</Value>
+	</LocaleResource>
+	<LocaleResource Name="NotificationError">
+		<Value>Error during processing of a PostFinance eCommerce notification.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ReportsError">
+		<Value>PostFinance eCommerce reports an error: {0}</Value>
+	</LocaleResource>
+	<LocaleResource Name="ModuleFailed">
+		<Value>PostFinance eCommerce module cannot be loaded or is deactivated.</Value>
+	</LocaleResource>
+	<LocaleResource Name="InvalidShaOut">
+		<Value>SHA-OUT doesn't match the data transfered by PostFinance eCommerce. IP: {0}, Sign: {1}, Hash string: {2}</Value>
+	</LocaleResource>
+	<LocaleResource Name="OrderNotFound">
+		<Value>Order with the ID {0} cannot be found.</Value>
+	</LocaleResource>
+	<LocaleResource Name="ModeAuthAndCapture">
+		<Value>Immediately debit</Value>
+	</LocaleResource>
+	<LocaleResource Name="ModeAuth">
+		<Value>Authorize immediately, debit later</Value>
+	</LocaleResource>
+	<LocaleResource Name="PspID">
+		<Value>Account name (PSPID)</Value>
+	</LocaleResource>
+	<LocaleResource Name="PspID.Hint">
+		<Value>Name of the PostFinance merchant account (PSPID).</Value>
+	</LocaleResource>
+	<LocaleResource Name="UserID">
+		<Value>User ID (optional)</Value>
+	</LocaleResource>
+	<LocaleResource Name="UserID.Hint">
+		<Value>Optional ID of the PostFinance user (USERID).</Value>
+	</LocaleResource>
+	<LocaleResource Name="Sha1InSignature">
+		<Value>SHA-1-IN signiture</Value>
+	</LocaleResource>
+	<LocaleResource Name="Sha1InSignature.Hint">
+		<Value>Your PostFinance eCommerce SHA-1-IN signiture. Security mechanism to prevent manipulation of request data.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Sha1OutSignature">
+		<Value>SHA-1-OUT signiture</Value>
+	</LocaleResource>
+	<LocaleResource Name="Sha1OutSignature.Hint">
+		<Value>Your PostFinance eCommerce SHA-1-OUT signiture (optional). Security mechanism to prevent manipulation of response data.</Value>
+	</LocaleResource>
+	<LocaleResource Name="TransactionType">
+		<Value>Transaction type</Value>
+	</LocaleResource>
+	<LocaleResource Name="TransactionType.Hint">
+		<Value>Transaction type.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFee">
+		<Value>Additional fee</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFee.Hint">
+		<Value>Enter additional fee to charge your customers.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage">
+		<Value>Additional fee. Use percentage</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage.Hint">
+		<Value>Determines whether to apply a percentage additional fee to the order total. If not enabled, a fixed value is used.</Value>
+	</LocaleResource>
+	<LocaleResource Name="UseTestEnvironment">
+		<Value>Use test environment</Value>
+	</LocaleResource>
+	<LocaleResource Name="UseTestEnvironment.Hint">
+		<Value>Check the box if you have a test account and want to test\simulate a payment.</Value>
+	</LocaleResource>
+  <LocaleResource Name="ApiUrlTest">
+    <Value>API URL test system</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiUrlTest.Hint">
+    <Value>Determines the API URL of the test system.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiUrlProduction">
+    <Value>API URL production system</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiUrlProduction.Hint">
+    <Value>Determines the API URL of the production system.</Value>
+  </LocaleResource>
+</Language>

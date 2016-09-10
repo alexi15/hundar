@@ -1,0 +1,88 @@
+﻿@using SmartStore.Web.Framework;
+@{
+    Layout = "";
+}
+@model SmartStore.IPayment.Models.DDPaymentInfoModel
+
+<div class="form-horizontal">
+	<div class="control-group">
+		@Html.LabelFor(model => model.EnterIBAN, new { @class = "control-label" })
+		<div class="controls">
+			<label class="radio inline">
+				<input type="radio" id="EnterIBAN_1" name="EnterIBAN" value="no-iban" @(Model.EnterIBAN == "no-iban" ? "checked=\"checked\"" : "") />
+				@T("Plugins.Payments.IPaymentDirectDebit.NoEnterIBAN")
+			</label>
+			<label class="radio inline">
+				<input type="radio" id="EnterIBAN_2" name="EnterIBAN" value="iban" @(Model.EnterIBAN == "iban" ? "checked=\"checked\"" : "") />
+				@T("Plugins.Payments.IPaymentDirectDebit.YesEnterIBAN")
+			</label>
+		</div>
+	</div>
+
+	<div class="control-group">
+		@Html.LabelFor(model => model.ElvAccountHolder, new { @class="control-label required" })
+		<div class="controls">
+			@Html.TextBoxFor(model => model.ElvAccountHolder, new { autocomplete = "off" })
+			@Html.ValidationMessageFor(model => model.ElvAccountHolder)
+		</div>
+	</div>
+
+	<div class="ipayment-no-iban">
+		<div class="control-group">
+			@Html.LabelFor(model => model.ElvAccountNumber, new { @class="control-label required" })
+			<div class="controls">
+				@Html.TextBoxFor(model => model.ElvAccountNumber, new { autocomplete = "off" })
+				@Html.ValidationMessageFor(model => model.ElvAccountNumber)
+			</div>
+		</div>
+		<div class="control-group">
+			@Html.LabelFor(model => model.ElvBankCode, new { @class="control-label required" })
+			<div class="controls">
+				@Html.TextBoxFor(model => model.ElvBankCode, new { autocomplete = "off" })
+				@Html.ValidationMessageFor(model => model.ElvBankCode)
+			</div>
+		</div>
+		<div class="control-group">
+			@Html.LabelFor(model => model.ElvCountry, new { @class="control-label required" })
+			<div class="controls">
+				@Html.DropDownList("ElvCountry", Model.Countries, new { style = "min-width: 220px;" })
+				@Html.ValidationMessageFor(model => model.ElvCountry)
+			</div>
+		</div>
+	</div>
+
+	<div class="ipayment-iban">
+		<div class="control-group">
+			@Html.LabelFor(model => model.ElvIBAN, new { @class="control-label required" })
+			<div class="controls">
+				@Html.TextBoxFor(model => model.ElvIBAN, new { autocomplete = "off" })
+				@Html.ValidationMessageFor(model => model.ElvIBAN)
+			</div>
+		</div>
+		<div class="control-group">
+			@Html.LabelFor(model => model.ElvBIC, new { @class="control-label required" })
+			<div class="controls">
+				@Html.TextBoxFor(model => model.ElvBIC, new { autocomplete = "off" })
+				@Html.ValidationMessageFor(model => model.ElvBIC)
+			</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		@Html.LabelFor(model => model.ElvBankName, new { @class = "control-label" })
+		<div class="controls">
+			@Html.TextBoxFor(model => model.ElvBankName, new { autocomplete = "off" })
+			@Html.ValidationMessageFor(model => model.ElvBankName)
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('input[name=EnterIBAN]').change(function () {
+			var value = $(this).filter(':checked').val();
+			$('.ipayment-' + value).slideDown('fast');
+			$('.ipayment-' + (value === 'iban' ? 'no-iban' : 'iban')).slideUp('fast');
+		}).trigger('change');
+	});
+</script>

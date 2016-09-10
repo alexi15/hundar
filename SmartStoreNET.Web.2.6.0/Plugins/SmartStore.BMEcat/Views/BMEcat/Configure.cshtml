@@ -1,0 +1,129 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Web.Framework.UI;
+@using SmartStore.BMEcat.Providers;
+@{
+    Layout = "";
+}
+@model SmartStore.BmeCat.Models.ConfigurationModel
+
+<div class="plugin-configuration">
+    <div>
+        @if (ViewData["DemoModeHint"] != null)
+        {
+            <div class="alert alert-warning">
+                <button class="close" data-dismiss="alert">×</button>
+                <div>@Html.Raw((string)ViewData["DemoModeHint"])</div>
+            </div>
+        }
+        <div class="alert alert-info">
+            <button class="close" data-dismiss="alert">×</button>
+            @Html.Raw(@T("Plugins.BMEcat.AdminInstruction"))
+        </div>
+
+        <div class="admin-config-group">
+            <div class="title">
+                Export
+            </div>
+        </div>
+
+        <div>
+            @Html.Raw(@T("Plugins.SmartStore.Exports.BMEcatProductXml.ExportProfileInfo").Text.FormatWith(
+                Url.Action("List", "Export", new { area = "Admin" })
+            ))
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            <table class="adminContent">
+
+                <tr>
+                    <td colspan="2">
+                        <div class="admin-config-group">
+                            <div class="title">
+                                Import
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="adminTitle">
+                        @Html.SmartLabelFor(m => m.PublishNewEntitiesImmediately)
+                    </td>
+                    <td class="adminData">
+                        @Html.SettingEditorFor(m => m.PublishNewEntitiesImmediately)
+                        @Html.ValidationMessageFor(m => m.PublishNewEntitiesImmediately)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="adminTitle">&nbsp;</td>
+                    <td class="adminData">
+                        <button type="submit" name="save" value="save" class="btn btn-default">
+                            <i class="fa fa-check"></i>&nbsp;@T("Admin.Common.Save")
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+					<td class="adminSeparator" colspan="2">
+						<hr />
+					</td>
+				</tr>
+                <tr id="upload-file">
+                    <td class="adminTitle">&nbsp;</td>
+                    <td class="adminData">
+                        @Html.Partial("FileUploader")
+                    </td>
+                </tr>
+
+                <tr id="ImportFileListContainer" class="@(!String.IsNullOrEmpty(Model.ImportFilePathInfo) ? "" : "hide")">
+                    <td class="adminTitle">
+                        &nbsp;
+                    </td>
+                    <td id="ImportFileList" class="adminData">
+                        <p>
+
+                            <i class="fa fa-fw fa-file-text-o" title="XML"></i>
+
+                            <a href="@Url.Action("DownloadImportFile", new { filename = Model.ImportFileName })" download>@Model.ImportFileName</a>
+
+                            <a class="btn btn-mini btn-right import-file-delete" href="@Url.Action("DeleteImportFile", new { filename = Model.ImportFileName })">
+                                <i class="fa fa-trash-o"></i>&nbsp;@T("Admin.Common.Delete")
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr id="file-info" class="@(String.IsNullOrEmpty(Model.ImportFilePathInfo) ? "hide" : "")">
+                    <td class="adminTitle">
+                        &nbsp;
+                    </td>
+                    <td class="adminData">
+						<div class="alert alert-warning">
+							@Html.Raw(Model.ImportFilePathInfo)
+						</div>
+                    </td>
+                </tr>
+				@if (Model.ScheduleTaskIdImport != 0)
+				{
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="adminTitle">
+							@Html.SmartLabelFor(model => model.ScheduleTaskIdImport)
+						</td>
+						<td class="adminData">
+							@Html.Action("MinimalTask", "ScheduleTask", new { taskId = Model.ScheduleTaskIdImport, returnUrl = Request.RawUrl, cancellable = true, area = "admin" })
+						</td>
+					</tr>
+				}
+            </table>
+        }
+    </div>
+    <div>
+        <a href="http://www.bmecat.de/" target="_blank">
+            <img src="@Url.Content("~/Plugins/SmartStore.BMEcat/Content/branding.png")" alt="BMEcat" />
+        </a>
+    </div>
+</div>

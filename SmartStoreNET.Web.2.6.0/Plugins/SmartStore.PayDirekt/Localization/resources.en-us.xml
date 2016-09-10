@@ -1,0 +1,98 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.PayDirekt" AppendRootKey="false">
+    <Value>paydirekt</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.PayDirekt" AppendRootKey="false">
+    <Value>Provides the paydirekt payment methods.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayDirektStandard" AppendRootKey="false">
+    <Value>Pay by paydirekt</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayDirektStandard" AppendRootKey="false">
+    <Value>Pay by paydirekt</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+      <![CDATA[<p>paydirekt is the direct online payment method of German banks. Open the paydirect <a href="https://www.paydirekt.de/haendler/" target="_blank">merchant page</a> for conditions of participation.
+paydirekt just supports payments in Euro at the moment!</p>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="ConfigGroups">
+    <Value>API access;Data exchange;Miscellaneous</Value>
+  </LocaleResource>
+  <LocaleResource Name="MessageStrings">
+    <Value>Response from paydirekt;API reports errors;Method;Cannot find order {0};Missing transaction ID for order {0};Order {0} already paid;Checkout;Transaction;Transaction type;Status;Amount</Value>
+  </LocaleResource>
+  <LocaleResource Name="RedirectionTip">
+    <Value>After confirmation of the order, you will be redirected straight to paydirekt. Please provide your data for online banking.</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidCredentials">
+    <Value>Incomplete credentials for the web API of paydirekt. Please enter the required data in the configuration area.</Value>
+  </LocaleResource>
+  <LocaleResource Name="PaymentNotAssociated">
+    <Value>Payment could not be associated with any order.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="ApiKey">
+    <Value>API-Key</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiKey.Hint">
+    <Value>Specifies the API-Key to identify your store.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiSecret">
+    <Value>API-Secret</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiSecret.Hint">
+    <Value>Specifies the API-Secret to access the paydirekt API.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ValidateAccessData">
+    <Value>The access data are incomplete. Please enter all access data.</Value>
+  </LocaleResource>
+  <LocaleResource Name="UseSandbox">
+    <Value>Use Sandbox</Value>
+  </LocaleResource>
+  <LocaleResource Name="UseSandbox.Hint">
+    <Value>Specifies whether to use the paydirekt Sandbox (testing environment).</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFee">
+    <Value>Additional fee</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFee.Hint">
+    <Value>Enter additional fee to charge your customers.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFeePercentage">
+    <Value>Additional fee percentage</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFeePercentage.Hint">
+    <Value>Specifies whether to apply a percentage additional fee to the order total. If not enabled, a fixed value is used.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AddOrderNotes">
+    <Value>Create order notes</Value>
+  </LocaleResource>
+  <LocaleResource Name="AddOrderNotes.Hint">
+    <Value>Specifies that order notes should be created in context of the data exchange with the payment provider.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType">
+    <Value>Payment action</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Hint">
+    <Value>Specifies when to debit the customer account.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.AuthAndCapture">
+    <Value>Immediately debit</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Auth">
+    <Value>Authorize immediately, debit later</Value>
+  </LocaleResource>
+  <LocaleResource Name="BankingUsageNote">
+    <Value>Usage note</Value>
+  </LocaleResource>
+  <LocaleResource Name="BankingUsageNote.Hint">
+    <Value>Specifies the optional text that appears in the usage field of the banking statement. Maximum 37 characters.</Value>
+  </LocaleResource>
+  <LocaleResource Name="BankingUsageNote.Validate">
+    <Value>The banking usage note is limited to 37 characters.</Value>
+  </LocaleResource>
+</Language>

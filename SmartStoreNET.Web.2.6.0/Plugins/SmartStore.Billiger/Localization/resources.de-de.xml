@@ -1,0 +1,32 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.Billiger" AppendRootKey="false">
+    <Value>Billiger.de Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.Billiger" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im Feed-Format von Billiger.de.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Feeds.BilligerProductXml" AppendRootKey="false">
+    <Value>Billiger.de XML Feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Feeds.BilligerProductXml" AppendRootKey="false">
+    <Value>Ermöglicht den Export von Produktdaten im XML Feed-Format von Billiger.de.</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<p>Anmeldung und technische Informationen zu billiger.de finden Sie <a href="http://www.billiger.de/application/" target="_blank">hier</a>.</p>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="DemoModeHint">
+    <Value>
+      <![CDATA[Bitte beachten Sie, dass sich dieses Plugin im Demo-Modus befindet und nur 20 Produkte exportiert werden. 
+        Um das Plugin zu lizensieren besuchen Sie bitte den <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="ShippingCostAustria">
+    <Value>Versandkosten nach Österreich</Value>
+  </LocaleResource>
+  <LocaleResource Name="ShippingCostAustria.Hint">
+    <Value>Legt die Versandkosten nach Österreich fest.</Value>
+  </LocaleResource>
+</Language>

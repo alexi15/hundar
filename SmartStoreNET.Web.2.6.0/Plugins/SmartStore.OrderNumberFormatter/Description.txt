@@ -1,0 +1,10 @@
+﻿FriendlyName: Order Number Formatter
+SystemName: SmartStore.OrderNumberFormatter
+Group: Admin
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.OrderNumberFormatter.dll
+ResourceRootKey: Plugins.Admin.OrderNumberFormatter
+Url: http://community.smartstore.com/marketplace/file/17-order-number-formatter/

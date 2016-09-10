@@ -1,0 +1,25 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Skrill.Models;
+@model QuickCheckoutPaymentInfoModel
+@{
+	Layout = "";
+}
+
+<div class="media">
+	<span class="pull-left">
+		<img class="media-object img-responsive" src="@Url.Content("~/Plugins/SmartStore.Skrill/Content/branding.png")" alt="Skrill" style="padding-top: 4px;" />
+	</span>
+	<div class="media-body">
+		@Html.Raw(T("Plugins.SmartStore.Skrill.QuickCheckout.RedirectionTip"))
+
+		@if (Model.PaymentMethodLogos != null && Model.PaymentMethodLogos.Count > 0)
+		{
+			<div>
+				@foreach (var item in Model.PaymentMethodLogos)
+				{
+					<img src="@item.Value" alt="@item.Text" title="@item.Text" style="margin: 10px 15px 10px 0;" />
+				}
+			</div>
+		}
+	</div>
+</div>

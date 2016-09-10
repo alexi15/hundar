@@ -1,0 +1,65 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Payone.Models;
+@model CheckoutCompleteModel
+@{
+	Html.AddCssFileParts(true, Url.Content("~/Plugins/SmartStore.Payone/Content/SmartStore.payone.css"));
+}
+
+<div class="clear"></div>
+
+<div class="payone-complete-box">
+	@*@if (Model.LogoImageName.HasValue())
+	{
+		<div class="logo">
+			<img src="@Url.Content("~/Plugins/SmartStore.Payone/Content/images/" + Model.LogoImageName)" />
+		</div>
+	}*@
+	<div class="description">
+		<div>
+			@Html.Raw(Model.Description)
+		</div>
+
+		@if (Model.BankAccountNumber.HasValue())
+		{
+			<div class="bank-account">
+				<table>
+					<tr>
+						<td>@T("Plugins.SmartStore.Payone.Payee"):</td>
+						<td>@Model.BankPayee.NaIfEmpty()</td>
+					</tr>
+					<tr>
+						<td>@T("Plugins.SmartStore.Payone.BankAccount"):</td>
+						<td>@Model.BankAccountNumber.NaIfEmpty()</td>
+					</tr>
+					<tr>
+						<td>@T("Plugins.SmartStore.Payone.BankCode"):</td>
+						<td>@Model.BankCode.NaIfEmpty()</td>
+					</tr>
+					<tr>
+						<td>@T("Plugins.SmartStore.Payone.Bank"):</td>
+						<td>@Model.BankDescripton.NaIfEmpty()</td>
+					</tr>
+					<tr>
+						<td>@T("Plugins.SmartStore.Payone.Iban"):</td>
+						<td>@Model.Iban.NaIfEmpty()</td>
+					</tr>
+					<tr>
+						<td>@T("Plugins.SmartStore.Payone.Bic"):</td>
+						<td>@Model.Bic.NaIfEmpty()</td>
+					</tr>
+					<tr>
+						<td>@T("Plugins.SmartStore.Payone.IntendedPurpose"):</td>
+						<td class="intended-purpose">@Model.IntendedPurpose.NaIfEmpty()</td>
+					</tr>
+				</table>
+			</div>
+		}
+		
+		@if (Model.Note.HasValue())
+		{
+			<div class="alert alert-warning">
+				@Html.Raw(Model.Note)
+			</div>
+		}
+	</div>
+</div>

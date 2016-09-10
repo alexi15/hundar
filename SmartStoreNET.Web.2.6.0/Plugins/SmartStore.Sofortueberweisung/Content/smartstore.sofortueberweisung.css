@@ -1,0 +1,13 @@
+﻿.sofortueberweisung {
+    width: 100%; 
+    margin-bottom: 10px;
+}
+.sofortueberweisung .logo {
+    float: left; 
+    margin-right: 20px; 
+    width: 200px; 
+    height: 75px;
+}
+.customer-protection-info {
+    margin-top: 12px;
+}

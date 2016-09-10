@@ -1,0 +1,11 @@
+﻿FriendlyName: Payone
+Description: Provides the Payone payment methods.
+SystemName: SmartStore.Payone
+Group: Payment
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.Payone.dll
+ResourceRootKey: Plugins.SmartStore.Payone
+Url: http://community.smartstore.com/marketplace/file/70-payone-payment/

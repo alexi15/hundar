@@ -1,0 +1,142 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.BMEcat" AppendRootKey="false">
+    <Value>BMEcat.de data exchange</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.BMEcat" AppendRootKey="false">
+    <Value>Allows to exchange product data in the format of BMEcat.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Exports.BMEcatProductXml.1.2" AppendRootKey="false">
+    <Value>BMEcat 1.2 product export</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Exports.BMEcatProductXml.1.2" AppendRootKey="false">
+    <Value>Allows to export product data in XML format of BMEcat 1.2.</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<p>
+        You can find registration and technical information for BMEcat.de <a href="http://www.BMEcat.de/application/" target="_blank">here</a>.
+      </p>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="DemoModeHint">
+    <Value>
+      <![CDATA[Please take to account this plugin runs in demo mode and only 20 products will be exported or imported.
+        To buy a license for this plugin please visit the <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Exports.BMEcatProductXml" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="CatalogId">
+        <Value>Catalog ID</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogId.Hint">
+        <Value>Specifies the catalog ID to be exported.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogVersion">
+        <Value>Catalog version</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogVersion.Hint">
+        <Value>Specifies the version of the catalog.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogName">
+        <Value>Catalog name</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogName.Hint">
+        <Value>Specifies the name of the catalog.</Value>
+      </LocaleResource>
+      <LocaleResource Name="UseSpecificSupplierData">
+        <Value>Export special supplier data</Value>
+      </LocaleResource>
+      <LocaleResource Name="UseSpecificSupplierData.Hint">
+        <Value>Allows to specify special supplier data. Otherwise the company data of the store is exported.</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataName">
+        <Value>Company name</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataName.Hint">
+        <Value>Specifies the name of the company.</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataContact">
+        <Value>Contact person</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataContact.Hint">
+        <Value>Specifies the name of the contact person.</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataStreet">
+        <Value>Street</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataStreet.Hint">
+        <Value>Specifies the street.</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataZip">
+        <Value>Postal code</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataZip.Hint">
+        <Value>Specifies the postal code.</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataCity">
+        <Value>City</Value>
+      </LocaleResource>
+      <LocaleResource Name="SupplierDataCity.Hint">
+        <Value>Specifies the city.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogType">
+        <Value>Catalog type</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogType.Hint">
+        <Value>Specifies the type of the catalog.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogRootName">
+        <Value>Group name</Value>
+      </LocaleResource>
+      <LocaleResource Name="CatalogRootName.Hint">
+        <Value>Specifies the name of the group.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ExportPictures">
+        <Value>Export pictures</Value>
+      </LocaleResource>
+      <LocaleResource Name="ExportPictures.Hint">
+        <Value>Specifies whether to export pictures as separate files.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="ImportFilePathInfo">
+    <Value>
+      <![CDATA[The last uploaded file was stored on your server at <span class='backups'>{0}</span>.
+          For an automatic update of your products, replace this file and configure the <b>scheduled task: <i>BMEcat Import</i></b> accordingly.]]>
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="ScheduleTaskIdImport">
+    <Value>Execute import</Value>
+  </LocaleResource>
+  <LocaleResource Name="ScheduleTaskIdImport.Hint">
+    <Value>Here you can control the import execution.</Value>
+  </LocaleResource>
+  <LocaleResource Name="PublishImmediately">
+    <Value>Publish objects immediately</Value>
+  </LocaleResource>
+  <LocaleResource Name="PublishImmediately.Hint">
+    <Value>Specifies whether imported categories and products should be published immediately.</Value>
+  </LocaleResource>
+  <LocaleResource Name="FileNotFound">
+    <Value>File doesn't exist.</Value>
+  </LocaleResource>
+  <LocaleResource Name="InitImport">
+    <Value>Init Import</Value>
+  </LocaleResource>
+  <LocaleResource Name="LoadDocument">
+    <Value>Load document</Value>
+  </LocaleResource>
+  <LocaleResource Name="ProductException">
+    <Value>Error when updating the product with the sku </Value>
+  </LocaleResource>
+  <LocaleResource Name="UpdateError">
+    <Value> An error occured during the update of products.</Value>
+  </LocaleResource>
+  <LocaleResource Name="UpdateSuccess">
+    <Value> Import of the products was successfully performed.</Value>
+  </LocaleResource>
+</Language>

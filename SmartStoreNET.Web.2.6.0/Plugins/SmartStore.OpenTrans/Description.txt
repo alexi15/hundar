@@ -1,0 +1,10 @@
+﻿FriendlyName: OpenTrans Export
+SystemName: SmartStore.OpenTrans
+Group: Data
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.OpenTrans.dll
+ResourceRootKey: Plugins.Exports.OpenTrans
+Url: http://community.smartstore.com/index.php?/files/file/84-opentrans-export/

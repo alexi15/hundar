@@ -1,0 +1,22 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.DiscountRules.HasShippingOption" AppendRootKey="false">
+    <Value>"Kunde hat bestimmte Versandart ausgewählt" Rabattregel</Value>
+  </LocaleResource>
+  
+  <!-- HasPaymentMethod -->
+  <LocaleResource Name="Plugins.FriendlyName.DiscountRequirement.HasShippingOption" AppendRootKey="false">
+    <Value>Kunde hat bestimmte Versandart ausgewählt</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.DiscountRules.HasShippingOption" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="Fields.ShippingOptions">
+        <Value>Versandart(en)</Value>
+      </LocaleResource>
+      <LocaleResource Name="Fields.ShippingOptions.Hint">
+        <Value>Kommagetrennte Liste von Versandarten (z.B. DHL, Hermes). Eine Liste mit allen Versandartnamen finden Sie im Konfigurationsbereich.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+  
+</Language>

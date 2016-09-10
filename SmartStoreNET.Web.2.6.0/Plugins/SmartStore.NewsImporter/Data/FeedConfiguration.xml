@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewsImporter>
+	<FeedSources>
+		<Feed>
+			<Domain>2ride.,2ri.</Domain>
+			<ImageEmbedding>1</ImageEmbedding>
+			<TagNameFilter>toride:BelongsTo</TagNameFilter>
+			<TagNameLongDescription>content:encoded</TagNameLongDescription>
+			<TagNameMetaKeywords>toride:Keywords</TagNameMetaKeywords>
+		</Feed>
+    <Feed>
+      <Domain>spiegel.</Domain>
+      <ImageEmbedding>1</ImageEmbedding>
+      <AppendLink>true</AppendLink>
+    </Feed>
+    <Feed>
+      <Domain>rss2.focus.</Domain>
+      <AppendLink>true</AppendLink>
+      <TagNameShortDescription>media:description</TagNameShortDescription>
+      <TagNameLongDescription>content:encoded</TagNameLongDescription>
+      <LongDescriptionToPlainText>true</LongDescriptionToPlainText>
+    </Feed>
+    <Feed>
+      <Domain>tagesschau.</Domain>
+      <TagNameLongDescription>content:encoded</TagNameLongDescription>
+    </Feed>
+	</FeedSources>
+</NewsImporter>

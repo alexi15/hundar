@@ -1,0 +1,21 @@
+﻿@model SmartStore.Payone.Models.PaymentInfoBankingBaseModel
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		try {
+
+			// toggle enter iban vs. bank data
+			$('input[name=EnterIban]').change(function () {
+				var value = $(this).filter(':checked').val();
+				if (value !== undefined) {
+					$('.payone-' + (value === 'iban' ? 'no-iban' : 'iban')).slideUp('fast');
+					$('.payone-' + (value === 'iban' ? 'iban' : 'no-iban')).slideDown('fast');
+				}
+			}).trigger('change');
+
+		}
+		catch (e) {
+			if (e.description) alert(e.description);
+		}
+	});
+</script>

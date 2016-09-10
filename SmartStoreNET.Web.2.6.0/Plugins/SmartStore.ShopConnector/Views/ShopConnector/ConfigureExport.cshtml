@@ -1,0 +1,68 @@
+﻿@using SmartStore.ShopConnector;
+@using SmartStore.ShopConnector.Models;
+@using SmartStore.ShopConnector.Core;
+@using SmartStore.ShopConnector.Extensions;
+@using SmartStore.Web.Framework;
+@using SmartStore.Web.Framework.UI;
+@using Telerik.Web.Mvc.UI;
+@model ConfigurationModel
+
+<div class="alert alert-info">
+	@Html.Raw(@T("Plugins.SmartStore.ShopConnector.AdminInstructionExport"))
+</div>
+
+<script type="text/javascript">
+	function onRowDataBound_ExportConnection(e) {
+		if (!e.dataItem.IsActive) {
+			$(e.row).find('td').wrapInner('<span class="muted" />');
+		}
+	}
+</script>
+
+<div>
+	@(Html.Telerik().Grid<ConnectionModel>()
+		.Name("export-connection-grid")
+		.DataKeys(keys => keys.Add(x => x.Id)
+		.RouteKey("Id"))
+		.Columns(c =>
+		{
+			c.Bound(x => x.Url)
+				.Width(280)
+				.ClientTemplate(@Html.NoteAndUrlLabel());
+			c.Bound(x => x.PublicKey);
+			c.Bound(x => x.SecretKey);
+			c.Bound(x => x.IsActive)
+				.Centered()
+				.ClientTemplate(@Html.SymbolForBool("IsActive"));
+			//c.Bound(x => x.LimitedToStores)
+			//	.Centered()
+			//	.ClientTemplate(@Html.SymbolForBool("LimitedToStores"));
+			c.Bound(x => x.LimitedToManufacturer)
+				.Centered()
+				.ClientTemplate(@Html.SymbolForBool("LimitedToManufacturer"));
+			c.Bound(x => x.RequestCount)
+				.Centered()
+				.ReadOnly();
+			c.Bound(x => x.LastRequest)
+				.ReadOnly();
+			c.Bound(x => x.LastProductCall)
+				.ReadOnly();
+			c.Template(x => @Html.GridButtons(true))
+				.ClientTemplate(@Html.GridButtons(true))
+				.Width(240);
+		})
+		.DataBinding(dataBinding =>
+		{
+			dataBinding.Ajax()
+				.Select("ConnectionSelect", "ShopConnector", new { area = ShopConnectorCore.SystemName, isForExport = true });
+		})
+		.ToolBar(commands => commands
+			.Custom()
+			.Name("connection-export-insert-button")
+			.HtmlAttributes(new { @class = "btn btn-link connection-grid-button connection-insert connection-forexport" })
+			.Text("<i class='fa fa-plus'></i>&nbsp;" + @T("Plugins.SmartStore.ShopConnector.AddNewExportConnection")))
+		.Pageable(settings => settings.PageSize(Model.GridPageSize).Position(GridPagerPosition.Both))
+		.ClientEvents(events => events.OnRowDataBound("onRowDataBound_ExportConnection"))
+		.EnableCustomBinding(true)
+	)
+</div>

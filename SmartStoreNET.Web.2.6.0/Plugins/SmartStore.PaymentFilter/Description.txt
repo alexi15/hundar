@@ -1,0 +1,10 @@
+﻿FriendlyName: Filter for payment methods
+SystemName: SmartStore.PaymentFilter
+Group: Payment
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.PaymentFilter.dll
+ResourceRootKey: Plugins.Payment.PaymentFilter
+Url: http://community.smartstore.com/index.php?/files/file/87-filter-for-payment-methods/

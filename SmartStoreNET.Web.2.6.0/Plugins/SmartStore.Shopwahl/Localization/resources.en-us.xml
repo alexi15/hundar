@@ -1,0 +1,53 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.Shopwahl" AppendRootKey="false">
+    <Value>LeGuide feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.Shopwahl" AppendRootKey="false">
+    <Value>Allows you to export product data in the feed format of LeGuide.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Feeds.ShopwahlProductXml" AppendRootKey="false">
+    <Value>LeGuide XML feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Feeds.ShopwahlProductXml" AppendRootKey="false">
+    <Value>Allows to export product data in XML feed format of LeGuide.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Feeds.ShopwahlProductCsv" AppendRootKey="false">
+    <Value>LeGuide CSV feed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Feeds.ShopwahlProductCsv" AppendRootKey="false">
+    <Value>Allows to export product data in CSV feed format of LeGuide.</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<ul>
+<li>Click the tab <b>Catalogue</b> in the shop account management area of <a href="http://merchants.leguide.com/" target="_blank">LeGuide</a> to leave the URL of your feed file.</li>
+<li>In order to get more technical infos look at the following <a href="https://haendler.shopwahl.com/faq/index?menu=498" target="_blank">FAQ</a>.</li>			
+</ul>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="DemoModeHint">
+    <Value>
+      <![CDATA[Please take to account this plugin runs in demo mode and only 20 products will be exported.
+        To buy a license for this plugin please visit the <a href="{0}" target="_blank">SmartStore Community Marketplace</a>.]]>
+    </Value>
+  </LocaleResource>
+	<LocaleResource Name="Warranty">
+		<Value>Warranty</Value>
+	</LocaleResource>
+	<LocaleResource Name="Warranty.Hint">
+		<Value>Warranty to use for export.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Availability">
+		<Value>Availability</Value>
+	</LocaleResource>
+	<LocaleResource Name="Availability.Hint">
+		<Value>Availability of the product.</Value>
+	</LocaleResource>
+	<LocaleResource Name="Condition">
+		<Value>Condition</Value>
+	</LocaleResource>
+	<LocaleResource Name="Condition.Hint">
+		<Value>Condition of the products (new, used...).</Value>
+	</LocaleResource>
+</Language>

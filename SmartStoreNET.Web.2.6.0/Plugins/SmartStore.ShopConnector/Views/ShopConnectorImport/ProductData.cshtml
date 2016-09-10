@@ -1,0 +1,63 @@
+﻿@using SmartStore.ShopConnector;
+@using SmartStore.ShopConnector.Models;
+@using SmartStore.ShopConnector.Core;
+@using SmartStore.Web.Framework;
+@model ProductDataModel
+@{
+	Layout = null;
+
+	Html.AddCssFileParts(true, Url.Content("~/Plugins/SmartStore.ShopConnector/Content/smartstore.shopconnector.css"));
+}
+
+@Html.Partial("ProcessingNote")
+
+<div>
+	<form method="POST" class="connection-form" action="@Url.Action("ProductData", "ShopConnectorImport", new { area = ShopConnectorCore.SystemName })">
+
+		<input type="hidden" id="Id" name="Id" value="@Model.Id" />
+		<input type="hidden" id="IsForExport" name="IsForExport" value="false" />
+
+		<table class="adminContent">
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.FetchFromDate)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.FetchFromDate)
+				</td>
+			</tr>
+			<tr>
+				<td class="adminTitle">
+					@Html.SmartLabelFor(model => model.DataFileName)
+				</td>
+				<td class="adminData">
+					@Html.EditorFor(model => model.DataFileName)
+				</td>
+			</tr>
+			@if (Model.AvailableManufacturers != null && Model.AvailableManufacturers.Count > 0)
+			{
+				<tr>
+					<td class="adminTitle">
+						@Html.SmartLabelFor(model => model.FilterManufacturerIds)
+					</td>
+					<td class="adminData">
+						<input type="hidden" name="NewFilterManufacturerIds" id="NewFilterManufacturerIds" value="@Model.FilterManufacturerIds.EmptyNull()" />
+						@Html.DropDownListFor(model => model.FilterManufacturerIds, Model.AvailableManufacturers, null, new { multiple = "multiple" })
+					</td>
+				</tr>
+			}
+			@if(Model.AvailableCategories != null && Model.AvailableCategories.Count > 0)
+			{
+				<tr>
+					<td class="adminTitle">
+						@Html.SmartLabelFor(model => model.FilterCategoryId)
+					</td>
+					<td class="adminData">
+						@Html.DropDownListFor(model => model.FilterCategoryId, Model.AvailableCategories)
+					</td>
+				</tr>
+			}
+		</table>
+	</form>
+</div>
+<br />

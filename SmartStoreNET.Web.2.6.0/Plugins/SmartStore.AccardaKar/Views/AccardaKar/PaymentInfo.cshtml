@@ -1,0 +1,179 @@
+﻿@model SmartStore.AccardaKar.Models.PaymentInfoModel
+@using SmartStore.Web.Framework;
+@using SmartStore.AccardaKar.Services;
+
+@{
+    Layout = "";
+}
+
+<div id="AccardaControls" class="form-horizontal">
+	@if (Model.EnableBusinessCustomer)
+	{
+		<div class="control-group">
+			@Html.LabelFor(model => model.CustomerType, new { @class = "control-label" })
+			<div class="controls form-inline">
+				<label class="inline radio">
+					@Html.RadioButton("CustomerType", (int)AccardaKarCustomerType.B2C, (Model.CustomerType == AccardaKarCustomerType.B2C))
+					@T("Plugins.SmartStore.AccardaKar.CustomerType.Private")
+				</label>
+				<label class="inline radio">
+					@Html.RadioButton("CustomerType", (int)AccardaKarCustomerType.B2B, (Model.CustomerType == AccardaKarCustomerType.B2B))
+					@T("Plugins.SmartStore.AccardaKar.CustomerType.Business")
+				</label>
+			</div>
+		</div>
+	}
+	
+	<div class="control-group accarda-b2c" style="margin-bottom: 10px;">
+		@Html.LabelFor(model => model.Salutation, new { @class = "control-label" })
+		<div class="controls form-inline">
+			<label class="inline radio">
+				@Html.RadioButton("Salutation", (int)AccardaKarSalutationType.Mr, (Model.Salutation == AccardaKarSalutationType.Mr))
+				@T("Admin.Address.Salutation.Mr")
+			</label>
+			<label class="inline radio">
+				@Html.RadioButton("Salutation", (int)AccardaKarSalutationType.Mrs, (Model.Salutation == AccardaKarSalutationType.Mrs))
+				@T("Admin.Address.Salutation.Mrs")
+			</label>
+		</div>
+	</div>
+	<div class="control-group accarda-b2c">
+        @Html.LabelFor(model => model.DateOfBirthYear, new { @class = "control-label required" })
+        <div class="controls">
+            @Html.DatePickerDropDowns(Html.FieldNameFor(x => x.DateOfBirthDay),
+                Html.FieldNameFor(x => x.DateOfBirthMonth),
+                Html.FieldNameFor(x => x.DateOfBirthYear),
+                DateTime.Now.Year - 90,
+                DateTime.Now.Year,
+                Model.DateOfBirthDay,
+                Model.DateOfBirthMonth,
+                Model.DateOfBirthYear)
+        </div>
+	</div>
+
+	@if (Model.EnableBusinessCustomer)
+	{
+		<div class="control-group accarda-b2b hide">
+			@Html.LabelFor(model => model.CompanyName, new { @class = "control-label required" })
+			<div class="controls">
+				@Html.EditorFor(model => model.CompanyName)
+			</div>
+		</div>
+	}
+	
+	<div class="control-group">
+		@Html.LabelFor(model => model.Street, new { @class = "control-label required" })
+		<div class="controls">
+			@Html.EditorFor(model => model.Street)
+		</div>
+	</div>
+	<div class="control-group">
+		@Html.LabelFor(model => model.HouseNumber, new { @class = "control-label required" })
+		<div class="controls">
+			@Html.EditorFor(model => model.HouseNumber)
+		</div>
+	</div>
+
+	<div class="control-group">
+		@Html.LabelFor(model => model.StreetShippingAddress, new { @class = "control-label required" })
+		<div class="controls">
+			@Html.EditorFor(model => model.StreetShippingAddress)
+		</div>
+	</div>
+	<div class="control-group">
+		@Html.LabelFor(model => model.HouseNumberShippingAddress, new { @class = "control-label required" })
+		<div class="controls">
+			@Html.EditorFor(model => model.HouseNumberShippingAddress)
+		</div>
+	</div>
+
+	@if (Model.EnableBusinessCustomer)
+	{
+		<div class="control-group accarda-b2b hide">
+			@Html.LabelFor(model => model.CompanyLegalForm, new { @class = "control-label required" })
+			<div class="controls">
+				@Html.DropDownList("CompanyLegalForm", Model.AvailableLegalForms, new { @class = "dropdownlists", style = "min-width: 220px;" })
+			</div>
+		</div>
+		<div id="CompanyLegalFormOtherContainer" class="control-group accarda-b2b hide">
+			@Html.LabelFor(model => model.CompanyLegalFormOther, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.CompanyLegalFormOther)
+			</div>
+		</div>
+		<div class="control-group accarda-b2b hide">
+			@Html.LabelFor(model => model.CompanyUid, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.CompanyUid)
+			</div>
+		</div>
+		<div class="control-group accarda-b2b hide">
+			@Html.LabelFor(model => model.CompanyNumber, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.CompanyNumber)
+			</div>
+		</div>
+		<div class="control-group accarda-b2b hide">
+			@Html.LabelFor(model => model.CompanyFoundationDateYear, new { @class = "control-label" })
+			<div class="controls">
+				@Html.DatePickerDropDowns(Html.FieldNameFor(x => x.CompanyFoundationDateDay),
+					Html.FieldNameFor(x => x.CompanyFoundationDateMonth),
+					Html.FieldNameFor(x => x.CompanyFoundationDateYear),
+					DateTime.Now.Year - 160,
+					DateTime.Now.Year,
+					Model.CompanyFoundationDateDay,
+					Model.CompanyFoundationDateMonth,
+					Model.CompanyFoundationDateYear)
+			</div>
+		</div>
+	}
+
+	@if (Model.EnablePhysicalInvoice)
+	{
+		<div class="control-group" style="margin-bottom: 0;">
+			@Html.LabelFor(model => model.PhysicalInvoice, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.PhysicalInvoice)
+			</div>
+		</div>
+		if (Model.PhysicalInvoiceInfo.HasValue())
+		{
+			<div id="PhysicalInvoiceInfo" class="hide">
+				<div class="alert alert-info">@Model.PhysicalInvoiceInfo</div>
+			</div>
+		}
+	}	
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('input[name=CustomerType]').change(function () {
+			var value = $(this).filter(':checked').val(),
+				elements = $('#AccardaControls');
+
+			elements.find('.accarda-' + (value === '@((int)AccardaKarCustomerType.B2B)' ? 'b2b' : 'b2c')).slideDown('fast');
+			elements.find('.accarda-' + (value === '@((int)AccardaKarCustomerType.B2B)' ? 'b2c' : 'b2b')).slideUp('fast');
+
+			$('#CompanyLegalForm').trigger('change');
+		}).trigger('change');
+
+		$('select[name=CompanyLegalForm]').change(function () {
+			var value = $(this).find('option:selected').val(),
+				isB2b = $('input[name=CustomerType]').filter(':checked').val() === '@((int)AccardaKarCustomerType.B2B)';
+
+			$('#CompanyLegalFormOtherContainer').toggle(value === 'other' && isB2b);
+
+			if (value === 'other' && isB2b)
+				$('input[name=CompanyLegalFormOther]').focus();
+		}).trigger('change');
+
+		$('input[name=PhysicalInvoice]').change(function () {
+			$('#PhysicalInvoiceInfo').toggle($(this).is(':checked'));
+		}).trigger('change');
+
+		$(document).on('click', '.payment-info-next-step-button', function () {
+			alert('@T("Plugins.SmartStore.AccardaKar.HoldOnCheckingData")');
+			$(this).hide();
+		});
+	});
+</script>

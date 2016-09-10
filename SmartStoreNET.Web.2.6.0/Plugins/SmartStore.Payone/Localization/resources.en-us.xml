@@ -1,0 +1,523 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.Payone" AppendRootKey="false">
+    <Value>Payone</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.Payone" AppendRootKey="false">
+    <Value>Provides the Payone payment methods.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Widgets.Payone" AppendRootKey="false">
+    <Value>Payone</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayoneCreditCard" AppendRootKey="false">
+    <Value>Credit card</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayoneCreditCard" AppendRootKey="false">
+    <Value>Payone Credit card</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayoneDirectDebit" AppendRootKey="false">
+    <Value>Direct debit</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayoneDirectDebit" AppendRootKey="false">
+    <Value>Payone direct debit</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayoneOnlineBankTransfer" AppendRootKey="false">
+    <Value>Online bank transfer</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayoneOnlineBankTransfer" AppendRootKey="false">
+    <Value>Payone online bank transfer through SOFORT Überweisung, Giropay etc.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayonePrepayment" AppendRootKey="false">
+    <Value>Prepayment</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayonePrepayment" AppendRootKey="false">
+    <Value>Payone Prepayment</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayoneInvoice" AppendRootKey="false">
+    <Value>Invoice</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayoneInvoice" AppendRootKey="false">
+    <Value>Payone invoice	manually</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayoneCashOnDelivery" AppendRootKey="false">
+    <Value>Cash on delivery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayoneCashOnDelivery" AppendRootKey="false">
+    <Value>Payone cash on delivery</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayoneFinancingBillsafe" AppendRootKey="false">
+    <Value>Invoice</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayoneFinancingBillsafe" AppendRootKey="false">
+    <Value>Payone purchase on account with BillSAFE</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.PayoneFinancingKlarna" AppendRootKey="false">
+    <Value>Invoice: Pay in 14 days</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.PayoneFinancingKlarna" AppendRootKey="false">
+    <Value>Payone purchase on account with Klarna</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+      <![CDATA[<p>Instructions to set up Payone:</p><ol>
+<li>Sign up in the <a href="https://pmi.pay1.de/merchants/" target="_blank">merchant area</a> of Payone.</li>
+<li>Create a new sub account under <b>configuration > account</b>. Enter the sub account ID on this page below.</li>
+<li>Create a new portal under <b>configuration > payment portal</b>. You use your store URL and activate the channels <b>FinanceGate Frontend</b> and <b>FinanceGate Server-API</b>.</li>
+<li>Go to the <b>Advanced</b> tab. There enter the Success, Back and TransactionStatus URLs listed below on this page.</li>
+<li>Enter the data displayed under <b>API parameters</b> on this page in the fields provided for this purpose.</li>
+</ol>]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="AdminInstructionCss">
+    <Value>
+      <![CDATA[<p>Tip: You can customize the appearance of the Payone payment page as follows:</p><ol>
+<li>Go to the Payone merchant area to <b>configuration > account</b> and open the <b>Advanced</b> tab.</li>
+<li>Select the language of the template and replace the CSS statements between the following lines<br /><i>&#60;style type="text/css" media="screen"&#62;&#60;!--</i><br />and<br /><i>--&#62;&#60;/style&#62;</i></li>
+<li>For example try out the following CSS: <a id="PayoneCssLink" href="javascript:void(0)" data-in="Show" data-out="Hide">Show</a></li>
+</ol><div id="PayoneCssContainer" class="hide"><pre>
+form[name=paymentform] > table {
+	width: 640px;
+	margin: 0 auto;
+	font-size: 0.9em;
+}
+table {
+	width: 100%;
+}
+td {
+	font-family: Arial, Helvetica, Geneva, SunSans-Regular;
+	padding: 3px 0 3px 0;
+}
+input {
+	padding: 3px 4px 2px 4px;
+}
+input[type=text] {
+	width: 280px;
+}
+input[type=radio] {
+	margin-right: 50px;
+}
+select {
+	width: 292px;
+	padding: 4px 0 4px 0;
+}
+input.short {
+	width: 132px !important;
+}
+select.short {
+	float: none !important;
+	width: 144px !important;
+}
+input.submit {
+	width: auto;
+	font-weight: bold;
+	color: #fff;
+	padding: 6px 12px;
+	background-color: #7F7B73;
+	cursor: pointer;
+	border: 1px solid #f0f0f0;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+input.submit:hover {
+	background-color: #615D55;
+}
+input.submit[disabled] {
+	color: gray;
+	cursor: wait;
+}
+a {
+	color: #000;
+}
+a:hover {
+	color: #F79400;
+}
+.fullbox {
+	width: 640px;
+	background-color: #E3DFD7;
+	padding: 0 10px 0 10px;
+}
+.headbox {
+	width: 100%;
+	font-weight: bold;
+	color: white;
+	background-color: #7F7B73;
+	margin: 20px 0 10px 0;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+}
+#submitFormBox {
+	width: 100%;
+}
+#infoFormBox {
+	width: 99%;
+}
+#infoFormBox td {
+	font-size: 0.9em;
+}
+#language {
+	font-size: 0.8em !important;
+	width: 120px !important;
+	margin-right: 3px;
+}
+.footer {
+	height: 26px;
+}
+.stripline {
+	border-top: 1px solid #999;
+	padding-top: 5px;
+}
+.errortext {
+	color: #c00;
+}
+</pre></div>]]>
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="ConfigGroups">
+    <Value>Access data;Data exchange;Miscellaneous</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderNoteStrings">
+    <Value><![CDATA[Status notification from Payone:<br />{0}]]></Value>
+  </LocaleResource>
+  <LocaleResource Name="MessageStrings">
+    <Value>Status;Payment method;Failure reason;Portal ID;Subaccount ID;Transaction ID;Transaction start;Expires on;Reference number;Sequence number;Offer ID;Access ID;Order GUID;Currency;Amount;Total amount;Balance;Payone User ID;Customer ID;Credit card;Credit card expiration;Credit card holder;Bank;Account number;Account holder;IBAN;BIC;Mandate ID;Creditor ID;Clearing amount;Clearing date;Due date;Financing reference;Invoice;IP address</Value>
+  </LocaleResource>
+  <LocaleResource Name="FailureReasons">
+    <Value>Insufficient funds.;Account expired;Account no./name not identical, incorrect or savings account.;No direct debit.;Recall. The recipient of the payment recalls the direct debit order.;Objection. The payer objects to the direct debit.;Return. The executing bank returns the order (due to insufficient funds, account closure, decease of the account holder, ...).;Debit cannot be collected.;Credit card chargeback;Credit card cannot be collected</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderNotFound">
+    <Value>An order for a transaction status message was not found ({0}).</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidCredentials">
+    <Value>The access data to the payment provider are incomplete. Please enter the necessary credentials in the configuration area of the payment method.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Other">
+    <Value>Miscellaneous</Value>
+  </LocaleResource>
+  <LocaleResource Name="Shipping">
+    <Value>Shipping</Value>
+  </LocaleResource>
+  <LocaleResource Name="MissingCheckoutSessionState">
+    <Value>Missing checkout session state for Payone. Your payment cannot be processed. Please go back to the payment selection and checkout again.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionTypeNotSupported">
+    <Value>The transaction type is not supported by Payone for the current settings.</Value>
+  </LocaleResource>
+  <LocaleResource Name="BillingAndShippingAddressMustBeEqual">
+    <Value>Shipping and billing address seem to differ. Both addresses must be equal for the selected payment method.</Value>
+  </LocaleResource>
+  <LocaleResource Name="OnlyEnterPaymentDataInCheckout">
+    <Value>The option to enter payment data in checkout must be activated. Another setting is not supported by Payone.</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidIp">
+    <Value>Received payone notification from invalid IP address ({0}).</Value>
+  </LocaleResource>
+  <LocaleResource Name="ContactPayoneNote">
+    <Value>For this message contacting Payone is recommended. A change may be needed on your Payone account to perform the corresponding function.</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderingFailed">
+    <Value>Payone reports error code {0}.</Value>
+  </LocaleResource>
+  <LocaleResource Name="FeeForFinancingInvoice">
+    <Value>Accounting charge</Value>
+  </LocaleResource>
+  <LocaleResource Name="NowRedirecting">
+    <Value>You will be redirected to Payone...</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SuccessUrl">
+    <Value>Success URL</Value>
+  </LocaleResource>
+  <LocaleResource Name="SuccessUrl.Hint">
+    <Value>Please enter this URL in your payment portal at Payone.</Value>
+  </LocaleResource>
+  <LocaleResource Name="BackUrl">
+    <Value>Back URL</Value>
+  </LocaleResource>
+  <LocaleResource Name="BackUrl.Hint">
+    <Value>Please enter this URL in your payment portal at Payone.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionStatusUrl">
+    <Value>Transaction-Status URL</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionStatusUrl.Hint">
+    <Value>Please enter this URL in your payment portal at Payone. Your shop will then receive status messages of the payment transactions.</Value>
+  </LocaleResource>
+  <LocaleResource Name="MerchantId">
+    <Value>Merchant-ID</Value>
+  </LocaleResource>
+  <LocaleResource Name="MerchantId.Hint">
+    <Value>Your Payone Merchant-ID.</Value>
+  </LocaleResource>
+  <LocaleResource Name="PortalId">
+    <Value>Portal-ID</Value>
+  </LocaleResource>
+  <LocaleResource Name="PortalId.Hint">
+    <Value>ID of the Payone payment portal to be used.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SubAccountId">
+    <Value>Subaccount-ID</Value>
+  </LocaleResource>
+  <LocaleResource Name="SubAccountId.Hint">
+    <Value>ID of the Payone sub-account to be used.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SecurityKey">
+    <Value>Key (Sicherheitsschlüssel)</Value>
+  </LocaleResource>
+  <LocaleResource Name="SecurityKey.Hint">
+    <Value>The security key of the Payone payment portal to be used.</Value>
+  </LocaleResource>
+	<LocaleResource Name="UseSandbox">
+		<Value>Use test system</Value>
+	</LocaleResource>
+	<LocaleResource Name="UseSandbox.Hint">
+		<Value>Check the box to use the test system.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFee">
+		<Value>Additional fee</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFee.Hint">
+		<Value>Enter additional fee to charge your customers.</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage">
+		<Value>Additional fee percentage</Value>
+	</LocaleResource>
+	<LocaleResource Name="AdditionalFeePercentage.Hint">
+		<Value>Determines whether to apply a percentage additional fee to the order total. If not enabled, a fixed value is used.</Value>
+	</LocaleResource>
+  <LocaleResource Name="TransactionType">
+    <Value>Payment action</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Hint">
+    <Value>Determines when the payout should occur.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.AuthAndSubmission">
+    <Value>Immediately debit</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Auth">
+    <Value>Authorize immediately, debit later</Value>
+  </LocaleResource>
+	<LocaleResource Name="AddOrderNotes">
+		<Value>Create order notes</Value>
+	</LocaleResource>
+	<LocaleResource Name="AddOrderNotes.Hint">
+		<Value>Determines that order notes should be created in context of the data exchange with the payment provider.</Value>
+	</LocaleResource>
+  <LocaleResource Name="EnterPaymentDataInCheckout">
+    <Value>Enter payment data in checkout</Value>
+  </LocaleResource>
+  <LocaleResource Name="EnterPaymentDataInCheckout.Hint">
+    <Value>Determines that the customer enters its payment data (e.g. credit card details) during checkout. If this option is disabled, then he is redirected to Payone (after ordering) to enter payment data there.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CheckIp">
+    <Value>Check IP address</Value>
+  </LocaleResource>
+  <LocaleResource Name="CheckIp.Hint">
+    <Value>Security mechanism to ensure that responses are always from the Payone server.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="EnterIban">
+    <Value>Enter IBAN</Value>
+  </LocaleResource>
+  <LocaleResource Name="BankAccount">
+    <Value>Bank account number</Value>
+  </LocaleResource>
+  <LocaleResource Name="BankCode">
+    <Value>Bank code</Value>
+  </LocaleResource>
+  <LocaleResource Name="BankCountry">
+    <Value>Country</Value>
+  </LocaleResource>
+  <LocaleResource Name="Iban">
+    <Value>IBAN</Value>
+  </LocaleResource>
+  <LocaleResource Name="Bic">
+    <Value>BIC</Value>
+  </LocaleResource>
+  <LocaleResource Name="Payee">
+    <Value>Payee</Value>
+  </LocaleResource>
+  <LocaleResource Name="Bank">
+    <Value>Bank</Value>
+  </LocaleResource>
+  <LocaleResource Name="IntendedPurpose">
+    <Value>Intended purpose</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="BankAccountRequired">
+    <Value>Please enter your account number.</Value>
+  </LocaleResource>
+  <LocaleResource Name="BankCodeRequired">
+    <Value>Please enter the bank code.</Value>
+  </LocaleResource>
+  <LocaleResource Name="IbanRequired">
+    <Value>Please enter the IBAN (International Bank Account Number).</Value>
+  </LocaleResource>
+  <LocaleResource Name="BicRequired">
+    <Value>Please enter the BIC (Bank Interchange Code).</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.CreditCard" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ExcludedCreditCards">
+        <Value>Excluded credit cards</Value>
+      </LocaleResource>
+      <LocaleResource Name="ExcludedCreditCards.Hint">
+        <Value>Credit cards that customers may not pay with.</Value>
+      </LocaleResource>
+      <LocaleResource Name="IssueNumber">
+        <Value>Issue number</Value>
+      </LocaleResource>
+      <LocaleResource Name="IssueNumber.Hint">
+        <Value>Issue number of your credit card. Only required for british Maestro cards.</Value>
+      </LocaleResource>
+      <LocaleResource Name="PseudoCardPanValidation">
+        <Value>Your credit card data was not validated by Payone. Please enter your data again or select another payment method.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.OnlineBankTransfer" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="OnlineBankTransferTypes">
+        <Value>SOFORT Banking;Giropay;eps Online-Überweisung;PostFinance E-Finance;PostFinance Card;iDEAL</Value>
+      </LocaleResource>
+      <LocaleResource Name="ExcludedOnlineBankTransferTypes">
+        <Value>Excluded payment methods</Value>
+      </LocaleResource>
+      <LocaleResource Name="ExcludedOnlineBankTransferTypes.Hint">
+        <Value>Payment methods that customers may not pay with.</Value>
+      </LocaleResource>
+      <LocaleResource Name="BankTransferType">
+        <Value>Payment method</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.DirectDebit" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="EnableSepaMandate">
+        <Value>Enable SEPA direct mandate</Value>
+      </LocaleResource>
+      <LocaleResource Name="EnableSepaMandate.Hint">
+        <Value>Determines to create a SEPA direct mandate that must be confirmed by the customer.</Value>
+      </LocaleResource>
+      <LocaleResource Name="SepaMandateDescription">
+        <Value>To directly debit your account we need a SEPA direct mandate from you.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ConfirmSepaMandate">
+        <Value>I would like to give the mandate (electronic transmission)</Value>
+      </LocaleResource>
+      <LocaleResource Name="ConfirmSepaMandate.Validate">
+        <Value>Please confirm the SEPA direct mandate.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.Prepayment" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckoutCompleteIntro">
+        <Value>Please transfer the total due in the amount of {0} to the following account:</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckoutCompleteNote">
+        <Value>Please keep in mind that we can take into account only transfers with the correct intended purpose!</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.Invoice" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckoutCompleteIntro">
+        <Value>Please transfer the total due in the amount of {0} to the following account:</Value>
+      </LocaleResource>
+      <LocaleResource Name="CheckoutCompleteNote">
+        <Value>Please keep in mind that we can take into account only transfers with the correct intended purpose!</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.CashOnDelivery" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShippingProviders">
+        <Value>DHL (Germany);Bartolini (Italy)</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShippingProvider">
+        <Value>Shipping provider</Value>
+      </LocaleResource>
+      <LocaleResource Name="ShippingProvider.Hint">
+        <Value>Shipping provider to be used.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.FinancingBillsafe" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="PaymentFeeWarning">
+        <Value>The calculation of additional fees is only possible after consultation with BillSAFE.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.SmartStore.Payone.FinancingKlarna" AppendRootKey="false">
+    <Children>
+      <LocaleResource Name="RedirectionTip">
+        <Value>After confirmation of the order, you will be redirected straight to Payone. Please provide your data for online banking.</Value>
+      </LocaleResource>
+      <LocaleResource Name="DateOfBirth">
+        <Value>Date of birth</Value>
+      </LocaleResource>
+      <LocaleResource Name="DateOfBirth.Validate">
+        <Value>Please enter your complete birth date.</Value>
+      </LocaleResource>
+      <LocaleResource Name="Gender">
+        <Value>Gender</Value>
+      </LocaleResource>
+      <LocaleResource Name="PhoneNumber">
+        <Value>Phone number</Value>
+      </LocaleResource>
+      <LocaleResource Name="PhoneNumber.Validate">
+        <Value>Please enter a phone number.</Value>
+      </LocaleResource>
+      <LocaleResource Name="PersonalId">
+        <Value>Personal ID</Value>
+      </LocaleResource>
+      <LocaleResource Name="PersonalId.Validate">
+        <Value>Please enter your ID.</Value>
+      </LocaleResource>
+      <LocaleResource Name="ConfirmDataTransmit">
+        <Value>
+          <![CDATA[
+<p>With selecting Klarnas payment method I agree with the submission of data required for the processing, authentication and credit assessment at Klarna. I can withdraw my <span id="consentxx">consent</span> at any time with effect for the future.</p>
+<p>For further information of purchase on account see <span id="invoicexx">invoice terms</span>.</p>
+]]>
+        </Value>
+      </LocaleResource>
+      <LocaleResource Name="ConfirmDataTransmit.Validate">
+        <Value>You must confirm the transmission of your data to Klarna.</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

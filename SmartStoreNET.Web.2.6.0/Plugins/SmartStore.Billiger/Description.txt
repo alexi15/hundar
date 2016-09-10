@@ -1,0 +1,10 @@
+﻿FriendlyName: Billiger.de feed
+SystemName: SmartStore.Billiger
+Group: Marketing
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.Billiger.dll
+ResourceRootKey: Plugins.Feed.Billiger
+Url: http://community.smartstore.com/marketplace/file/12-billigerde-feed/

@@ -1,0 +1,138 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Web.Framework.UI;
+@using SmartStore.PostFinanceECommerce.Models;
+@model ConfigurationModel
+@{
+    Layout = "";
+	Html.AddCssFileParts(true, Url.Content("~/Plugins/SmartStore.PostFinanceECommerce/Content/smartstore.postfinanceec.css"));
+	Html.AddScriptParts(true, Url.Content("~/Plugins/SmartStore.PostFinanceECommerce/Scripts/smartstore.postfinanceecommerce.js"));
+}
+
+<div class="plugin-configuration">
+	<div>
+		<div class="alert alert-info">
+			<button class="close" data-dismiss="alert">×</button>
+			@Html.Raw(@T("Plugins.Payments.PostFinanceECommerce.AdminInstruction"))
+		</div>
+	</div>
+	<div>
+		<a href="https://e-payment.postfinance.ch/" target="_blank">
+			<img src="@Url.Content("~/Plugins/SmartStore.PostFinanceECommerce/Content/branding.png")" alt="PostFinance" />
+		</a>
+	</div>
+</div>
+
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+
+@using (Html.BeginForm())
+{
+	<table class="adminContent">
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.PspID)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.PspID)
+            @Html.ValidationMessageFor(model => model.PspID)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.UserID)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.UserID)
+            @Html.ValidationMessageFor(model => model.UserID)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.Sha1InSignature)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.Sha1InSignature)
+            @Html.ValidationMessageFor(model => model.Sha1InSignature)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.Sha1OutSignature)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.Sha1OutSignature)
+            @Html.ValidationMessageFor(model => model.Sha1OutSignature)
+        </td>
+    </tr>
+@*    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.TransactionType)
+        </td>
+        <td class="adminData">
+			@Html.DropDownList("TransactionType", new List<SelectListItem> {
+				new SelectListItem { Selected = (Model.TransactionType == "SAL"), Text = @T("Plugins.Payments.PostFinance.ModeAuthAndCapture"), Value = "SAL" },
+				new SelectListItem { Selected = (Model.TransactionType == "RES"), Text = @T("Plugins.Payments.PostFinance.ModeAuth"), Value = "RES" }
+			})
+            @Html.ValidationMessageFor(model => model.TransactionType)
+        </td>
+    </tr>*@
+	<tr>
+		<td class="adminTitle">
+			@Html.SmartLabelFor(model => model.UseTestEnvironment)
+		</td>
+		<td class="adminData">
+			@Html.SettingEditorFor(model => model.UseTestEnvironment)
+			@Html.ValidationMessageFor(model => model.UseTestEnvironment)
+		</td>
+	</tr>
+	<tr>
+		<td class="adminTitle">
+			@Html.SmartLabelFor(model => model.ApiUrlTest)
+		</td>
+		<td class="adminData">
+			@Html.TextBoxFor(model => model.ApiUrlTest, new { @class = "input-large" })
+			@Html.ValidationMessageFor(model => model.ApiUrlTest)
+		</td>
+	</tr>
+	<tr>
+		<td class="adminTitle">
+			@Html.SmartLabelFor(model => model.ApiUrlProduction)
+		</td>
+		<td class="adminData">
+			@Html.TextBoxFor(model => model.ApiUrlProduction, new { @class = "input-large" })
+			@Html.ValidationMessageFor(model => model.ApiUrlProduction)
+		</td>
+	</tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AdditionalFee)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AdditionalFee)
+            @Html.ValidationMessageFor(model => model.AdditionalFee)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.AdditionalFeePercentage)
+        </td>
+        <td class="adminData">
+            @Html.SettingEditorFor(model => model.AdditionalFeePercentage)
+            @Html.ValidationMessageFor(model => model.AdditionalFeePercentage)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">&nbsp;</td>
+        <td class="adminData">
+            <button type="submit" name="save" class="btn btn-primary" value="save">
+                <i class="fa fa-check"></i>&nbsp;@T("Admin.Common.Save")
+            </button>
+        </td>
+    </tr>
+	</table>
+}
+
+<script type="text/javascript">
+	jQuery(document).ready(function () {
+		postfinanceecommerce.init();
+	});
+</script>

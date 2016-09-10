@@ -1,0 +1,11 @@
+﻿FriendlyName: News Importer
+SystemName: SmartStore.NewsImporter
+Description: Create news from RSS feeds.
+Group: Data
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.NewsImporter.dll
+ResourceRootKey: Plugins.SmartStore.NewsImporter
+Url: http://community.smartstore.com/marketplace/file/60-rss-news-importer/

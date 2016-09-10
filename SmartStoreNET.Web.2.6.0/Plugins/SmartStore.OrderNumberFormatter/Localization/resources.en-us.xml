@@ -1,0 +1,79 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.OrderNumberFormatter" AppendRootKey="false">
+    <Value>Number Formatter</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdminInstruction">
+    <Value>
+      <![CDATA[
+        <p>
+        By default, the incremented, numeric id for orders and customer are at the same time the order number or the customer number.
+        This plugin helps you to create a custom number pattern that suits your business needs.
+        Please consider that the pattern affects new orders and new registered customers only and that order numbers (once created) are immutable.
+        </p>
+      ]]>
+    </Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Setting.NumberFormatOrder">
+    <Value>Order Number Format</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberFormatOrder.Hint">
+    <Value>An arbitrary string pattern that can contain the placeholders %id (numeric order ID), %d (order date) and %c (customer ID). eg: 'OR-%d-%id' results in 'OR-20131022-1248'.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatOrder">
+    <Value>Order Date Format</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatOrder.Hint">
+    <Value>Format for order date (placeholder %d) (eg: yyyyMMdd, ddMMyyyy, dd, MM etc.)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthOrder">
+    <Value>Min. Order Number Length</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthOrder.Hint">
+    <Value>Min. length for order id (placeholder %id). Leading chars are prepended to the order id when it's too short (eg: 248 results in 000248 with setting 6)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharOrder">
+    <Value>Order Number Leading Char</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharOrder.Hint">
+    <Value>The leading char that should be used to pad the order id.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Setting.NumberFormatCustomer">
+    <Value>Customer Number Format</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberFormatCustomer.Hint">
+    <Value>An arbitrary string pattern that can contain the placeholders %id (numeric customer ID), %d (date) and %l (unique seo code of the customer langauge). eg: 'CN-%d-%id' results in 'CN-20131022-1248'.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatCustomer">
+    <Value>Date Format</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.DateFormatCustomer.Hint">
+    <Value>Format for date (placeholder %d) (eg: yyyyMMdd, ddMMyyyy, dd, MM etc.)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthCustomer">
+    <Value>Min. Customer Number Length</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.NumberMinLengthCustomer.Hint">
+    <Value>Min. length for customer id (placeholder %id). Leading chars are prepended to the order id when it's too short (eg: 248 results in 000248 with setting 6)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharCustomer">
+    <Value>Customer Number Leading Char</Value>
+  </LocaleResource>
+  <LocaleResource Name="Setting.LeadingCharCustomer.Hint">
+    <Value>The leading char that should be used to pad the order id.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Validate.NumberFormat.NotEmpty">
+    <Value>The format for the number can not be empty.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Validate.LeadingChar">
+    <Value>The lead characters shall be at least one character.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Validate.DateFormat">
+    <Value>The date format is invalid.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Validate.NumberMinLength">
+    <Value>The ID minimum length must be 1-20.</Value>
+  </LocaleResource>
+</Language>

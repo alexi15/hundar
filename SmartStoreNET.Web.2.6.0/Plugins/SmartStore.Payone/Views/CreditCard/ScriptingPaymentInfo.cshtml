@@ -1,0 +1,84 @@
+﻿@model SmartStore.Payone.Models.CreditCardPaymentInfoModel
+
+@if (Model.CcCheck != null)
+{
+	<script src="https://secure.pay1.de/client-api/js/ajax.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function processPayoneResponse(response) {
+			if (response.get('status') == 'VALID') {
+				$('#PseudoCardPan').val(response.get('pseudocardpan'));
+				$('#TruncatedCardPan').val(response.get('truncatedcardpan'));
+
+				// PCI DSS
+				$('#CardNumber').val('');
+				$('#CardCode').val('');
+				$('#IssueNumber').val('');
+
+				$('#nextstep').trigger('click');
+			}
+			else {
+				alert(response.get('customermessage'));
+			}
+		}
+	</script>
+}
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		try {
+
+			// toggle issue number
+			$('select[name=CreditCardType]').change(function () {
+				var value = $(this).find('option:selected').val();
+
+				$('.issueno-startdate').toggle(value === 'U');	// Maestro UK. SoloCard not available.
+			}).trigger('change');
+
+			@if (Model.CcCheck != null)
+			{<text>
+
+			$('#nextstep').click(function (e) {
+				if ($('input[name=paymentmethod]:checked').val() === 'Payments.PayoneCreditCard' && $('#PseudoCardPan').val().length === 0) {
+					e.stopPropagation();
+					e.preventDefault();
+
+					var cardType = $('#CreditCardType').val() || '';
+
+					var data = {
+						cardpan: $('#CardNumber').val() || '',
+						cardtype: cardType,
+						cardexpiremonth: $('#ExpireMonth').val() || '',
+						cardexpireyear: $('#ExpireYear').val() || '',
+						cardcvc2: $('#CardCode').val() || '',
+						cardissuenumber: (cardType === 'U' ? ($('#IssueNumber').val() || '') : ''),
+						request: 'creditcardcheck',
+						responsetype: 'JSON',
+						storecarddata: 'yes',
+						encoding: 'UTF-8',
+						mode: '@Model.CcCheck["mode"].Value',
+						mid: '@Model.CcCheck["mid"].Value',
+						aid: '@Model.CcCheck["aid"].Value',
+						portalid: '@Model.CcCheck["portalid"].Value',
+						language: '@Model.CcCheck["language"].Value',
+						hash: '@Model.CcCheck["hash"].Value',
+					};
+
+					var options = {
+						return_type: 'object',
+						callback_function_name: 'processPayoneResponse'
+					}
+
+					var request = new PayoneRequest(data, options);
+					request.checkAndStore();
+
+					return false;
+				}
+			});
+
+			</text>}
+		}
+		catch (e) {
+			if (e.description) alert(e.description);
+		}
+	});
+</script>

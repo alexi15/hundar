@@ -1,0 +1,43 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.ShippingFilter" AppendRootKey="false">
+    <Value>Filter for shipping methods</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.ShippingFilter" AppendRootKey="false">
+    <Value>Allows to filter out shipping methods in the checkout process. Offers filters for customer roles and countries.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Enums.SmartStore.ShippingFilter.ShippingFilterCountryContext.BillingAddress" AppendRootKey="false">
+    <Value>Billing address</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.ShippingFilter.ShippingFilterCountryContext.ShippingAddress" AppendRootKey="false">
+    <Value>Shipping address</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="ExcludedCustomerRoles">
+    <Value>Customer roles</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCustomerRoles.Hint">
+    <Value>Specifies customer roles for which the shipping method should not be offered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCountries">
+    <Value>Countries</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCountries.Hint">
+    <Value>Specifies countries for which the shipping method should not be offered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CountryContext">
+    <Value>Countries related to</Value>
+  </LocaleResource>
+  <LocaleResource Name="CountryContext.Hint">
+    <Value>Specifies the address to which the selected countries are related to.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Selection">
+    <Value>Selection</Value>
+  </LocaleResource>
+  <LocaleResource Name="Reverse">
+    <Value>Reverse</Value>
+  </LocaleResource>
+  <LocaleResource Name="Eu">
+    <Value>European Union</Value>
+  </LocaleResource>
+</Language>

@@ -1,0 +1,85 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartStore.PaymentFilter" AppendRootKey="false">
+    <Value>Filter for payment methods</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.PaymentFilter" AppendRootKey="false">
+    <Value>Allows to filter out payment methods in the checkout process. Offers filters for customer roles, countries, order amount and shipping methods and serves rules such as "Customer has less than n placed orders" and "Customer has spent less than x amount".</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterCountryContext.BillingAddress" AppendRootKey="false">
+    <Value>Billing address</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterCountryContext.ShippingAddress" AppendRootKey="false">
+    <Value>Shipping address</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterAmountContext.SubtotalAmount" AppendRootKey="false">
+    <Value>Subtotal</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SmartStore.PaymentFilter.PaymentFilterAmountContext.TotalAmount" AppendRootKey="false">
+    <Value>Order total</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="ExcludedCustomerRoles">
+    <Value>Customer roles</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCustomerRoles.Hint">
+    <Value>Specifies customer roles for which the payment method should not be offered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCountries">
+    <Value>Countries</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedCountries.Hint">
+    <Value>Specifies countries for which the payment method should not be offered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CountryContext">
+    <Value>Countries related to</Value>
+  </LocaleResource>
+  <LocaleResource Name="CountryContext.Hint">
+    <Value>Specifies the address to which the selected countries are related to.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedShippingMethods">
+    <Value>Shipping method</Value>
+  </LocaleResource>
+  <LocaleResource Name="ExcludedShippingMethods.Hint">
+    <Value>Specifies shipping methods for which the payment method should not be offered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="MinimumOrderAmount">
+    <Value>Minimum order amount</Value>
+  </LocaleResource>
+  <LocaleResource Name="MinimumOrderAmount.Hint">
+    <Value>Specifies the minimum order amount from which on the payment method should be offered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="MaximumOrderAmount">
+    <Value>Maximum order amount</Value>
+  </LocaleResource>
+  <LocaleResource Name="MaximumOrderAmount.Hint">
+    <Value>Specifies the maximum order amount up to which the payment methods should be offered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AmountContext">
+    <Value>Amount related to</Value>
+  </LocaleResource>
+  <LocaleResource Name="AmountContext.Hint">
+    <Value>Specifies the amount to which the minimum and maximum order amounts are related to.</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanOrders">
+    <Value>Customer has less than n placed orders</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanOrders.Hint">
+    <Value>Do not offer this payment method, if the customer has less than n placed orders.</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanTotalAmount">
+    <Value>Customer has spent less than x amount</Value>
+  </LocaleResource>
+  <LocaleResource Name="HasLessThanTotalAmount.Hint">
+    <Value>Do not offer this payment method, if the customer has spent less than x amount.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Selection">
+    <Value>Selection</Value>
+  </LocaleResource>
+  <LocaleResource Name="Reverse">
+    <Value>Reverse</Value>
+  </LocaleResource>
+  <LocaleResource Name="Eu">
+    <Value>European Union</Value>
+  </LocaleResource>
+</Language>

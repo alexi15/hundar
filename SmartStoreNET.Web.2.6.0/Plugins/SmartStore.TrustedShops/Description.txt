@@ -1,0 +1,10 @@
+﻿FriendlyName: Trusted Shops Widgets
+Description: Provides the Trusted Shops Widgets Seal (Trustbadge), Customer Protection and Customer Reviews.
+SystemName: SmartStore.TrustedShops
+Group: Marketing
+Version: 2.6.0
+MinAppVersion: 2.5.0
+DisplayOrder: 1
+FileName: SmartStore.TrustedShops.dll
+ResourceRootKey: Plugins.SmartStore.TrustedShops
+Url: http://community.smartstore.com/marketplace/file/20-trusted-shops-widgets/

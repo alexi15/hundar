@@ -1,0 +1,61 @@
+﻿@using SmartStore.Web.Framework;
+@using SmartStore.Payone.Models;
+@model CreditCardPaymentInfoModel
+@{
+    Layout = "";
+}
+
+<div class="form-horizontal payone-creditcard">
+	<input type="hidden" name="PseudoCardPan" id="PseudoCardPan" value="@Model.PseudoCardPan" />
+	<input type="hidden" name="TruncatedCardPan" id="TruncatedCardPan" value="@Model.TruncatedCardPan" />
+
+	<div class="control-group">
+		@Html.LabelFor(model => model.CreditCardTypes, new { @class="control-label required" })
+		<div class="controls">
+			@Html.DropDownList("CreditCardType", Model.CreditCardTypes, new { style = "min-width: 220px", data_select_min_results_for_search = 20 })
+		</div>
+	</div>
+	@*<div class="control-group">
+		@Html.LabelFor(model => model.CardholderName, new { @class="control-label required" })
+		<div class="controls">
+			@Html.TextBoxFor(model => model.CardholderName, new { autocomplete = "off" })
+			@Html.ValidationMessageFor(model => model.CardholderName)
+		</div>
+	</div>*@
+	<div class="control-group">
+		@Html.LabelFor(model => model.CardNumber, new { @class="control-label required" })
+		<div class="controls">
+			@Html.TextBoxFor(model => model.CardNumber, new { autocomplete = "off", maxlength = 22 })
+			@Html.ValidationMessageFor(model => model.CardNumber)
+		</div>
+	</div>
+	<div class="control-group">
+		@Html.LabelFor(model => model.ExpireMonth, new { @class="control-label required" })
+		<div class="controls">
+			@Html.DropDownList("ExpireMonth", Model.ExpireMonths, new { @class = "dropdownlists", style = "min-width: 90px;" })
+			/
+			@Html.DropDownList("ExpireYear", Model.ExpireYears, new { @class = "dropdownlists", style = "min-width: 90px;" })
+			@Html.ValidationMessageFor(model => model.ExpireMonths)
+			@Html.ValidationMessageFor(model => model.ExpireYears)
+		</div>
+	</div>
+	<div class="control-group">
+		@Html.LabelFor(model => model.CardCode, new { @class="control-label required" })
+		<div class="controls">
+			@Html.TextBoxFor(model => model.CardCode, new { autocomplete = "off", maxlength = 4, style = "width: 76px;" })
+			@Html.ValidationMessageFor(model => model.CardCode)
+		</div>
+	</div>
+
+	<div class="issueno-startdate">
+		<div class="control-group">
+			@Html.LabelFor(model => model.IssueNumber, new { @class = "control-label" })
+			<div class="controls">
+				@Html.TextBoxFor(model => model.IssueNumber, new { autocomplete = "off", maxlength = 2, style = "width: 76px;" })
+				@Html.ValidationMessageFor(model => model.IssueNumber)
+			</div>
+		</div>
+	</div>
+</div>
+
+@Html.Partial("ScriptingPaymentInfo", Model)

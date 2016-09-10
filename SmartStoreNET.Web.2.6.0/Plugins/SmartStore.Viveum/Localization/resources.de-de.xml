@@ -1,0 +1,172 @@
+﻿<Language Name="Deutsch" IsDefault="true" IsRightToLeft="false">
+	<LocaleResource Name="Plugins.FriendlyName.SmartStore.Viveum" AppendRootKey="false">
+		<Value>Viveum</Value>
+	</LocaleResource>
+  <LocaleResource Name="Plugins.Description.SmartStore.Viveum" AppendRootKey="false">
+    <Value>Stellt die Viveum Zahlungsarten zur Verfügung.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.FriendlyName.Payments.ViveumCreditCard" AppendRootKey="false">
+    <Value>Kreditkarte</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.ViveumCreditCard" AppendRootKey="false">
+    <Value>Viveum Kreditkartenzahlung</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.FriendlyName.Payments.ViveumOnlineBankTransfer" AppendRootKey="false">
+    <Value>Online Überweisung</Value>
+  </LocaleResource>
+  <LocaleResource Name="Plugins.Description.Payments.ViveumOnlineBankTransfer" AppendRootKey="false">
+    <Value>Viveum Überweisung per SOFORT Überweisung, Giropay etc.</Value>
+  </LocaleResource>
+
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[<p>Weitere Informationen zum Bezahlen mit Viveum finden Sie auf deren <a href="http://www.viveum.com/" target="_blank">Homepage</a>.</p>]]>
+    </Value>
+	</LocaleResource>
+  <LocaleResource Name="ConfigGroups">
+    <Value>API Zugang;Datenaustausch;Sonstiges</Value>
+  </LocaleResource>
+  <LocaleResource Name="OrderNoteStrings">
+    <Value><![CDATA[Antwort von Viveum:<br />{0}]]></Value>
+  </LocaleResource>
+  <LocaleResource Name="MessageStrings">
+    <Value>Transaktionstyp;Transaktions-ID;Ergebnis;Kennung;Kreditkarte;Zahlungsart</Value>
+  </LocaleResource>
+  <LocaleResource Name="MethodUnavailable">
+    <Value>Wir können Ihnen leider die gewünschte Zahlungsart nicht anbieten.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionFailed">
+    <Value>Die Zahlungstransaktion ist leider fehlgeschlagen. Grund: {0}.</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidPaymentAmount">
+    <Value>Der Zahlungsbetrag {0} stimmt nicht mit der Auftragssumme {1} überein.</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidCurrency">
+    <Value>Die {0} stimmt nicht mit der Primärwährung des Shops {1} überein.</Value>
+  </LocaleResource>
+  <LocaleResource Name="InvalidCredentials">
+    <Value>Unvollständige Zugangsdaten für Viveum. Bitte geben Sie die erforderlichen Zugangsdaten im Konfigurationsbereich ein.</Value>
+  </LocaleResource>
+  <LocaleResource Name="PaymentMethodInfo">
+    <Value>Bezahlen Sie bequem mit einer der folgenden Zahlungsarten:</Value>
+  </LocaleResource>
+  <LocaleResource Name="PleasePayNow">
+    <Value><![CDATA[Bitte geben Sie Ihre Zahlungsdaten ein und schließen Sie die Zahlung über <b>Jetzt bezahlen</b> ab.]]></Value>
+  </LocaleResource>
+  <LocaleResource Name="Other">
+    <Value>Sonstiges</Value>
+  </LocaleResource>
+  <LocaleResource Name="Shipping">
+    <Value>Versand</Value>
+  </LocaleResource>
+  <LocaleResource Name="Successful">
+    <Value>Erfolgreich</Value>
+  </LocaleResource>
+  <LocaleResource Name="Failed">
+    <Value>Fehlgeschlagen</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="ApiUserId">
+    <Value>API Benutzer-ID</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiUserId.Hint">
+    <Value>Legt die Benutzer-ID für den Zugang zur API fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiPassword">
+    <Value>API Passwort</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiPassword.Hint">
+    <Value>Legt das Passwort für den Zugang zur API fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiEntityId">
+    <Value>API Entity-ID</Value>
+  </LocaleResource>
+  <LocaleResource Name="ApiEntityId.Hint">
+    <Value>Legt die Entity-ID für den Zugang zur API fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ValidateAccessData">
+    <Value>Die Zugangsdaten sind unvollständig. Bitte geben Sie sämtliche Zugangsdaten ein.</Value>
+  </LocaleResource>
+  <LocaleResource Name="UseSandbox">
+    <Value>Sandbox benutzen</Value>
+  </LocaleResource>
+  <LocaleResource Name="UseSandbox.Hint">
+    <Value>Legt fest, ob die Sandbox (Testumgebung) genutzt werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFee">
+    <Value>Zusätzliche Gebühren</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFee.Hint">
+    <Value>Zusätzliche Gebühren, die dem Kunden für die Inanspruchnahme des Dienstes berechnet werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFeePercentage">
+    <Value>Zusätzliche Gebühren (prozentual)</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdditionalFeePercentage.Hint">
+    <Value>Zusätzliche prozentuale Gebühr zum Gesamtbetrag. Es wird ein fester Wert verwendet, falls diese Option nicht aktiviert ist.</Value>
+  </LocaleResource>
+  <LocaleResource Name="AddOrderNotes">
+    <Value>Auftragsnotizen anlegen</Value>
+  </LocaleResource>
+  <LocaleResource Name="AddOrderNotes.Hint">
+    <Value>Legt fest, dass Auftragsnotizen hinsichtlich des Datenaustausches mit dem Zahlungsanbieter angelegt werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType">
+    <Value>Zahlungsaktion</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Hint">
+    <Value>Legt fest, wann abgebucht werden soll.</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.AuthAndCapture">
+    <Value>Sofort abbuchen</Value>
+  </LocaleResource>
+  <LocaleResource Name="TransactionType.Auth">
+    <Value>Autorisierung sofort, Abbuchung später</Value>
+  </LocaleResource>
+  <LocaleResource Name="ValidatePayment">
+    <Value>Zahlungsdaten überprüfen</Value>
+  </LocaleResource>
+  <LocaleResource Name="ValidatePayment.Hint">
+    <Value>Legt fest, ob die Zahlungsdaten (wie z.B. der Betrag) bei der Bestellannahme geprüft, d.h. mit Viveum abgeglichen werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="PaymentBrands">
+    <Value>Zahlungsarten</Value>
+  </LocaleResource>
+  <LocaleResource Name="PaymentBrands.Hint">
+    <Value>Legt die Zahlungsarten fest, die dem Kunden angeboten werden sollen.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ValidatePaymentBrands">
+    <Value>Bitte legen Sie mindestens eine Zahlungsart fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetStyle">
+    <Value>Widget Stil</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetStyle.Hint">
+    <Value>Legt den Darstellungsstil des Eingabe-Widgets fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetStyleCard">
+    <Value>Kreditkarte</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetStylePlain">
+    <Value>Formular</Value>
+  </LocaleResource>
+  <LocaleResource Name="SetWidgetBackgroundColor">
+    <Value>Widget Hintergrundfarbe festlegen</Value>
+  </LocaleResource>
+  <LocaleResource Name="SetWidgetBackgroundColor.Hint">
+    <Value>Aktivieren Sie diese Option, falls Sie die Hintergrundfarbe des Eingabe-Widgets ändern möchten.</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetBackgroundColor">
+    <Value>Widget Hintergrundfarbe</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetBackgroundColor.Hint">
+    <Value>Legt die Hintergrundfarbe des Eingabe-Widgets fest.</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetFrameMinHeight">
+    <Value>Widget Minimalhöhe</Value>
+  </LocaleResource>
+  <LocaleResource Name="WidgetFrameMinHeight.Hint">
+    <Value>Legt die minimale Höhe (in Pixel) des Eingabe-Widgets fest.</Value>
+  </LocaleResource>
+</Language>

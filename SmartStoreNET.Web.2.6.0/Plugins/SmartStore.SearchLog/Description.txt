@@ -1,0 +1,11 @@
+﻿FriendlyName: Search Log
+Description: Provides a simple list of top search terms separated by store and language
+SystemName: SmartStore.SearchLog
+Group: Admin
+Version: 2.6.0
+MinAppVersion: 2.5.0
+Author: SmartStore AG
+DisplayOrder: 1
+FileName: SmartStore.SearchLog.dll
+ResourceRootKey: Plugins.SearchLog
+Url: http://community.smartstore.com/marketplace/file/17-order-number-formatter/
